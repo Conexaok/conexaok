@@ -5,16 +5,17 @@ import { FaCartShopping } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
 import DarkMode from "./DarkMode";
 
+
 const Menu = [
   {
     id: 1,
-    name: "Início",
+    name: "Início", 
     link: "/#",
   },
   {
     id: 2,
     name: "Sobre",
-    link: "/#services",
+    link: "#Testimonials.jsx",
   },
   {
     id: 3,
@@ -23,7 +24,7 @@ const Menu = [
   },
   {
     id: 3,
-    name: "Locações",
+    name: "Brinds",
     link: "/#",
   },
   {
@@ -36,17 +37,22 @@ const Menu = [
 const DropdownLinks = [
   {
     id: 1,
-    name: "Trending Products",
+    name: "Estruturas",
     link: "/#",
   },
   {
     id: 2,
-    name: "Best Selling",
+    name: "Movéis",
     link: "/#",
   },
   {
     id: 3,
-    name: "Top Rated",
+    name: "Eletro",
+    link: "/#",
+  },
+  {
+    id: 3,
+    name: "Equipamentos",
     link: "/#",
   },
 ];
@@ -81,7 +87,7 @@ const Navbar = ({ handleOrderPopup }) => {
               className="bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white  py-1 px-4 rounded-full flex items-center gap-3 group"
             >
               <span className="group-hover:block hidden transition-all duration-200">
-                Order
+                Alugue aqui
               </span>
               <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
             </button>
@@ -109,7 +115,7 @@ const Navbar = ({ handleOrderPopup }) => {
           {/* Simple Dropdown and Links */}
           <li className="group relative cursor-pointer">
             <a href="#" className="flex items-center gap-[2px] py-2">
-              Trending Products
+              Locações
               <span>
                 <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
               </span>
