@@ -1,41 +1,57 @@
 import React from "react";
-import Image1 from "../../assets/hero/women.png";
-import Image2 from "../../assets/hero/shopping.png";
-import Image3 from "../../assets/hero/sale.png";
+import Image1 from "../../assets/hero/conexaok2.png";
+import Image2 from "../../assets/hero/conexaok1.png";
+import Image3 from "../../assets/hero/conexaok3.png";
+import Image4 from "../../assets/hero/conexaok4.png";
 import Slider from "react-slick";
 
 const ImageList = [
   {
     id: 1,
     img: Image1,
-    title: "Faça já Seu Orçamento com a melhor produto do Brasil",
+    title: "Faça já Seu Orçamento Com a Melhor Produtora Do Brasil",
+    description:
+      "Transforme seu evento em uma experiência inesquecível com nosso aluguel de som, luz cênica e estrutura e muito mais Entre em contato e garanta a atmosfera perfeita para sua comemoração.",
+  },
+  {
+    id: 2,
+    img: Image4,
+    title: "Temos Tudo Que Você Precisa Para Seu Evento",
     description:
       "lorem His Life will forever be Changed dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
-    id: 2,
+    id: 3,
     img: Image2,
     title: "Venha Para Conexão K",
     description:
-      "Who's there lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Entre Em Contato Conosco e Solicite Já Seu Orçamento, Os Melhores Preços Do Mercado Você Encontra Aqui!",
   },
   {
-    id: 3,
+    id: 4,
     img: Image3,
-    title: "Não Perca Tempo e Corre que temos uma boa Oportunidade para você",
+    title: "Não Perca Tempo e Corre, Que Temos Ótima Oportunidade Para Você",
     description:
-      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Conexão K, conectando marcas, ideias e pessoas! 🚀",
   },
 ];
 const Hero = ({ handleOrderPopup }) => {
+   // Número de telefone completo com código do país e DDD
+   const phoneNumber = '558195042474';
+   // URL do link do WhatsApp com o número de telefone
+   const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
+
+   // Abrir uma nova janela do navegador com o link do WhatsApp
+   window.open(whatsappLink, '_blank');
+ 
   var settings = {
     dots: false,
     arrows: false,
     infinite: true,
-    speed: 800,
+    speed: 1200,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 9000,
     cssEase: "ease-in-out",
     pauseOnHover: false,
     pauseOnFocus: true,
