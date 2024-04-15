@@ -2,6 +2,7 @@ import React from "react";
 import footerLogo from "../../assets/logo.png";
 import Banner from "../../assets/website/footer-pattern.jpg";
 import {
+  FaWhatsapp,
   FaFacebook,
   FaInstagram,
   FaLinkedin,
@@ -78,14 +79,17 @@ const Footer = () => {
 
             <div>
               <div className="flex items-center gap-3 mt-6">
-                <a href="#">
+                <a href="https://www.instagram.com/conexaokeventos/" target="blank">
                   <FaInstagram className="text-3xl" />
                 </a>
-                <a href="#">
+                <a href="https://www.facebook.com/Conexaokshows" target="_blank">
                   <FaFacebook className="text-3xl" />
                 </a>
-                <a href="#">
+                <a href="https://www.linkedin.com/in/conexaok/" target="_blank">
                   <FaLinkedin className="text-3xl" />
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=558195042474" target="_blank">
+                  <FaWhatsapp className="text-3xl" />
                 </a>
               </div>
               <div className="mt-6">

@@ -2,6 +2,7 @@ import React from "react";
 import Img1 from "../../assets/shirt/shirt.png";
 import Img2 from "../../assets/shirt/shirt2.png";
 import Img3 from "../../assets/shirt/shirt3.png";
+import Img4 from "../../assets/shirt/shirt4.png"
 import { FaStar } from "react-icons/fa";
 
 const ProductsData = [
@@ -28,7 +29,7 @@ const ProductsData = [
   },
   {
     id: 4,
-    img: Img3,
+    img: Img4,
     title: "Eletrônicos",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
