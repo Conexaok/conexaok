@@ -1,7 +1,6 @@
 import React from "react";
 import Logo from "../../assets/logo.png";
-import { IoMdSearch } from "react-icons/io";
-import { FaCartShopping } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
 import DarkMode from "./DarkMode";
 
@@ -19,12 +18,12 @@ const Menu = [
   },
   {
     id: 3,
-    name: "Stand",
+    name: "Stands",
     link: "/#",
   },
   {
     id: 3,
-    name: "Brinds",
+    name: "Brindes",
     link: "/#",
   },
   {
@@ -72,14 +71,7 @@ const Navbar = ({ handleOrderPopup }) => {
 
           {/* search bar */}
           <div className="flex justify-between items-center gap-4">
-            <div className="relative group hidden sm:block">
-              <input
-                type="text"
-                placeholder="Procure aqui"
-                className="w-[200px] sm:w-[200px] group-hover:w-[300px] transition-all duration-300 rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary dark:border-gray-500 dark:bg-gray-800  "
-              />
-              <IoMdSearch className="text-gray-500 group-hover:text-primary absolute top-1/2 -translate-y-1/2 right-3" />
-            </div>
+            
 
             {/* order button */}
             <button
@@ -89,7 +81,7 @@ const Navbar = ({ handleOrderPopup }) => {
               <span className="group-hover:block hidden transition-all duration-200">
                 Alugue aqui
               </span>
-              <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
+              <FaWhatsapp className="text-xl text-white drop-shadow-sm cursor-pointer" />
             </button>
 
             {/* Darkmode Switch */}
@@ -141,4 +133,4 @@ const Navbar = ({ handleOrderPopup }) => {
   );
 };
 
-export default Navbar;
+export default Navbar; 
