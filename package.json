@@ -31,7 +31,7 @@
     "vite": "^5.0.8"
   },
   "description": "Um projeto feito para Conexão K",
-  "main": "Tecnologia Aplicadas React, Java Script, Tailwind, Vite, Html e Css",
+  "main": "Tecnologias Aplicadas React, Java Script, Tailwind, Vite, Html/Css",
   "repository": {
     "type": "git",
     "url": "https://github.com/Conexaok/conexaok.git"
@@ -40,7 +40,7 @@
     "conexaok2024"
   ],
   "author": "Joel Maranhão Da Silva Filho / Daniele Barbosa da Silva",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Conexaok/conexaok/issues"
   },

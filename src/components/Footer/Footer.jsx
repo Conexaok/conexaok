@@ -49,13 +49,13 @@ const Footer = () => {
 
   return (
     <div style={BannerImg} className="text-white">
-      <div className="container pb-16 flex justify-center">
-        <div data-aos="zoom-in" className="grid md:grid-cols-3 pb-5 pt-5">
+      <div className="container pb-16 flex justify-end">
+        <div data-aos="zoom-in" className="grid md:grid-cols-3 pb8 pt-5">
           {/* company details */}
-          <div className="py-3 px-2 text-center">
-            <h1 className="sm:text-3xl text-xl font-bold mb-3 flex items-center justify-center gap-3">
+          <div className="py-10 px-8 text-center">
+            <h1 className="sm:text-3xl text-xl font-bold mb-3 flex items-center justify-center gap-4">
               <img src={footerLogo} alt="" className="max-w-[60px]" />
-              Conexão <strong>k</strong>
+              Conexão <strong>K</strong>
             </h1>
             <p className="text-lg">
               Conectando ideias, marcas e pessoas!
@@ -63,11 +63,14 @@ const Footer = () => {
           </div>
 
           {/* Footer Links */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10 justify-center">
+          {/*no primeiro classname é onde mudamos o padrao do grid e separamos o footer*/}
+          <div className="grid grid-cols-4 sm:grid-cols-1 col-span-2 md:pl-10 justify-end">
+          <div className="self-end col-span-full sm:col-span-3 md:col-span-2 flex justify-end">
+
             <div>
-              <div className="py-3 px-2 text-center">
-                <h1 className="sm:text-xl text-lg font-bold mb-3">
-                  Links
+              <div className="py-5 px-5 text-center">
+                <h1 className="sm:text-xl text-lg font-bold mb-2">
+                  Links 
                 </h1>
                 <ul className="flex flex-col gap-3">
                   {FooterLinks.map((link) => (
@@ -113,6 +116,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

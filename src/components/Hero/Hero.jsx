@@ -9,7 +9,7 @@ const ImageList = [
   {
     id: 1,
     img: Image1,
-    title: "Faça já Seu Orçamento Com a Melhor Produtora Do Brasil",
+    title: "Faça já Seu Orçamento Com a Melhor Produtora Do Mercado",
     description:
       "Transforme seu evento em uma experiência inesquecível com nosso aluguel de som, luz cênica e estrutura e muito mais Entre em contato e garanta a atmosfera perfeita para sua comemoração.",
   },
