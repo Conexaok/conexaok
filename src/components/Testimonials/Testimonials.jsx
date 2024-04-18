@@ -1,6 +1,7 @@
 import React from "react";
-import Slider from "react-slick";
+import Slider from "react-slick"; // Importa o componente Slider do react-slick
 
+// Dados dos depoimentos
 const TestimonialData = [
   {
     id: 1,
@@ -28,7 +29,9 @@ const TestimonialData = [
   },
 ];
 
+// Componente de Testemunhos
 const Testimonials = () => {
+  // Configurações do Slider
   var settings = {
     dots: true,
     arrows: false,
@@ -70,7 +73,7 @@ const Testimonials = () => {
   return (
     <div id="Sobre" className="py-10 mb-10">
       <div className="container">
-        {/* header section */}
+        {/* Seção de cabeçalho */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
           <h1 data-aos="fade-up" className="text-3xl font-bold">
             Sobre
@@ -81,9 +84,11 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Testimonial cards */}
+        {/* Cartões de depoimento */}
         <div data-aos="zoom-in">
+          {/* Utiliza o componente Slider com as configurações definidas */}
           <Slider {...settings}>
+            {/* Mapeia os dados dos depoimentos e renderiza os cartões */}
             {TestimonialData.map((data) => (
               <div className="my-6">
                 <div
@@ -91,6 +96,7 @@ const Testimonials = () => {
                   className="flex flex-col gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl dark:bg-gray-800 bg-primary/10 relative"
                 >
                   <div className="mb-4">
+                    {/* Renderiza a imagem do depoimento */}
                     <img
                       src={data.img}
                       alt=""
@@ -99,12 +105,15 @@ const Testimonials = () => {
                   </div>
                   <div className="flex flex-col items-center gap-4">
                     <div className="space-y-3">
+                      {/* Renderiza o texto do depoimento */}
                       <p className="text-xs text-gray-500">{data.text}</p>
+                      {/* Renderiza o nome do autor do depoimento */}
                       <h1 className="text-xl font-bold text-black/80 dark:text-light">
                         {data.name}
                       </h1>
                     </div>
                   </div>
+                  {/* Renderiza o caractere de aspas */}
                   <p className="text-black/20 text-9xl font-serif absolute top-0 right-0">
                     ,,
                   </p>

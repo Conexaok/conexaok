@@ -9,7 +9,7 @@ const Footer = () => {
     <div className="text-white bg-gradient-to-b from-primary to-secondary">
       <div className="container py-8">
         <div data-aos="zoom-in" className="grid md:grid-cols-2">
-          {/* company details */}
+          {/* Detalhes da empresa */}
           <div className="py-10 px-8 text-center">
             <h1 className="sm:text-3xl text-xl font-bold mb-3 flex items-center justify-center gap-4">
               <img src={footerLogo} alt="" className="max-w-[60px]" />
@@ -17,7 +17,7 @@ const Footer = () => {
             </h1>
             <p className="text-lg">Conectando ideias, marcas e pessoas!</p>
 
-            {/* Contact Info */}
+            {/* Informações de contato */}
             <div className="flex flex-col gap-3 items-center mt-8">
               <div className="flex items-center gap-3 justify-center">
                 <CiLocationOn className="text-2xl hover:text-blue-500" />
@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Social Links */}
+      {/* Links Sociais */}
       <div className="text-center py-4">
         <div className="flex justify-center gap-4">
           <a href="https://www.instagram.com/conexaokeventos/" target="blank">

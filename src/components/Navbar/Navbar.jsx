@@ -4,6 +4,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
 import DarkMode from "./DarkMode";
 
+// Itens do menu principal
 const Menu = [
   {
     id:1,
@@ -32,6 +33,7 @@ const Menu = [
   },
 ];
 
+// Itens do dropdown
 const DropdownLinks = [
   {
     id: 1,
@@ -58,21 +60,20 @@ const DropdownLinks = [
 const Navbar = ({ handleOrderPopup }) => {
   return (
     <div className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40">
-      {/* upper Navbar */}
+      {/* Navbar superior */}
       <div className="bg-primary/40 py-2">
         <div className="container flex justify-between items-center">
           <div>
+            {/* Logo */}
             <a href="#" className="font-bold text-2xl sm:text-3xl flex gap-2">
               <img src={Logo} alt="Logo" className="w-10" />
               Conexão K
             </a>
           </div>
 
-          {/* search bar */}
+          {/* Barra de busca e botão de pedido */}
           <div className="flex justify-between items-center gap-4">
-            
-
-            {/* order button */}
+            {/* Botão de pedido */}
             <button
               onClick={() => handleOrderPopup()}
               className="bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white  py-1 px-4 rounded-full flex items-center gap-3 group"
@@ -90,9 +91,11 @@ const Navbar = ({ handleOrderPopup }) => {
           </div>
         </div>
       </div>
-      {/* lower Navbar */}
+
+      {/* Navbar inferior */}
       <div data-aos="zoom-in" className="flex justify-center">
         <ul className="sm:flex hidden items-center gap-4">
+          {/* Itens do menu principal */}
           {Menu.map((data) => (
             <li key={data.id}>
               <a
@@ -103,7 +106,7 @@ const Navbar = ({ handleOrderPopup }) => {
               </a>
             </li>
           ))}
-          {/* Simple Dropdown and Links */}
+          {/* Dropdown simples */}
           <li className="group relative cursor-pointer">
             <a href="#" className="flex items-center gap-[2px] py-2">
               Locações
@@ -111,6 +114,7 @@ const Navbar = ({ handleOrderPopup }) => {
                 <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
               </span>
             </a>
+            {/* Itens do dropdown */}
             <div className="absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white p-2 text-black shadow-md">
               <ul>
                 {DropdownLinks.map((data) => (
