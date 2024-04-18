@@ -4,32 +4,31 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
 import DarkMode from "./DarkMode";
 
-
 const Menu = [
   {
-    id: 1,
+    id:1,
     name: "Início", 
-    link: "/#",
+    link: "#",
   },
   {
-    id: 2,
+    id:2,
     name: "Sobre",
-    link: "#Testimonials.jsx",
+    link: "/#Sobre",
   },
   {
     id: 3,
     name: "Stands",
-    link: "/#",
+    link: "/#Stands",
   },
   {
     id: 3,
     name: "Brindes",
-    link: "/#",
+    link: "/#Brindes",
   },
   {
     id: 3,
     name: "Gráfica",
-    link: "/#",
+    link: "/#Gráfica",
   },
 ];
 
@@ -79,7 +78,7 @@ const Navbar = ({ handleOrderPopup }) => {
               className="bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white  py-1 px-4 rounded-full flex items-center gap-3 group"
             >
               <span className="group-hover:block hidden transition-all duration-200">
-                Alugue aqui
+                Fale conosco
               </span>
               <FaWhatsapp className="text-xl text-white drop-shadow-sm cursor-pointer" />
             </button>
@@ -133,4 +132,4 @@ const Navbar = ({ handleOrderPopup }) => {
   );
 };
 
-export default Navbar; 
+export default Navbar;

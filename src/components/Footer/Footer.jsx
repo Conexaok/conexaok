@@ -1,122 +1,71 @@
 import React from "react";
 import footerLogo from "../../assets/logo.png";
-import Banner from "../../assets/website/footer-pattern.jpg";
-import {
-  FaWhatsapp,
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaLocationArrow,
-  FaMobileAlt,
-} from "react-icons/fa";
+import {  FaMobileAlt, FaWhatsapp, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { CiLocationOn } from "react-icons/ci";
+import { MdOutlineMail } from "react-icons/md";
 
 const Footer = () => {
-  const BannerImg = {
-    backgroundImage: `url(${Banner})`,
-    backgroundPosition: "bottom",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    height: "auto",
-    width: "100%",
-  };
-
-  const FooterLinks = [
-    {
-      title: "Inicio",
-      link: "/#",
-    },
-    {
-      title: "Sobre",
-      link: "/#about",
-    },
-    {
-      title: "Stand",
-      link: "/#contact",
-    },
-    {
-      title: "Brindes",
-      link: "/#blog",
-    },
-    {
-      title: "Gráfica",
-      link: "/#blog",
-    },
-    {
-      title: "Contato",
-      link: "/#blog",
-    },
-  ];
-
   return (
-    <div style={BannerImg} className="text-white">
-      <div className="container pb-16 flex justify-end">
-        <div data-aos="zoom-in" className="grid md:grid-cols-3 pb8 pt-5">
+    <div className="text-white bg-gradient-to-b from-primary to-secondary">
+      <div className="container py-8">
+        <div data-aos="zoom-in" className="grid md:grid-cols-2">
           {/* company details */}
           <div className="py-10 px-8 text-center">
             <h1 className="sm:text-3xl text-xl font-bold mb-3 flex items-center justify-center gap-4">
               <img src={footerLogo} alt="" className="max-w-[60px]" />
-              Conexão <strong>K</strong>
+              Conexão K
             </h1>
-            <p className="text-lg">
-              Conectando ideias, marcas e pessoas!
-            </p>
+            <p className="text-lg">Conectando ideias, marcas e pessoas!</p>
+
+            {/* Contact Info */}
+            <div className="flex flex-col gap-3 items-center mt-8">
+              <div className="flex items-center gap-3 justify-center">
+                <CiLocationOn className="text-2xl hover:text-blue-500" />
+                <p>R. Artur Heleno de Souza, 111 - JangaPaulista - PE, 53435-310</p>
+              </div>
+              <div className="flex items-center gap-3 justify-center">
+                <FaMobileAlt className="text-2xl hover:text-blue-500" />
+                <p>+55 81 9.9504-2474</p>
+              </div>
+              <div className="flex items-center gap-3 justify-center">
+                < MdOutlineMail className="text-2xl hover:text-blue-500" />
+                <p>contato@conexaokeventos.com</p>
+              </div>
+            </div>
           </div>
 
-          {/* Footer Links */}
-          {/*no primeiro classname é onde mudamos o padrao do grid e separamos o footer*/}
-          <div className="grid grid-cols-4 sm:grid-cols-1 col-span-2 md:pl-10 justify-end">
-          <div className="self-end col-span-full sm:col-span-3 md:col-span-2 flex justify-end">
-
-            <div>
-              <div className="py-5 px-5 text-center">
-                <h1 className="sm:text-xl text-lg font-bold mb-2">
-                  Links 
-                </h1>
-                <ul className="flex flex-col gap-3">
-                  {FooterLinks.map((link) => (
-                    <li
-                      className="cursor-pointer hover:text-blue-500 hover:underline duration-300 text-white text-center"
-                      key={link.title}
-                    >
-                      <span>{link.title}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* social links */}
-
-            <div>
-              <div className="flex items-center gap-3 mt-6 justify-center">
-                <a href="https://www.instagram.com/conexaokeventos/" target="blank">
-                  <FaInstagram className="text-3xl hover:text-blue-500" />
-                </a>
-                <a href="https://www.facebook.com/Conexaokshows" target="_blank">
-                  <FaFacebook className="text-3xl hover:text-blue-500" />
-                </a>
-                <a href="https://www.linkedin.com/in/conexaok/" target="_blank">
-                  <FaLinkedin className="text-3xl hover:text-blue-500" />
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=558195042474" target="_blank">
-                  <FaWhatsapp className="text-3xl hover:text-blue-500" />
-                </a>
-              </div>
-              <div className="mt-6 text-center">
-                <div className="flex items-center gap-3 justify-center">
-                  <FaLocationArrow className="hover:text-blue-500" />
-                  <p>Rua Arthur Heleno de Souza, 111</p>
-                </div>
-                <div className="flex items-center gap-3 mt-3 justify-center">
-                  <FaMobileAlt className="hover:text-blue-500" />
-                  <p>+55 81 9.9504-2474</p>
-                </div>
-              </div>
-            </div>
+          {/* Mapa */}
+          <div className="py-4 text-center">
+            <iframe
+              title="Localização"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d197156.56391517725!2d-34.917058985696835!3d-7.989526293910779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab16518ebfe3c7%3A0x5ad4568054b0179d!2sR.%20Artur%20Heleno%20de%20Souza%2C%20111%20-%20JangaPaulista%2C%20Paulista%20-%20PE%2C%2053435-310!5e0!3m2!1sen!2sbr!4v1649714655733!5m2!1sen!2sbr"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
       </div>
-    </div>
+
+      {/* Social Links */}
+      <div className="text-center py-4">
+        <div className="flex justify-center gap-4">
+          <a href="https://www.instagram.com/conexaokeventos/" target="blank">
+            <FaInstagram className="text-3xl hover:text-blue-500" />
+          </a>
+          <a href="https://www.facebook.com/Conexaokshows" target="_blank">
+            <FaFacebook className="text-3xl hover:text-blue-500" />
+          </a>
+          <a href="https://www.linkedin.com/in/conexaok/" target="_blank">
+            <FaLinkedin className="text-3xl hover:text-blue-500" />
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=558195042474" target="_blank">
+            <FaWhatsapp className="text-3xl hover:text-blue-500" />
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

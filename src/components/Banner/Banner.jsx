@@ -1,16 +1,21 @@
 import React from "react";
-import BannerImg from "../../assets/women/women2.jpg";
-import EsposendeLogo from "../../assets/women/esposende.jpeg";
+import EsposendeLogo from "../../assets/women/esposende.png";
 import FreegellsLogo from "../../assets/women/freegells.png";
-import AmbevLogo from "../../assets/women/ambev.jpg";
+import AmbevLogo from "../../assets/women/ambev.png";
 import BomLeiteLogo from "../../assets/women/bomLeite.png";
 import UnoparLogo from "../../assets/women/unopar.png";
 import MaguaryLogo from "../../assets/women/maguary.png";
 import NeoquimicaLogo from "../../assets/women/neoquimica.png";
 import PituLogo from "../../assets/women/pitu.png";
 import JohnsonLogo from "../../assets/women/johnson.svg";
+import VitarelaLogo from "../../assets/women/vitarela.png";
+import HeinekenLogo from "../../assets/women/heineken.png";
+import UnileverLogo from "../../assets/women/Unilever.png";
 
-const Banner = () => {
+
+
+
+const Banner = ({ isDarkMode }) => {
   const handleLogoHover = (event) => {
     event.target.style.transform = "translateY(-5px)";
   };
@@ -23,7 +28,7 @@ const Banner = () => {
     <div className="min-h-[550px] flex justify-center items-center py-12 sm:py-0">
       <div className="container">
         <div className="grid grid-cols-1 gap-6 items-center text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold text-black shadow-md mb-4">
+          <h1 className="text-3xl sm:text-4xl font-bold ${isDarkMode ? 'text-white' : 'text-black'} shadow-md mb-4">
             Parceiros
           </h1>
           <div className="grid grid-cols-4 gap-4 justify-items-center">
@@ -86,6 +91,27 @@ const Banner = () => {
             <img
               src={JohnsonLogo}
               alt="Johnson"
+              className="h-24 w-24 object-contain cursor-pointer transition-transform duration-300 ease-in-out transform hover:translate-y-1 hover:shadow-lg"
+              onMouseOver={handleLogoHover}
+              onMouseLeave={handleLogoLeave}
+            />
+            <img
+              src={VitarelaLogo}
+              alt="vitarela"
+              className="h-24 w-24 object-contain cursor-pointer transition-transform duration-300 ease-in-out transform hover:translate-y-1 hover:shadow-lg"
+              onMouseOver={handleLogoHover}
+              onMouseLeave={handleLogoLeave}
+            />
+            <img
+              src={HeinekenLogo}
+              alt="heineken"
+              className="h-24 w-24 object-contain cursor-pointer transition-transform duration-300 ease-in-out transform hover:translate-y-1 hover:shadow-lg"
+              onMouseOver={handleLogoHover}
+              onMouseLeave={handleLogoLeave}
+            />
+            <img
+              src={UnileverLogo}
+              alt="unilever"
               className="h-24 w-24 object-contain cursor-pointer transition-transform duration-300 ease-in-out transform hover:translate-y-1 hover:shadow-lg"
               onMouseOver={handleLogoHover}
               onMouseLeave={handleLogoLeave}
