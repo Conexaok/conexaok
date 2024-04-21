@@ -9,7 +9,7 @@ const Menu = [
   {
     id:1,
     name: "Início", 
-    link: "#",
+    link: "/#Inicio",
   },
   {
     id:2,
@@ -22,14 +22,14 @@ const Menu = [
     link: "/#Stands",
   },
   {
-    id: 3,
+    id: 4,
     name: "Brindes",
     link: "/#Brindes",
   },
   {
-    id: 3,
+    id: 5,
     name: "Gráfica",
-    link: "/#Gráfica",
+    link: "/#Grafica",
   },
 ];
 
@@ -59,6 +59,7 @@ const DropdownLinks = [
 
 const Navbar = ({ handleOrderPopup }) => {
   return (
+    
     <div className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40">
       {/* Navbar superior */}
       <div className="bg-primary/40 py-2">

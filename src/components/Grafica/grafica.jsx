@@ -6,7 +6,7 @@ import Img4 from "../../assets/women/women4.jpg";
 import { FaStar } from "react-icons/fa6";
 
 // Dados dos produtos
-const ProductsData = [
+const GraficaData = [
   {
     id: 1,
     img: Img1,
@@ -49,9 +49,9 @@ const ProductsData = [
   },
 ];
 
-const Products = () => {
+const Grafica = () => {
   return (
-    <div id="#" className="mt-14 mb-12">
+    <div id="Grafica" className="mt-14 mb-12">
       <div className="container">
         {/* Seção de cabeçalho */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
@@ -59,7 +59,7 @@ const Products = () => {
             Top Selling Products for you
           </p>
           <h1 data-aos="fade-up" className="text-3xl font-bold">
-            Eventos Realizados
+           Gráfica
           </h1>
           <p data-aos="fade-up" className="text-xs text-gray-400">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
@@ -70,7 +70,7 @@ const Products = () => {
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
             {/* Seção dos cards de produtos */}
-            {ProductsData.map((data) => (
+            {GraficaData.map((data) => (
               <div
                 data-aos="fade-up" // Animação AOS
                 data-aos-delay={data.aosDelay} // Atraso para a animação AOS
@@ -109,4 +109,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Grafica;

@@ -5,11 +5,14 @@ import Products from "./components/Products/Products";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import TopProducts from "./components/TopProducts/TopProducts";
-import Banner from "./components/Banner/Banner";
+import Clientes from "./components/Clientes/Clientes";
 import Subscribe from "./components/Subscribe/Subscribe";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
 import Popup from "./components/Popup/Popup";
+import Grafica from "./components/Grafica/grafica";
+import Brindes from "./components/Brindes/Brindes";
+import Stands from "./components/Stands/Stands";
 
 const App = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
@@ -33,12 +36,15 @@ const App = () => {
       <Hero handleOrderPopup={handleOrderPopup} />
       <Products />
       <TopProducts handleOrderPopup={handleOrderPopup} />
-      <Banner />
+      <Stands/>
       <Subscribe />
-      <Products />
+      <Grafica/>
+      <Brindes/>
       <Testimonials />
+      <Clientes />
       <Footer />
       <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
+      
     </div>
   );
 };
