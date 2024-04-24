@@ -1,55 +1,85 @@
-import React from "react";
-import Img1 from "../../assets/women/women.png";
-import Img2 from "../../assets/women/women2.jpg";
-import Img3 from "../../assets/women/women3.jpg";
-import Img4 from "../../assets/women/women4.jpg";
-import { FaStar } from "react-icons/fa6";
+import React, { useState } from "react";
+import img1 from "../../assets/evento/imagem1.jpeg"; // Caminho para a primeira imagem
+import img2 from "../../assets/evento/imagem2.jpeg"; // Caminho para a segunda imagem
+import img3 from "../../assets/evento/imagem3.jpeg"; // Caminho para a terceira imagem
+import img4 from "../../assets/evento/imagem4.jpeg"; // Caminho para a quarta imagem
+import img5 from "../../assets/evento/imagem5.jpeg"; // Caminho para a quinta imagem
+import img6 from "../../assets/evento/imagem6.jpeg"; // Caminho para a primeira imagem
+import img7 from "../../assets/evento/imagem7.jpeg"; // Caminho para a segunda imagem
+import img8 from "../../assets/evento/imagem8.jpeg"; // Caminho para a terceira imagem
+import img9 from "../../assets/evento/imagem9.jpeg"; // Caminho para a quarta imagem
+import img10 from "../../assets/evento/imagem10.jpeg"; // Caminho para a quinta imagem
+import img11 from "../../assets/evento/imagem11.jpeg"; // Caminho para a primeira imagem
+import img12 from "../../assets/evento/imagem12.jpeg"; // Caminho para a segunda imagem
+import img13 from "../../assets/evento/imagem13.jpeg"; // Caminho para a terceira imagem
+import img14 from "../../assets/evento/imagem14.jpeg"; // Caminho para a quarta imagem
+import img15 from "../../assets/evento/imagem15.jpeg"; // Caminho para a quinta imagem
+import img16 from "../../assets/evento/imagem16.jpeg"; // Caminho para a primeira imagem
+import img17 from "../../assets/evento/imagem17.jpeg"; // Caminho para a segunda imagem
+import img18 from "../../assets/evento/imagem18.jpeg"; // Caminho para a terceira imagem
+import img19 from "../../assets/evento/imagem19.jpeg"; // Caminho para a quarta imagem
+import img20 from "../../assets/evento/imagem20.jpeg"; // Caminho para a quinta imagem
+import img21 from "../../assets/evento/imagem21.jpeg"; // Caminho para a primeira imagem
+import img22 from "../../assets/evento/imagem22.jpeg"; // Caminho para a segunda imagem
+import img23 from "../../assets/evento/imagem23.jpeg"; // Caminho para a terceira imagem
+import img24 from "../../assets/evento/imagem24.jpeg"; // Caminho para a quarta imagem
+import img25 from "../../assets/evento/imagem25.jpeg"; // Caminho para a quinta imagem
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 
 // Dados dos produtos
 const ProductsData = [
   {
     id: 1,
-    img: Img1,
-    title: "Women Ethnic",
-    rating: 5.0,
-    color: "white",
+    img: img1,
+    title: "Evento 1",
+    color: "Descrição do Evento 1",
     aosDelay: "0", // Atraso para a animação AOS
+    galleryImages: [img1, img2, img3, img4, img5],
   },
   {
     id: 2,
-    img: Img2,
-    title: "Women western",
-    rating: 4.5,
-    color: "Red",
+    img: img6,
+    title: "Evento 2",
+    color: "descrição do Evento 2",
     aosDelay: "200", // Atraso para a animação AOS
+    galleryImages: [img6, img7, img8, img9, img10],
   },
   {
     id: 3,
-    img: Img3,
-    title: "Goggles",
-    rating: 4.7,
-    color: "brown",
+    img: img1,
+    title: "Evento 3",
+    color: "Descrição do Evento 3",
     aosDelay: "400", // Atraso para a animação AOS
+    galleryImages: [img11, img12, img13, img14, img15],
   },
   {
     id: 4,
-    img: Img4,
-    title: "Printed T-Shirt",
-    rating: 4.4,
-    color: "Yellow",
+    img: img16,
+    title: "Evento 4",
+    color: "Descrição do Evento 4",
     aosDelay: "600", // Atraso para a animação AOS
+    galleryImages: [img16, img17, img18, img19, img20],
   },
   {
-    id: 5,
-    img: Img2,
-    title: "Fashin T-Shirt",
-    rating: 4.5,
-    color: "Pink",
-    aosDelay: "800", // Atraso para a animação AOS
+    id: 4,
+    img: img21,
+    title: "Evento 5",
+    color: "Descrição do Evento 5",
+    aosDelay: "600", // Atraso para a animação AOS
+    galleryImages: [img21, img22, img23, img24, img25],
   },
 ];
 
 const Products = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState(null);
+
+  const handleEventClick = (id) => {
+    setSelectedEvent(id);
+    setShowModal(true);
+  };
+
   return (
     <div id="#" className="mt-14 mb-12">
       <div className="container">
@@ -71,10 +101,9 @@ const Products = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
             {/* Seção dos cards de produtos */}
             {ProductsData.map((data) => (
-              <div
-                data-aos="fade-up" // Animação AOS
-                data-aos-delay={data.aosDelay} // Atraso para a animação AOS
+              <button
                 key={data.id}
+                onClick={() => handleEventClick(data.id)}
                 className="space-y-3"
               >
                 {/* Imagem do produto */}
@@ -90,21 +119,33 @@ const Products = () => {
                   <p className="text-sm text-gray-600">{data.color}</p>
                   {/* Rating do produto */}
                   <div className="flex items-center gap-1">
-                    <FaStar className="text-yellow-400" />
-                    <span>{data.rating}</span>
                   </div>
                 </div>
-              </div>
+              </button>
             ))}
-          </div>
-          {/* Botão de visualizar todos os produtos */}
-          <div className="flex justify-center">
-            <button className="text-center mt-10 cursor-pointer bg-primary text-white py-1 px-5 rounded-md">
-              View All Button
-            </button>
           </div>
         </div>
       </div>
+      {showModal && selectedEvent !== null && (
+        <div className="fixed top-0 left-0 z-50 w-screen h-screen flex items-center justify-center bg-black bg-opacity-75">
+          <div className="relative max-w-3/4 max-h-3/4">
+            <ImageGallery
+              items={ProductsData[selectedEvent - 1].galleryImages.map((img) => ({
+                original: img,
+                thumbnail: img,
+              }))}
+              showPlayButton={false}
+              showFullscreenButton={false}
+            />
+            <button
+              onClick={() => setShowModal(false)}
+              className="absolute top-0 right-0 m-4 p-2 bg-white text-black rounded-full"
+            >
+              Fechar
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
