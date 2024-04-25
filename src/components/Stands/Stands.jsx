@@ -26,7 +26,7 @@ const StandsData = [
   {
     id: 3,
     img: Img3,
-    title: "Goggles",
+    title: "Daniele",
     rating: 4.7,
     color: "brown",
     aosDelay: "400", // Atraso para a animação AOS
@@ -97,12 +97,7 @@ const Stands = () => {
               </div>
             ))}
           </div>
-          {/* Botão de visualizar todos os produtos */}
-          <div className="flex justify-center">
-            <button className="text-center mt-10 cursor-pointer bg-primary text-white py-1 px-5 rounded-md">
-              View All Button
-            </button>
-          </div>
+         
         </div>
       </div>
     </div>

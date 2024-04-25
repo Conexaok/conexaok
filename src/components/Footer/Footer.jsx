@@ -1,122 +1,149 @@
 import React from "react";
-import footerLogo from "../../assets/logo.png";
-import Banner from "../../assets/website/footer-pattern.jpg";
 import {
   FaWhatsapp,
   FaFacebook,
   FaInstagram,
   FaLinkedin,
-  FaLocationArrow,
   FaMobileAlt,
+  FaMapMarkerAlt, // Importando o ícone de localização
 } from "react-icons/fa";
+import footerLogo from "../../assets/website/logo.png";
+
+const ServiceOptions = [
+  {
+    title: "Serviços da Empresa",
+  },
+  {
+    title: "Serviço de Gráfica",
+  },
+  {
+    title: "Confecções de Brindes",
+  },
+  {
+    title: "Mão de Obra Especializada",
+  },
+  {
+    title: "Áudio e Vídeo",
+  },
+];
+
+const FooterLinks = [
+  {
+    title: "Início",
+    link: "/#",
+  },
+  {
+    title: "Sobre",
+    link: "/#Sobre",
+  },
+  {
+    title: "Stands",
+    link: "/#Stands",
+  },
+  {
+    title: "Gráfica",
+    link: "/#Grafica",
+  },
+  {
+    title: "Locações",
+    link: "/#blog",
+  },
+];
 
 const Footer = () => {
-  const BannerImg = {
-    backgroundImage: `url(${Banner})`,
-    backgroundPosition: "bottom",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    height: "auto",
-    width: "100%",
-  };
-
-  const FooterLinks = [
-    {
-      title: "Inicio",
-      link: "/#",
-    },
-    {
-      title: "Sobre",
-      link: "/#about",
-    },
-    {
-      title: "Stand",
-      link: "/#contact",
-    },
-    {
-      title: "Brindes",
-      link: "/#blog",
-    },
-    {
-      title: "Gráfica",
-      link: "/#blog",
-    },
-    {
-      title: "Contato",
-      link: "/#blog",
-    },
-  ];
-
   return (
-    <div style={BannerImg} className="text-white">
-      <div className="container pb-16 flex justify-end">
-        <div data-aos="zoom-in" className="grid md:grid-cols-3 pb8 pt-5">
-          {/* company details */}
-          <div className="py-10 px-8 text-center">
-            <h1 className="sm:text-3xl text-xl font-bold mb-3 flex items-center justify-center gap-4">
-              <img src={footerLogo} alt="" className="max-w-[60px]" />
-              Conexão <strong>K</strong>
+    <div className="bg-green-200 dark:bg-gray-950">
+      <section className="container">
+        <div className="grid md:grid-cols-3 py-5">
+          {/* Detalhes da empresa */}
+          <div className="py-8 px-4">
+            {/* Logo e nome da empresa */}
+            <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
+              <img src={footerLogo} alt="Logo" className="max-w-[50px]" />
+              Conexão K
             </h1>
-            <p className="text-lg">
-              Conectando ideias, marcas e pessoas!
-            </p>
+            <p className="">Conectando ideias, marcas e pessoas!</p>
+            <br />
+            {/* Informações de contato */}
+            <div className="flex items-center gap-3">
+              <FaMobileAlt />
+              <p>+55 81 9.9504-2474</p>
+            </div>
+            {/* Endereço */}
+            <div className="flex items-center gap-3 mt-6">
+              <FaMapMarkerAlt />
+              <p>Rua Arthur Heleno de Souza, 111</p>
+            </div>
+            {/* Redes sociais */}
+            <div className="flex items-center gap-3 mt-6">
+              <a
+                href="https://www.instagram.com/conexaokeventos/"
+                target="_blank"
+              >
+                <FaInstagram className="text-3xl hover:text-blue-500" />
+              </a>
+              <a
+                href="https://www.facebook.com/Conexaokshows"
+                target="_blank"
+              >
+                <FaFacebook className="text-3xl hover:text-blue-500" />
+              </a>
+              <a href="https://www.linkedin.com/in/conexaok/" target="_blank">
+                <FaLinkedin className="text-3xl hover:text-blue-500" />
+              </a>
+              <a
+                href="https://api.whatsapp.com/send?phone=558195042474"
+                target="_blank"
+              >
+                <FaWhatsapp className="text-3xl hover:text-blue-500" />
+              </a>
+            </div>
           </div>
-
-          {/* Footer Links */}
-          {/*no primeiro classname é onde mudamos o padrao do grid e separamos o footer*/}
-          <div className="grid grid-cols-4 sm:grid-cols-1 col-span-2 md:pl-10 justify-end">
-          <div className="self-end col-span-full sm:col-span-3 md:col-span-2 flex justify-end">
-
-            <div>
-              <div className="py-5 px-5 text-center">
-                <h1 className="sm:text-xl text-lg font-bold mb-2">
-                  Links 
-                </h1>
-                <ul className="flex flex-col gap-3">
-                  {FooterLinks.map((link) => (
-                    <li
-                      className="cursor-pointer hover:text-blue-500 hover:underline duration-300 text-white text-center"
-                      key={link.title}
-                    >
-                      <span>{link.title}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* social links */}
-
-            <div>
-              <div className="flex items-center gap-3 mt-6 justify-center">
-                <a href="https://www.instagram.com/conexaokeventos/" target="blank">
-                  <FaInstagram className="text-3xl hover:text-blue-500" />
-                </a>
-                <a href="https://www.facebook.com/Conexaokshows" target="_blank">
-                  <FaFacebook className="text-3xl hover:text-blue-500" />
-                </a>
-                <a href="https://www.linkedin.com/in/conexaok/" target="_blank">
-                  <FaLinkedin className="text-3xl hover:text-blue-500" />
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=558195042474" target="_blank">
-                  <FaWhatsapp className="text-3xl hover:text-blue-500" />
-                </a>
-              </div>
-              <div className="mt-6 text-center">
-                <div className="flex items-center gap-3 justify-center">
-                  <FaLocationArrow className="hover:text-blue-500" />
-                  <p>Rua Arthur Heleno de Souza, 111</p>
-                </div>
-                <div className="flex items-center gap-3 mt-3 justify-center">
-                  <FaMobileAlt className="hover:text-blue-500" />
-                  <p>+55 81 9.9504-2474</p>
-                </div>
-              </div>
-            </div>
+          {/* Opções de serviços */}
+          <div className="py-8 px-4">
+            <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
+              Opções de Serviços
+            </h1>
+            <ul className={`flex flex-col gap-3`}>
+              {ServiceOptions.map((option, index) => (
+                <li
+                  key={index}
+                  className="cursor-pointer text-gray-500"
+                  onClick={() => console.log(`Opção selecionada: ${option.title}`)}
+                >
+                  <span>&#11162;</span>
+                  <span>{option.title}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Links */}
+          <div className="py-8 px-4 flex flex-col justify-center items-center md:items-start">
+            <h1 className="sm:text-xl text-xl font-bold sm:text-left text-center justify-center mb-3">
+              Links
+            </h1>
+            <ul className="flex flex-col gap-3">
+              {FooterLinks.map((link, index) => (
+                <li
+                  key={index}
+                  className="cursor-pointer text-gray-500"
+                  onClick={() => window.location.href = link.link}
+                >
+                  <span>&#11162;</span>
+                  <span>{link.title}</span>
+                </li>
+              ))}
+            </ul>
+            
+           
           </div>
         </div>
-      </div>
-    </div>
+        <div>
+          <div className="text-center py-10 border-t-2 border-gray-300/50">
+            @copyright 2024
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

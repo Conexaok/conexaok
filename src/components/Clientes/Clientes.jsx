@@ -58,7 +58,7 @@ const Clientes = ({ isDarkMode }) => {
       <div className="container">
         <div className="grid grid-cols-1 gap-6 items-center text-center">
           {/* Título */}
-          <h1 className={`text-3xl sm:text-4xl font-bold ${isDarkMode ? 'text-white' : 'text-black'} shadow-md mb-4`}>
+          <h1 className={"bg-gray-100 dark:bg-gray-950 text-3xl font-bold p-1"}>
             Clientes
           </h1>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 justify-items-center">
