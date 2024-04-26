@@ -85,16 +85,11 @@ const Products = () => {
       <div className="container">
         {/* Seção de cabeçalho */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
-          <p data-aos="fade-up" className="text-sm text-primary">
-            Top Selling Products for you
-          </p>
-          <h1 data-aos="fade-up" className="text-3xl font-bold">
+          
+          <h1 data-aos="fade-up" className="text-3xl font-bold shadow-md">
             Eventos Realizados
           </h1>
-          <p data-aos="fade-up" className="text-xs text-gray-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-            asperiores modi Sit asperiores modi
-          </p>
+        
         </div>
         {/* Seção do corpo */}
         <div>

@@ -42,16 +42,11 @@ const TopProducts = ({ handleOrderPopup }) => {
     <div className="container flex flex-col items-center justify-center">
       {/* Seção de cabeçalho */}
       <div className="text-center mb-24">
-        <p data-aos="fade-up" className="text-sm text-primary">
-          Top Rated Products for you
-        </p>
-        <h1 data-aos="fade-up" className="text-3xl font-bold">
+        
+        <h1 data-aos="fade-up" className="text-3xl font-bold shadow-md">
           Locações de Móveis e Estruturas Para Eventos
         </h1>
-        <p data-aos="fade-up" className="text-xs text-gray-400">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-          asperiores modi Sit asperiores modi
-        </p>
+       
       </div>
       {/* Seção do corpo */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-20 md:gap-5 place-items-center">

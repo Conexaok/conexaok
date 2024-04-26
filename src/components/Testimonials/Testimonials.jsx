@@ -75,13 +75,10 @@ const Testimonials = () => {
       <div className="container">
         {/* Seção de cabeçalho */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
-          <h1 data-aos="fade-up" className="text-3xl font-bold">
+          <h1 data-aos="fade-up" className="text-3xl font-bold shadow-md">
             Sobre
           </h1>
-          <p data-aos="fade-up" className="text-xs text-gray-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-            asperiores modi Sit asperiores modi
-          </p>
+         
         </div>
 
         {/* Cartões de depoimento */}
@@ -93,7 +90,7 @@ const Testimonials = () => {
               <div className="my-6">
                 <div
                   key={data.id}
-                  className="flex flex-col gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl dark:bg-gray-800 bg-primary/10 relative"
+                  className="flex flex-col gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl dark:bg-gray-800 bg-primary/40 relative"
                 >
                   <div className="mb-4">
                     {/* Renderiza a imagem do depoimento */}

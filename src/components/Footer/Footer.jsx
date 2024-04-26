@@ -5,7 +5,7 @@ import {
   FaInstagram,
   FaLinkedin,
   FaMobileAlt,
-  FaMapMarkerAlt, // Importando o ícone de localização
+  FaMapMarkerAlt,
 } from "react-icons/fa";
 import footerLogo from "../../assets/website/logo.png";
 
@@ -55,26 +55,21 @@ const Footer = () => {
     <div className="bg-green-200 dark:bg-gray-950">
       <section className="container">
         <div className="grid md:grid-cols-3 py-5">
-          {/* Detalhes da empresa */}
           <div className="py-8 px-4">
-            {/* Logo e nome da empresa */}
             <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
               <img src={footerLogo} alt="Logo" className="max-w-[50px]" />
               Conexão K
             </h1>
             <p className="">Conectando ideias, marcas e pessoas!</p>
             <br />
-            {/* Informações de contato */}
             <div className="flex items-center gap-3">
               <FaMobileAlt />
               <p>+55 81 9.9504-2474</p>
             </div>
-            {/* Endereço */}
             <div className="flex items-center gap-3 mt-6">
               <FaMapMarkerAlt />
               <p>Rua Arthur Heleno de Souza, 111</p>
             </div>
-            {/* Redes sociais */}
             <div className="flex items-center gap-3 mt-6">
               <a
                 href="https://www.instagram.com/conexaokeventos/"
@@ -99,17 +94,15 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          {/* Opções de serviços */}
-          <div className="py-8 px-4">
-            <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
+          <div className="py-8 px-4 flex flex-col justify-center items-center md:items-start">
+            <h1 className="sm:text-xl text-xl font-bold sm:text-end text-justify mb-3">
               Opções de Serviços
             </h1>
             <ul className={`flex flex-col gap-3`}>
               {ServiceOptions.map((option, index) => (
                 <li
                   key={index}
-                  className="cursor-pointer text-gray-500"
-                  onClick={() => console.log(`Opção selecionada: ${option.title}`)}
+                  className="text-gray-500 text-left"
                 >
                   <span>&#11162;</span>
                   <span>{option.title}</span>
@@ -117,16 +110,15 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          {/* Links */}
           <div className="py-8 px-4 flex flex-col justify-center items-center md:items-start">
-            <h1 className="sm:text-xl text-xl font-bold sm:text-left text-center justify-center mb-3">
+            <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
               Links
             </h1>
             <ul className="flex flex-col gap-3">
               {FooterLinks.map((link, index) => (
                 <li
                   key={index}
-                  className="cursor-pointer text-gray-500"
+                  className="cursor-pointer text-gray-500 text-left transition-colors duration-300 hover:text-green-700"
                   onClick={() => window.location.href = link.link}
                 >
                   <span>&#11162;</span>
@@ -134,8 +126,6 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            
-           
           </div>
         </div>
         <div>
