@@ -13,7 +13,11 @@ import Popup from "./components/Popup/Popup";
 import Grafica from "./components/Grafica/grafica";
 import Brindes from "./components/Brindes/Brindes";
 import Stands from "./components/Stands/Stands";
+<<<<<<< HEAD
 import Contato from "./components/Contato/Contato";
+=======
+{/* import Gallery from "./components/Gallery"; */}
+>>>>>>> 1ffdda09dfcdc118a384983394e0507d5aea19a0
 
 
 const App = () => {
@@ -38,7 +42,7 @@ const App = () => {
       <Hero handleOrderPopup={handleOrderPopup} />
       <Products />
       <TopProducts handleOrderPopup={handleOrderPopup} />
-      <Stands/>
+     {/* <Gallery />*/ }
       <Subscribe />
       <Grafica/>
       <Brindes/>
@@ -46,7 +50,7 @@ const App = () => {
       <Clientes />
       <Contato/>
       <Footer />
-      <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
+     
       
     </div>
   );
