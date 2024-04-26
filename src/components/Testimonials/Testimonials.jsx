@@ -117,6 +117,7 @@ const Testimonials = () => {
                   <p className="text-black/20 text-9xl font-serif absolute top-0 right-0">
                     ,,
                   </p>
+
                 </div>
               </div>
             ))}

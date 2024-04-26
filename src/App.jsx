@@ -13,6 +13,7 @@ import Popup from "./components/Popup/Popup";
 import Grafica from "./components/Grafica/grafica";
 import Brindes from "./components/Brindes/Brindes";
 import Stands from "./components/Stands/Stands";
+{/* import Gallery from "./components/Gallery"; */}
 
 
 const App = () => {
@@ -37,14 +38,14 @@ const App = () => {
       <Hero handleOrderPopup={handleOrderPopup} />
       <Products />
       <TopProducts handleOrderPopup={handleOrderPopup} />
-      <Stands/>
+     {/* <Gallery />*/ }
       <Subscribe />
       <Grafica/>
       <Brindes/>
       <Testimonials />
       <Clientes />
       <Footer />
-      <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
+     
       
     </div>
   );

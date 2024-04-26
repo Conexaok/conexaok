@@ -37,7 +37,7 @@ const ProductsData = [
 ];
 
 // Componente TopProducts
-const TopProducts = ({ handleOrderPopup }) => {
+const TopProducts = ({ galerry }) => {
   return (
     <div className="container flex flex-col items-center justify-center">
       {/* Seção de cabeçalho */}
@@ -79,7 +79,7 @@ const TopProducts = ({ handleOrderPopup }) => {
               </p>
               <button
                 className="bg-primary hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
-                onClick={handleOrderPopup} // Adiciona o manipulador de clique
+                onClick={galerry} // Adiciona o manipulador de clique
               >
                 Clique Aqui
               </button>

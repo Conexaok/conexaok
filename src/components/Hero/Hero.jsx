@@ -1,9 +1,10 @@
 import React from "react";
+import Slider from "react-slick";
+
 import Image1 from "../../assets/hero/conexaok2.png";
 import Image2 from "../../assets/hero/conexaok1.png";
 import Image3 from "../../assets/hero/conexaok3.png";
 import Image4 from "../../assets/hero/conexaok4.png";
-import Slider from "react-slick";
 
 // Lista de imagens e informações para exibição no slider
 const ImageList = [
@@ -38,16 +39,18 @@ const ImageList = [
 ];
 
 const Hero = ({ handleOrderPopup }) => {
-  // Número de telefone completo com código do país e DDD
-  const phoneNumber = '558195042474';
-  // URL do link do WhatsApp com o número de telefone
-  const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
-
-  // Abrir uma nova janela do navegador com o link do WhatsApp
-  window.open(whatsappLink, '_blank');
+  // Função para abrir o WhatsApp
+  const openWhatsApp = () => {
+    // Número de telefone completo com código do país e DDD
+    const phoneNumber = '558195042474';
+    // URL do link do WhatsApp com o número de telefone
+    const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
+    // Abrir uma nova janela do navegador com o link do WhatsApp
+    window.open(whatsappLink, '_blank');
+  };
 
   // Configurações do slider
-  var settings = {
+  const settings = {
     dots: false,
     arrows: false,
     infinite: true,
@@ -69,7 +72,7 @@ const Hero = ({ handleOrderPopup }) => {
         {/* Slider */}
         <Slider {...settings}>
           {ImageList.map((data) => (
-            <div>
+            <div key={data.id}>
               <div className="grid grid-cols-1 sm:grid-cols-2">
                 {/* Seção de conteúdo de texto */}
                 <div className="flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
@@ -96,7 +99,7 @@ const Hero = ({ handleOrderPopup }) => {
                   >
                     {/* Botão para solicitar orçamento */}
                     <button
-                      onClick={handleOrderPopup}
+                      onClick={openWhatsApp}
                       className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
                     >
                       Solicite seu orçamento
