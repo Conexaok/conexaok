@@ -9,16 +9,11 @@ import Clientes from "./components/Clientes/Clientes";
 import Subscribe from "./components/Subscribe/Subscribe";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
-import Popup from "./components/Popup/Popup";
+/*import Popup from "./components/Popup/Popup";*/
 import Grafica from "./components/Grafica/grafica";
 import Brindes from "./components/Brindes/Brindes";
 import Stands from "./components/Stands/Stands";
-<<<<<<< HEAD
 import Contato from "./components/Contato/Contato";
-=======
-{/* import Gallery from "./components/Gallery"; */}
->>>>>>> 1ffdda09dfcdc118a384983394e0507d5aea19a0
-
 
 const App = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
@@ -42,16 +37,14 @@ const App = () => {
       <Hero handleOrderPopup={handleOrderPopup} />
       <Products />
       <TopProducts handleOrderPopup={handleOrderPopup} />
-     {/* <Gallery />*/ }
       <Subscribe />
       <Grafica/>
       <Brindes/>
+      <Stands/>
       <Testimonials />
       <Clientes />
       <Contato/>
       <Footer />
-     
-      
     </div>
   );
 };
