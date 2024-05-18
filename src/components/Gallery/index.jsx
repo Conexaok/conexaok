@@ -43,6 +43,7 @@ function Gallery({gallery}) {
                 <li>img3</li>
                 <li>img4</li>
                 <li>img5</li>
+                
                 </ul>
 
                 <ul className="
@@ -56,6 +57,7 @@ function Gallery({gallery}) {
                 <li>img4</li>
                 <li>img5</li>
                 </ul>
+            
             
 
         </div>
