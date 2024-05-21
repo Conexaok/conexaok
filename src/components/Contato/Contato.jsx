@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; // Importa o React e a função useState do pacote 'react'
 import img from "../../assets/website/contato.jpg"; // Importa a imagem de um caminho relativo
-import emailjs from 'emailjs-com'; // Importa o módulo 'emailjs-com' para envio de emails
+import emailjs from '@emailjs/browser'; // Importa o módulo 'emailjs-com' para envio de emails
 
 // Declaração do componente Contato como uma função arrow
 const Contato = () => {
