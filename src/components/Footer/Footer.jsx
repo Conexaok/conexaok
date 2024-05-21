@@ -57,8 +57,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 py-5">
           <div className="py-8 px-4">
             <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
-              <img src={footerLogo} alt="Logo" className="max-w-[50px]" />
-              Conexão K
+              <img src={footerLogo} alt="Logo" className="w-40" />
+              
             </h1>
             <p className="">Conectando ideias, marcas e pessoas!</p>
             <br />

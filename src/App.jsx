@@ -15,6 +15,7 @@ import Brindes from "./components/Brindes/Brindes";
 import Stands from "./components/Stands/Stands";
 import Contato from "./components/Contato/Contato";
 
+
 const App = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
 
@@ -45,6 +46,8 @@ const App = () => {
       <Clientes />
       <Contato/>
       <Footer />
+     
+      
     </div>
   );
 };
