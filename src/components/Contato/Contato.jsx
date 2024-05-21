@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; // Importa o React e a função useState do pacote 'react'
 import img from "../../assets/website/contato.jpg"; // Importa a imagem de um caminho relativo
-import emailjs from '@emailjs/browser'; // Importa o módulo 'emailjs-com' para envio de emails
+import emailjs from '@emailjs/browser'; // Importa o módulo '@emailjs/browser' para envio de emails
 
 // Declaração do componente Contato como uma função arrow
 const Contato = () => {
@@ -21,7 +21,7 @@ const Contato = () => {
     };
 
     // Função do emailjs para enviar o email
-    emailjs.send("service_2kj1xbo", "template_c4tug4d", templateParams, "wIAkKOOOeivlixQda")
+    emailjs.send("service_hoezbmj", "template_c4tug4d", templateParams, "wIAkKOOOeivlixQda")
       .then((response) => { // Callback para o caso de sucesso
         console.log("EMAIL ENVIADO", response.status, response.text); // Loga o sucesso do envio
         // Limpa os campos de entrada após o envio bem-sucedido

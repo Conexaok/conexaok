@@ -56,6 +56,8 @@ const Footer = () => {
       <section className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-5">
           <div className="py-8 px-4">
+
+            
             <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-center mb-3 flex items-center justify-center md:justify-start gap-3">
               <img src={footerLogo} alt="Logo" className="max-w-[50px]" />
               Conexão K
