@@ -7,8 +7,6 @@ export default {
       colors: {
         primary: "#76c893",
         secondary: "#168AAD",
-        
-        
       },
       container: {
         center: true,
@@ -16,6 +14,9 @@ export default {
           DEFAULT: "2rem",
           sm: "5rem",
         },
+      },
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif']
       },
     },
   },

@@ -34,7 +34,7 @@ const ProductsData = [
     img: img1,
     title: "Evento 1",
     color: "Descrição do Evento 1",
-    aosDelay: "0", // Atraso para a animação AOS
+    aosDelay: "200", // Atraso para a animação AOS
     galleryImages: [img1, img2, img3, img4, img5],
   },
   {
@@ -82,6 +82,7 @@ const Products = () => {
 
   return (
     <div id="#" className="mt-14 mb-12">
+      
       <div className="container">
         {/* Seção de cabeçalho */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
@@ -134,9 +135,13 @@ const Products = () => {
             />
             <button
               onClick={() => setShowModal(false)}
-              className="absolute top-0 right-0 m-4 p-2 bg-white text-black rounded-full"
+              type="button"
+              className="absolute top-0 right-0 m-4 p-2 text-white rounded-sm inline-flex items-center justify-center hover:text-blue-500 hover:bg-gray focus:outline-none bg-transparent"
             >
-              Fechar
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
           </div>
         </div>

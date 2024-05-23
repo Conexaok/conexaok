@@ -1,4 +1,5 @@
 import React from "react";
+import MapPage from "../MapPage/MapPage";
 import {
   FaWhatsapp,
   FaFacebook,
@@ -8,6 +9,7 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import footerLogo from "../../assets/website/logo.png";
+
 
 const ServiceOptions = [
   {
@@ -132,6 +134,7 @@ const Footer = () => {
           <div className="text-center py-10 border-t-2 border-gray-300/50">
             @copyright 2024
           </div>
+        <div></div>  
         </div>
       </section>
     </div>

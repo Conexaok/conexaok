@@ -5,6 +5,7 @@ import Image1 from "../../assets/hero/conexaok2.png";
 import Image2 from "../../assets/hero/conexaok1.png";
 import Image3 from "../../assets/hero/conexaok3.png";
 import Image4 from "../../assets/hero/conexaok4.png";
+//
 
 // Lista de imagens e informações para exibição no slider
 const ImageList = [
@@ -13,20 +14,23 @@ const ImageList = [
     img: Image1,
     title: "Faça já Seu Orçamento Com a Melhor Produtora Do Mercado",
     description:
+    //Adicionar fonte
       "Transforme seu evento em uma experiência inesquecível com nosso aluguel de som, luz cênica e estrutura e muito mais Entre em contato e garanta a atmosfera perfeita para sua comemoração.",
   },
   {
     id: 2,
     img: Image4,
-    title: "Temos Tudo Que Você Precisa Para Seu Evento",
+    title: "Sobre Nós",
     description:
-      "lorem His Life will forever be Changed dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    //Adicionar fonte
+      "Uma agência completa com todos os serviços e estruturas que você e sua marca precisa. Moderna e estratégica, a Conexão K desenvolve soluções estratégicas de acordo com a necessidade de cada cliente.",
   },
   {
     id: 3,
     img: Image2,
     title: "Venha Para Conexão K",
     description:
+    //Adicionar fonte
       "Entre Em Contato Conosco e Solicite Já Seu Orçamento, Os Melhores Preços Do Mercado Você Encontra Aqui!",
   },
   {
@@ -34,6 +38,7 @@ const ImageList = [
     img: Image3,
     title: "Não Perca Tempo e Corre, Que Temos Ótima Oportunidade Para Você",
     description:
+    //Adicionar fonte
       "Conexão K, conectando marcas, ideias e pessoas! 🚀",
   },
 ];
