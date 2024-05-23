@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; // Importa o React e a função useState do pacote 'react'
 import img from "../../assets/website/contato.jpg"; // Importa a imagem de um caminho relativo
-import emailjs from '@emailjs/browser'; // Importa o módulo 'emailjs-com' para envio de emails
+import emailjs from '@emailjs/browser'; // Importa o módulo '@emailjs/browser' para envio de emails
 
 // Declaração do componente Contato como uma função arrow
 const Contato = () => {
@@ -21,7 +21,7 @@ const Contato = () => {
     };
 
     // Função do emailjs para enviar o email
-    emailjs.send("service_2kj1xbo", "template_c4tug4d", templateParams, "wIAkKOOOeivlixQda")
+    emailjs.send("service_hoezbmj", "template_c4tug4d", templateParams, "wIAkKOOOeivlixQda")
       .then((response) => { // Callback para o caso de sucesso
         console.log("EMAIL ENVIADO", response.status, response.text); // Loga o sucesso do envio
         // Limpa os campos de entrada após o envio bem-sucedido
@@ -48,7 +48,7 @@ const Contato = () => {
           <form className="space-y-4" onSubmit={sendEmail}> {/* Formulário de contato */}
             {/* Campo para o nome */}
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                 Seu Nome
               </label>
               <input
@@ -59,12 +59,12 @@ const Contato = () => {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
               />
             </div>
             {/* Campo para o email */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                 Seu Email
               </label>
               <input
@@ -75,12 +75,12 @@ const Contato = () => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
               />
             </div>
             {/* Campo para a mensagem */}
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                 Mensagem
               </label>
               <textarea
@@ -90,14 +90,14 @@ const Contato = () => {
                 required
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
               ></textarea>
             </div>
             {/* Botão de envio */}
             <div>
               <button
                 type="submit"
-                className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-500 hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-200 focus:ring-offset-2 focus:ring-offset-gray-50"
+                className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-200 focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-gray-900"
               >
                 Enviar
               </button>
