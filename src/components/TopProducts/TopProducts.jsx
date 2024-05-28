@@ -3,6 +3,7 @@ import Img1 from "../../assets/shirt/shirt.png"; // Importa a imagem 1
 import Img2 from "../../assets/shirt/shirt2.png"; // Importa a imagem 2
 import Img3 from "../../assets/shirt/shirt3.png"; // Importa a imagem 3
 import Img4 from "../../assets/shirt/shirt4.png"; // Importa a imagem 4
+import { Link } from "react-router-dom";
 
 // Array de dados dos produtos
 const ProductsData = [
@@ -10,43 +11,37 @@ const ProductsData = [
     id: 1,
     img: Img1,
     title: "Galpôes",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    link: "/brinds"
   },
   {
     id: 2,
     img: Img2,
     title: "Montagens de Stands",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
     id: 3,
     img: Img3,
     title: "Movéis em Geral",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
     id: 4,
     img: Img4,
     title: "Eletrônicos",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
+    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  }
 ];
 
 // Componente TopProducts
-const TopProducts = ({ galerry }) => {
+const TopProducts = () => {
   return (
     <div className="container flex flex-col items-center justify-center">
       {/* Seção de cabeçalho */}
       <div className="text-center mb-24">
-        
         <h1 data-aos="fade-up" className="text-3xl font-bold shadow-md">
           Locações de Móveis e Estruturas Para Eventos
         </h1>
-       
       </div>
       {/* Seção do corpo */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-20 md:gap-5 place-items-center">
@@ -72,12 +67,17 @@ const TopProducts = ({ galerry }) => {
               <p className="text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-2">
                 {data.description}
               </p>
-              <button
-                className="bg-primary hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
-                onClick={galerry} // Adiciona o manipulador de clique
-              >
-                Clique Aqui
-              </button>
+              {data.link ? (
+                <Link to={data.link}>
+                  <button className="bg-primary hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary">
+                    Clique Aqui
+                  </button>
+                </Link>
+              ) : (
+                <button className="bg-primary hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary">
+                  Clique Aqui
+                </button>
+              )}
             </div>
           </div>
         ))}

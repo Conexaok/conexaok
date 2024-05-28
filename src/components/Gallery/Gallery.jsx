@@ -1,7 +1,7 @@
 // FeaturedImageGallery.js
 import React from "react";
 
-export function FeaturedImageGallery() {
+export function Gallery() {
   const data = [
     {
       imgelink:
