@@ -18,6 +18,7 @@ import Galerry from "./components/Gallery/index";
 import MapPage from "./components/MapPage/MapPage";
 
 
+
 const App = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
 
@@ -36,8 +37,8 @@ const App = () => {
 
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
-      <Navbar handleOrderPopup={handleOrderPopup} />
       <Hero handleOrderPopup={handleOrderPopup} />
+      <Navbar handleOrderPopup={handleOrderPopup} />
       <Products />
       <TopProducts handleOrderPopup={handleOrderPopup} />
       <Subscribe />
@@ -49,10 +50,6 @@ const App = () => {
       <Contato/>
       <MapPage />
       <Footer />
-
-
-      
-     
     </div>
   );
 };

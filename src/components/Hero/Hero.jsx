@@ -4,43 +4,17 @@ import Slider from "react-slick";
 import Image1 from "../../assets/hero/conexaok2.png";
 import Image2 from "../../assets/hero/conexaok1.png";
 import Image3 from "../../assets/hero/conexaok3.png";
-import Image4 from "../../assets/hero/conexaok4.png";
+import Image4 from "../../assets/hero/conexaok4.jpg";
+import Image5 from "../../assets/hero/conexao.jpg";
 //
 
 // Lista de imagens e informações para exibição no slider
 const ImageList = [
-  {
-    id: 1,
-    img: Image1,
-    title: "Faça já Seu Orçamento Com a Melhor Produtora Do Mercado",
-    description:
-    //Adicionar fonte
-      "Transforme seu evento em uma experiência inesquecível com nosso aluguel de som, luz cênica e estrutura e muito mais Entre em contato e garanta a atmosfera perfeita para sua comemoração.",
-  },
-  {
-    id: 2,
-    img: Image4,
-    title: "Sobre Nós",
-    description:
-    //Adicionar fonte
-      "Uma agência completa com todos os serviços e estruturas que você e sua marca precisa. Moderna e estratégica, a Conexão K desenvolve soluções estratégicas de acordo com a necessidade de cada cliente.",
-  },
-  {
-    id: 3,
-    img: Image2,
-    title: "Venha Para Conexão K",
-    description:
-    //Adicionar fonte
-      "Entre Em Contato Conosco e Solicite Já Seu Orçamento, Os Melhores Preços Do Mercado Você Encontra Aqui!",
-  },
-  {
-    id: 4,
-    img: Image3,
-    title: "Não Perca Tempo e Corre, Que Temos Ótima Oportunidade Para Você",
-    description:
-    //Adicionar fonte
-      "Conexão K, conectando marcas, ideias e pessoas! 🚀",
-  },
+  { id: 1, img: Image1 },
+  { id: 3, img: Image2 },
+  { id: 5, img: Image5 },
+  { id: 4, img: Image3 },
+  { id: 2, img: Image4 },
 ];
 
 const Hero = ({ handleOrderPopup }) => {
@@ -56,8 +30,8 @@ const Hero = ({ handleOrderPopup }) => {
 
   // Configurações do slider
   const settings = {
-    dots: false,
-    arrows: false,
+    dots: true,
+    arrows: true,
     infinite: true,
     speed: 1200,
     slidesToScroll: 1,
@@ -66,6 +40,9 @@ const Hero = ({ handleOrderPopup }) => {
     cssEase: "ease-in-out",
     pauseOnHover: false,
     pauseOnFocus: true,
+    appendDots: dots => (
+      <ul className="m-0 p-0"> {dots} </ul>
+    ),
   };
 
   return (
@@ -80,53 +57,31 @@ const Hero = ({ handleOrderPopup }) => {
             <div key={data.id}>
               <div className="grid grid-cols-1 sm:grid-cols-2">
                 {/* Seção de conteúdo de texto */}
-                <div className="flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
-                  <h1
-                    data-aos="zoom-out"
-                    data-aos-duration="500"
-                    data-aos-once="true"
-                    className="text-5xl sm:text-6xl lg:text-7xl font-bold"
-                  >
-                    {data.title}
-                  </h1>
-                  <p
-                    data-aos="fade-up"
-                    data-aos-duration="500"
-                    data-aos-delay="100"
-                    className="text-sm"
-                  >
-                    {data.description}
-                  </p>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-duration="500"
-                    data-aos-delay="300"
-                  >
-                    {/* Botão para solicitar orçamento */}
-                    <button
-                      onClick={openWhatsApp}
-                      className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
-                    >
-                      Solicite seu orçamento
-                    </button>
-                  </div>
+                
                 </div>
                 {/* Seção de imagem */}
-                <div className="order-1 sm:order-2">
+                <div className="order-1 sm:order-1  ">
                   <div
                     data-aos="zoom-in"
                     data-aos-once="true"
-                    className="relative z-10"
+                    className="relative z-1 "
                   >
                     <img
                       src={data.img}
                       alt=""
-                      className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto"
+                      className="w-[300px] h-[300px] sm:h-[450px] sm:w-[1150px] sm:scale-auto lg:scale-auto  rounded"
                     />
+                  {data.id === 3 && (
+                    <button
+                      onClick={openWhatsApp}
+                      className="absolute bottom-10 w-60 right-80 m-12 p-12 rounded-md text-black text-center font-bold shadow-lg border-2 border-white bg-transparent"
+                    >
+                    </button>
+                  )}
                   </div>
                 </div>
               </div>
-            </div>
+            
           ))}
         </Slider>
       </div>

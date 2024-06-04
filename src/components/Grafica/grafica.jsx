@@ -10,43 +10,28 @@ const GraficaData = [
   {
     id: 1,
     img: Img1,
-    title: "Women Ethnic",
-    rating: 5.0,
-    color: "white",
-    aosDelay: "0", // Atraso para a animação AOS
+    title: "Gráfica",
   },
   {
     id: 2,
     img: Img2,
-    title: "Women western",
-    rating: 4.5,
-    color: "Red",
-    aosDelay: "200", // Atraso para a animação AOS
+    title: "Gráfica",
   },
   {
     id: 3,
     img: Img3,
-    title: "Goggles",
-    rating: 4.7,
-    color: "brown",
-    aosDelay: "400", // Atraso para a animação AOS
+    title: "Gráfica",
   },
   {
     id: 4,
     img: Img4,
-    title: "Printed T-Shirt",
-    rating: 4.4,
-    color: "Yellow",
-    aosDelay: "600", // Atraso para a animação AOS
+    title: "Gráfica",
   },
   {
     id: 5,
     img: Img2,
-    title: "Fashin T-Shirt",
-    rating: 4.5,
-    color: "Pink",
-    aosDelay: "800", // Atraso para a animação AOS
-  },
+    title: "Gráfica",
+  }
 ];
 
 const Grafica = () => {

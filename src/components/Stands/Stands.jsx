@@ -10,7 +10,7 @@ const StandsData = [
   {
     id: 1,
     img: Img1,
-    title: "Women Ethnic",
+    title: "Stands",
     rating: 5.0,
     color: "white",
     aosDelay: "0", // Atraso para a animação AOS
@@ -18,7 +18,7 @@ const StandsData = [
   {
     id: 2,
     img: Img2,
-    title: "Women western",
+    title: "Stands",
     rating: 4.5,
     color: "Red",
     aosDelay: "200", // Atraso para a animação AOS
@@ -26,7 +26,7 @@ const StandsData = [
   {
     id: 3,
     img: Img3,
-    title: "Daniele",
+    title: "Stands",
     rating: 4.7,
     color: "brown",
     aosDelay: "400", // Atraso para a animação AOS
@@ -34,7 +34,7 @@ const StandsData = [
   {
     id: 4,
     img: Img4,
-    title: "Printed T-Shirt",
+    title: "Stands",
     rating: 4.4,
     color: "Yellow",
     aosDelay: "600", // Atraso para a animação AOS
@@ -42,7 +42,7 @@ const StandsData = [
   {
     id: 5,
     img: Img2,
-    title: "Fashin T-Shirt",
+    title: "Stands",
     rating: 4.5,
     color: "Pink",
     aosDelay: "800", // Atraso para a animação AOS

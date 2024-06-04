@@ -40,31 +40,31 @@ const ProductsData = [
   {
     id: 2,
     img: img6,
-    title: "Evento 2",
-    color: "descrição do Evento 2",
+    title: "Unilever",
+    color: "esperando por dani",
     aosDelay: "200", // Atraso para a animação AOS
     galleryImages: [img6, img7, img8, img9, img10],
   },
   {
     id: 3,
     img: img1,
-    title: "Evento 3",
-    color: "Descrição do Evento 3",
+    title: "São João",
+    color: "esperando por dani",
     aosDelay: "400", // Atraso para a animação AOS
     galleryImages: [img11, img12, img13, img14, img15],
   },
   {
     id: 4,
     img: img16,
-    title: "Evento 4",
-    color: "Descrição do Evento 4",
+    title: "Carnaval",
+    color: "esperando por dani",
     aosDelay: "600", // Atraso para a animação AOS
     galleryImages: [img16, img17, img18, img19, img20],
   },
   {
     id: 4,
     img: img21,
-    title: "Evento 5",
+    title: "Feiras",
     color: "Descrição do Evento 5",
     aosDelay: "600", // Atraso para a animação AOS
     galleryImages: [img21, img22, img23, img24, img25],

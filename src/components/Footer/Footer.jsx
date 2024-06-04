@@ -55,52 +55,47 @@ const FooterLinks = [
 const Footer = () => {
   return (
     <div className="bg-green-200 dark:bg-gray-950">
-      <section className="container">
-        <div className="grid md:grid-cols-3 py-5">
+      <section className="container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-5">
           <div className="py-8 px-4">
-            <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
+
+            
+            <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-center mb-3 flex items-center justify-center md:justify-start gap-3">
               <img src={footerLogo} alt="Logo" className="max-w-[50px]" />
               Conexão K
             </h1>
-            <p className="">Conectando ideias, marcas e pessoas!</p>
+            <p className="text-center md:text-left">Conectando ideias, marcas e pessoas!</p>
             <br />
-            <div className="flex items-center gap-3">
-              <FaMobileAlt />
-              <p>+55 81 9.9504-2474</p>
-            </div>
-            <div className="flex items-center gap-3 mt-6">
-              <FaMapMarkerAlt />
-              <p>Rua Arthur Heleno de Souza, 111</p>
-            </div>
-            <div className="flex items-center gap-3 mt-6">
-              <a
-                href="https://www.instagram.com/conexaokeventos/"
-                target="_blank"
-              >
-                <FaInstagram className="text-3xl hover:text-blue-500" />
-              </a>
-              <a
-                href="https://www.facebook.com/Conexaokshows"
-                target="_blank"
-              >
-                <FaFacebook className="text-3xl hover:text-blue-500" />
-              </a>
-              <a href="https://www.linkedin.com/in/conexaok/" target="_blank">
-                <FaLinkedin className="text-3xl hover:text-blue-500" />
-              </a>
-              <a
-                href="https://api.whatsapp.com/send?phone=558195042474"
-                target="_blank"
-              >
-                <FaWhatsapp className="text-3xl hover:text-blue-500" />
-              </a>
+            <div className="flex flex-col items-center md:items-start gap-3">
+              <div className="flex items-center gap-3">
+                <FaMobileAlt />
+                <p>+55 81 9.9504-2474</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <FaMapMarkerAlt />
+                <p>Rua Arthur Heleno de Souza, 111</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <a href="https://www.instagram.com/conexaokeventos/" target="_blank" rel="noopener noreferrer">
+                  <FaInstagram className="text-3xl hover:text-blue-500" />
+                </a>
+                <a href="https://www.facebook.com/Conexaokshows" target="_blank" rel="noopener noreferrer">
+                  <FaFacebook className="text-3xl hover:text-blue-500" />
+                </a>
+                <a href="https://www.linkedin.com/in/conexaok/" target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin className="text-3xl hover:text-blue-500" />
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=558195042474" target="_blank" rel="noopener noreferrer">
+                  <FaWhatsapp className="text-3xl hover:text-blue-500" />
+                </a>
+              </div>
             </div>
           </div>
-          <div className="py-8 px-4 flex flex-col justify-center items-center md:items-start">
-            <h1 className="sm:text-xl text-xl font-bold sm:text-end text-justify mb-3">
+          <div className="py-8 px-4 flex flex-col justify-center items-center">
+            <h1 className="sm:text-xl text-xl font-bold text-center sm:text-right mb-3">
               Opções de Serviços
             </h1>
-            <ul className={`flex flex-col gap-3`}>
+            <ul className={`flex flex-col gap-3 items-center md:items-start`}>
               {ServiceOptions.map((option, index) => (
                 <li
                   key={index}
@@ -112,11 +107,11 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="py-8 px-4 flex flex-col justify-center items-center md:items-start">
-            <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
+          <div className="py-8 px-4 flex flex-col justify-center items-center">
+            <h1 className="sm:text-xl text-xl font-bold text-center sm:text-left mb-3">
               Links
             </h1>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-3 items-center md:items-start">
               {FooterLinks.map((link, index) => (
                 <li
                   key={index}
