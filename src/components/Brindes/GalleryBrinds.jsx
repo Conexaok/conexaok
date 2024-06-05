@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Gallery({ images, onClose }) {
+export function GalleryBrinds({ images, onClose }) {
   const [active, setActive] = React.useState(images[0].imgelink);
 
   return (

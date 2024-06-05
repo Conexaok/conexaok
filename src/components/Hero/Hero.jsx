@@ -6,29 +6,15 @@ import Image2 from "../../assets/hero/conexaok1.png";
 import Image3 from "../../assets/hero/conexaok3.png";
 import Image4 from "../../assets/hero/conexaok4.jpg";
 import Image5 from "../../assets/hero/conexao.jpg";
+//
 
 // Lista de imagens e informações para exibição no slider
 const ImageList = [
-  {
-    id: 1,
-    img: Image1,
-  },
-  {
-    id: 2,
-    img: Image4,
-  },
-  {
-    id: 3,
-    img: Image2,
-  },
-  {
-    id: 4,
-    img: Image3,
-  },
-  {
-    id: 5,
-    img: Image5,
-  },
+  { id: 1, img: Image1 },
+  { id: 3, img: Image2 },
+  { id: 5, img: Image5 },
+  { id: 4, img: Image3 },
+  { id: 2, img: Image4 },
 ];
 
 const Hero = ({ handleOrderPopup }) => {
@@ -37,7 +23,7 @@ const Hero = ({ handleOrderPopup }) => {
     // Número de telefone completo com código do país e DDD
     const phoneNumber = '558195042474';
     // URL do link do WhatsApp com o número de telefone
-    const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
+    const whatsappLink = 'https://api.whatsapp.com/send?phone=${phoneNumber}';
     // Abrir uma nova janela do navegador com o link do WhatsApp
     window.open(whatsappLink, '_blank');
   };
@@ -50,7 +36,7 @@ const Hero = ({ handleOrderPopup }) => {
     speed: 1200,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 9000,
+    autoplaySpeed: 943000,
     cssEase: "ease-in-out",
     pauseOnHover: false,
     pauseOnFocus: true,
@@ -83,8 +69,16 @@ const Hero = ({ handleOrderPopup }) => {
                     <img
                       src={data.img}
                       alt=""
-                      className="w-[300px] h-[300px] sm:h-[450px] sm:w-[1150px] sm:scale-auto lg:scale-auto  rounded"
+                      className="w-[300%] h-[300%] sm:h-[450%] sm:w-[1150%] sm:scale-auto lg:scale-auto  rounded"
                     />
+                  {data.id === 3 && (
+                    <button
+                      onClick={openWhatsApp}
+                      className="absolute bottom-[10%] w-[20%] right-[30%] m-[3%] p-[4%] rounded-md text-black text-center font-bold shadow-lg  bg-transparent
+                      hover:bg-blue-200  hover:opacity-30 hover:shadow-md transition duration-200"
+                    >
+                    </button>
+                  )}
                   </div>
                 </div>
               </div>
