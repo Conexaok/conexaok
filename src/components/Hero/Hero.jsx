@@ -21,9 +21,9 @@ const Hero = ({ handleOrderPopup }) => {
   // Função para abrir o WhatsApp
   const openWhatsApp = () => {
     // Número de telefone completo com código do país e DDD
-    const phoneNumber = '558195042474';
+    const phoneNumber = '5581995042474';
     // URL do link do WhatsApp com o número de telefone
-    const whatsappLink = 'https://api.whatsapp.com/send?phone=${phoneNumber}';
+    const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
     // Abrir uma nova janela do navegador com o link do WhatsApp
     window.open(whatsappLink, '_blank');
   };

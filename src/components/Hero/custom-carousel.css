@@ -1,9 +1,0 @@
-/* custom-carousel.css */
-.slick-prev, .slick-next {
-  color: #ff0000; /* Substitua por qualquer cor desejada */
-  /* Adicione mais estilos conforme necessário */
-}
-
-.slick-prev:hover, .slick-next:hover {
-  color: #cc0000; /* Cor ao passar o mouse */
-}

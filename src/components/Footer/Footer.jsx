@@ -68,10 +68,10 @@ const Footer = () => {
               <img
                 src={footerLogo}
                 alt="Logo"
-                className="max-w-[50px]"
+                className="max-w-[200px]"
                 style={{ filter: "invert(0)" }}
               />
-              Conexão K
+             
             </h1>
             {/* Descrição da empresa */}
             <p className="text-center md:text-left">Conectando ideias, marcas e pessoas!</p>
@@ -144,7 +144,7 @@ const Footer = () => {
         </div>
         {/* Rodapé com o ano de copyright */}
         <div className="text-center py-10 border-t-2 border-gray-300/50">
-          &copy; 2024
+          &copy; 2024 Conexão K. Todos os direitos reservados.
         </div>
       </section>
     </div>
