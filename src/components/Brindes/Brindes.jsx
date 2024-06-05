@@ -5,7 +5,7 @@ import Img3 from "../../assets/women/cheveiro.jpg";
 import Img4 from "../../assets/women/entrega.jpg";
 import { GalleryBrinds } from "./GalleryBrinds";
 
-// Dados dos produtos
+
 const BrindesData = [
   {
     id: 1,
