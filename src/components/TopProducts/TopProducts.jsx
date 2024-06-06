@@ -39,14 +39,12 @@ const ProductsData = [
 // Componente TopProducts
 const TopProducts = ({ galerry }) => {
   return (
-    <div className="container flex flex-col items-center justify-center">
+    <div className="container flex flex-col items-center justify-center pt-24"> {/* Adiciona padding-top para compensar a altura do navbar */}
       {/* Seção de cabeçalho */}
       <div className="text-center mb-24">
-        
-        <h1 data-aos="fade-up" className="text-3xl font-bold shadow-md">
+        <h1 className="text-3xl font-bold shadow-md">
           Locações de Móveis e Estruturas Para Eventos
         </h1>
-       
       </div>
       {/* Seção do corpo */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-20 md:gap-5 place-items-center">
@@ -54,16 +52,44 @@ const TopProducts = ({ galerry }) => {
         {ProductsData.map((data) => (
           <div
             key={data.id}
-            data-aos="zoom-in"
-            className="relative rounded-2xl bg-white dark:bg-gray-800 hover:bg-gradient-to-b from-primary to-secondary dark:hover:bg-primary hover:text-white shadow-xl duration-300 group max-w-[300px]"
-            style={{ cursor: "pointer" }} // Adiciona estilo de cursor pointer
+            className="
+              relative
+              rounded-2xl
+              bg-white
+              dark:bg-gray-800
+              hover:bg-gradient-to-b
+              from-primary
+              to-secondary
+              dark:hover:bg-primary
+              hover:text-white
+              shadow-xl
+              duration-300
+              group
+              max-w-[300px]
+              space-y-3
+            "
+            style={{ cursor: "pointer" }}
+            onClick={() => galerry(data.id)}
           >
             {/* Seção da imagem */}
             <div className="h-[100px] relative">
               <img
                 src={data.img}
-                alt=""
-                className="max-w-[140px] block mx-auto absolute left-0 right-0 top-1/2 transform -translate-y-1/2 group-hover:scale-105 duration-300 drop-shadow-md"
+                alt={data.title}
+                className="
+                  max-w-[140px]
+                  block
+                  mx-auto
+                  absolute
+                  left-0
+                  right-0
+                  top-1/2
+                  transform
+                  -translate-y-1/2
+                  group-hover:scale-105
+                  duration-300
+                  drop-shadow-md
+                "
               />
             </div>
             {/* Seção de detalhes */}
@@ -73,8 +99,18 @@ const TopProducts = ({ galerry }) => {
                 {data.description}
               </p>
               <button
-                className="bg-primary hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
-                onClick={galerry} // Adiciona o manipulador de clique
+                className="
+                  bg-primary
+                  hover:scale-105
+                  duration-300
+                  text-white
+                  py-1
+                  px-4
+                  rounded-full
+                  mt-4
+                  group-hover:bg-white
+                  group-hover:text-primary
+                "
               >
                 Clique Aqui
               </button>

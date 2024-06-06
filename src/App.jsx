@@ -38,17 +38,17 @@ const App = () => {
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
       <Hero handleOrderPopup={handleOrderPopup} />
-      <Navbar handleOrderPopup={handleOrderPopup} />
-      <Products />
       <TopProducts handleOrderPopup={handleOrderPopup} />
+      <Products />
       <Subscribe />
       <Grafica/>
       <Brindes/>
       <Stands/>
-      <Testimonials />
+      <Testimonials handleOrderPopup={handleOrderPopup} />
       <Clientes />
       <Contato/>
       <MapPage />
+      <Navbar handleOrderPopup={handleOrderPopup} />
       <Footer />
     </div>
   );
