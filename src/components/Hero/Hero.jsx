@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-
 import Image1 from "../../assets/hero/conexaok2.png";
 import Image2 from "../../assets/hero/conexaok1.png";
 import Image3 from "../../assets/hero/conexaok3.png";
@@ -21,7 +20,7 @@ const Hero = ({ handleOrderPopup }) => {
   // Função para abrir o WhatsApp
   const openWhatsApp = () => {
     // Número de telefone completo com código do país e DDD
-    const phoneNumber = '5581995042474';
+    const phoneNumber = '558195042474';
     // URL do link do WhatsApp com o número de telefone
     const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
     // Abrir uma nova janela do navegador com o link do WhatsApp

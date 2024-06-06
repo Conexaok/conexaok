@@ -1,4 +1,3 @@
-// Importando os logotipos das empresas
 import AsanetLogo from "../../assets/women/asanet.png";
 import AssaiLogo from "../../assets/women/assai.png";
 import AmbevLogo from "../../assets/women/ambev.png";

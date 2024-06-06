@@ -4,7 +4,7 @@ export function GalleryProducts({ images, onClose }) {
   const [active, setActive] = React.useState(images[0].imgelink);
 
   return (
-    <div className="relative grid gap-4">
+    <div className="relative mt-3 grid gap-4">
       <button 
         onClick={onClose}
         className="absolute top-4 right-4 bg-blue-500 text-white py-2 px-4 rounded-full"
@@ -13,7 +13,7 @@ export function GalleryProducts({ images, onClose }) {
       </button>
       <div>
         <img
-          className="h-auto w-full max-w-full rounded-lg object-cover object-center md:h-[480px]"
+          className="h-auto w-full max-w-full rounded-lg object-cover object-center md:h-[600px]"
           src={active}
           alt="Featured"
         />

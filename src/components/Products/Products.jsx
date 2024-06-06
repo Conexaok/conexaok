@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import img1 from "../../assets/evento/imagem1.jpeg";
-import img2 from "../../assets/evento/imagem2.jpeg";
-import img3 from "../../assets/evento/imagem3.jpeg";
-import img4 from "../../assets/evento/imagem4.jpeg";
-import img5 from "../../assets/evento/imagem5.jpeg";
-import img6 from "../../assets/evento/imagem6.jpeg";
-import img7 from "../../assets/evento/imagem7.jpeg";
-import img8 from "../../assets/evento/imagem8.jpeg";
-import img9 from "../../assets/evento/imagem9.jpeg";
-import img10 from "../../assets/evento/imagem10.jpeg";
-import img11 from "../../assets/evento/imagem11.jpeg";
+import img1 from "../../assets/evento/imagem01.jpg";
+import img2 from "../../assets/evento/imagem2.JPG";
+import img3 from "../../assets/evento/imagem3.JPG";
+import img4 from "../../assets/evento/imagem4.JPG";
+import img5 from "../../assets/evento/imagem5.JPG";
+import img6 from "../../assets/evento/imagem6.JPG";
+import img7 from "../../assets/evento/imagem7.jpg";
+import img8 from "../../assets/evento/imagem8.jpg";
+import img9 from "../../assets/evento/imagem9.jpg";
+import img10 from "../../assets/evento/imagem10.jpg";
+import img11 from "../../assets/evento/imagem11.jpg";
 import img12 from "../../assets/evento/imagem12.jpeg";
-import img13 from "../../assets/evento/imagem13.jpeg";
+import img13 from "../../assets/evento/imagem13.jpg";
 import img14 from "../../assets/evento/imagem14.jpeg";
 import img15 from "../../assets/evento/imagem15.jpeg";
 import img16 from "../../assets/evento/imagem16.jpeg";
@@ -31,7 +31,7 @@ const ProductsData = [
   {
     id: 1,
     img: img1,
-    title: "Hnk",
+    title: "Heinekem",
     color: "esperando dani.",
     aosDelay: "0", // Atraso para a animação AOS
     galleryImages: [
@@ -59,7 +59,7 @@ const ProductsData = [
   {
     id: 3,
     img: img11,
-    title: "São João",
+    title: "Carnaval",
     color: "esperando por dani",
     aosDelay: "400", // Atraso para a animação AOS
     galleryImages: [
@@ -73,8 +73,8 @@ const ProductsData = [
   {
     id: 4,
     img: img16,
-    title: "Carnaval",
-    color: "esperando por dani",
+    title: "FENAFE",
+    color: "FENAFE por dani",
     aosDelay: "600", // Atraso para a animação AOS
     galleryImages: [
       { imgelink: img16 },
@@ -87,7 +87,7 @@ const ProductsData = [
   {
     id: 5,
     img: img21,
-    title: "Feiras",
+    title: "CoofBrack",
     color: "Descrição do Evento 5",
     aosDelay: "800", // Atraso para a animação AOS
     galleryImages: [
@@ -128,13 +128,13 @@ const Products = () => {
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}
                 className="space-y-3 cursor-pointer"
-                onClick={() => handleEventClick(data.galleryImages)}
+                
               >
                 {/* Imagem do produto */}
                 <img
                   src={data.img}
                   alt={data.title}
-                  className="h-[220px] w-[150px] object-cover rounded-md"
+                  className="h-[220px] w-[150px] object-cover "
                 />
                 <div>
                   {/* Título do produto */}
