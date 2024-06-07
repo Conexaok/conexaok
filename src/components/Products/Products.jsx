@@ -143,7 +143,7 @@ const Products = () => {
                   <p className="text-sm text-gray-600">{data.color}</p>
                 </div>
                 <button
-                  className="mt-2 w-full bg-sky-700 text-white py-2 px-4 rounded-full"
+                  className="bg-sky-700 dark:bg-cyan-900 hover:scale-105 duration-300 text-white py-2 px-8 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
                   onClick={(e) => {
                     e.stopPropagation();
                     handleEventClick(data.galleryImages);

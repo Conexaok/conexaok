@@ -48,7 +48,7 @@ const FooterLinks = [
   },
   {
     title: "Locações",
-    link: "/#blog",
+    link: "/#TopProducts",
   },
 ];
 

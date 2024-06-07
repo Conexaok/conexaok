@@ -84,29 +84,30 @@ const ProductsData = [
     id: 1,
     img: Img1,
     title: "Galpôes",
-    galleryType: "galpoes"
+    description: "Locação de galpôes para eventos",
+    galleryType: "galpoes",
   },
   {
     id: 2,
     img: Img2,
     title: "Montagens de Stands",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    galleryType: "stands"
+    description: "Montagem completa de stands",
+    galleryType: "stands",
   },
   {
     id: 3,
     img: Img3,
-    title: "Movéis em Geral",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    galleryType: "moveis"
+    title: "Móveis",
+    description: "Locação de móveis diversos",
+    galleryType: "moveis",
   },
   {
     id: 4,
     img: Img4,
     title: "Eletrônicos",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    galleryType: "eletronicos"
-  }
+    description: "Locação de equipamentos eletrônicos",
+    galleryType: "eletronicos",
+  },
 ];
 
 // Componente TopProducts
@@ -129,39 +130,34 @@ const TopProducts = () => {
   }
 
   return (
-    <div className="container flex flex-col items-center justify-center ">
-      {/* Seção de cabeçalho */}
+    <div id="TopProducts" className="container flex flex-col items-center justify-center">
       <div className="text-center mb-24">
         <h1 data-aos="fade-up" className="text-3xl font-bold shadow-md">
           Locações de Móveis e Estruturas Para Eventos
         </h1>
       </div>
-      {/* Seção do corpo */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-20 md:gap-8 place-items-center">
-        {/* Mapeamento dos dados dos produtos */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 place-items-center">
         {ProductsData.map((data) => (
           <div
             key={data.id}
             data-aos="zoom-in"
-            className="relative rounded-2xl bg-white dark:bg-gray-950 hover:bg-sky-700 dark:text-white from-primary to-secondary dark:hover:bg-slate-800 hover:text-white shadow-xl duration-300 group max-w-[300px]"
-            style={{ cursor: "pointer" }} // Adiciona estilo de cursor pointer
-            onClick={() => handleItemClick(data.galleryType)} // Adiciona o evento de clique
+            className="relative flex flex-col items-center justify-center rounded-2xl bg-white dark:bg-gray-950 hover:bg-sky-700 dark:text-white from-primary to-secondary dark:hover:bg-cyan-900 hover:text-white shadow-xl duration-300 group w-full h-[250px] max-w-[300px]"
+            style={{ cursor: "pointer" }}
+            onClick={() => handleItemClick(data.galleryType)}
           >
-            {/* Seção da imagem */}
-            <div className="h-[100px] relative">
+            <div className="h-[100px] relative flex items-center justify-center">
               <img
                 src={data.img}
                 alt=""
-                className="max-w-[140px] block mx-auto absolute left-0 right-0 top-1/2 transform -translate-y-1/2 group-hover:scale-105 duration-300 drop-shadow-md"
+                className="max-w-[140px] block mx-auto group-hover:scale-105 duration-300 drop-shadow-md"
               />
             </div>
-            {/* Seção de detalhes */}
-            <div className="p-4 text-center">
+            <div className="p-4 text-center flex flex-col items-center justify-center h-full">
               <h1 className="text-xl font-bold">{data.title}</h1>
               <p className="text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-2">
                 {data.description}
               </p>
-              <button className="bg-sky-700 hover:scale-105 duration-300 text-white py-2 px-8 rounded-full mt-4 group-hover:bg-white group-hover:text-primary">
+              <button className="bg-sky-700 dark:bg-cyan-900 hover:scale-105 duration-300 text-white py-2 px-8 rounded-full mt-4 group-hover:bg-white group-hover:text-primary">
                 Clique Aqui
               </button>
             </div>

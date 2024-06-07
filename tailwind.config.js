@@ -10,7 +10,7 @@ export default {
       colors: {
         primary: "#0284c7",
         secondary: "#0284c7",
-        dark: "#0284c7",
+        dark: "#0369a17",
         light: "#0369a1",
       },
       container: {

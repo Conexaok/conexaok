@@ -17,10 +17,12 @@ import Stands from "./components/Stands/Stands";
 import Contato from "./components/Contato/Contato";
 import { Gallery } from "./components/Gallery/Gallery";
 
+
 function App() {
   AOS.init();
 
   return (
+    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
     <Router>
       <Navbar/>
       <Hero/>
@@ -35,7 +37,7 @@ function App() {
       <Subscribe/>
       <Footer/>
       <Routes>
-      
+    
         <Route path="/products" element={<Products />} />
         <Route path="/top-products" element={<TopProducts />} />
         <Route path="/clientes" element={<Clientes />} />
@@ -49,6 +51,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />}/>
       </Routes>
     </Router>
+    </div>
   );
 }
 

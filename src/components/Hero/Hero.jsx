@@ -1,8 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-import Image1 from "../../assets/hero/conexaok2.png";
+import Image1 from "../../assets/hero/conexaok3.png";
 import Image2 from "../../assets/hero/conexaok1.png";
-import Image3 from "../../assets/hero/conexaok3.png";
+import Image3 from "../../assets/hero/conexaok2.png";
 import Image4 from "../../assets/hero/conexaok4.jpg";
 import Image5 from "../../assets/hero/conexao.jpg";
 //

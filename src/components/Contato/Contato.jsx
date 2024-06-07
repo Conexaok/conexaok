@@ -87,14 +87,14 @@ const Contato = () => {
             <div>
               <button
                 type="submit"
-                className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-sky-700 hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-green-200 focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-gray-900"
+                className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-cyan-900 hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-green-200 focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-gray-900"
               >
                 Enviar
               </button>
             </div>
           </form>
           {statusMessage && (
-            <div className={`mt-4 text-center ${statusMessage.includes('sucesso') ? 'text-cyan-950' : 'text-rose-950'}`}>
+            <div className={`mt-4 text-center ${statusMessage.includes('sucesso') ? 'text-cyan-800' : 'text-rose-950'}`}>
               {statusMessage}
             </div>
           )}

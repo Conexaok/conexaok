@@ -133,7 +133,7 @@ const Grafica = () => {
                   <h3 className="font-semibold">{data.title}</h3>
                   {/* Botão para abrir a galeria */}
                   <button
-                    className="bg-sky-700 hover:scale-105 duration-300 text-white py-2 px-8 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
+                    className="bg-sky-700 dark:bg-cyan-900 hover:scale-105 duration-300 text-white py-2 px-8 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
                     onClick={() => handleItemClick(data.galleryType)}
                   >
                     Clique Aqui
