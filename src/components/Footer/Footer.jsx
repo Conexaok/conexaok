@@ -55,29 +55,29 @@ const FooterLinks = [
 // Componente do rodapé
 const Footer = () => {
   return (
-    // Div com a cor de fundo azul claro no modo claro e preto no modo escuro
-    <div className="bg-blue-100 dark:bg-black">
+    // Div com a cor de fundo cyan-200 no modo claro e preto no modo escuro
+    <div className="bg-cyan-200 dark:bg-black">
       {/* Seção do rodapé */}
       <section className="container mx-auto text-black dark:text-white">
         {/* Grid com três colunas */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-5 justify-items-center">
           {/* Coluna 1: Informações de contato */}
           <div className="py-8 px-4">
             {/* Título com o nome da empresa e logo */}
-            <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-center mb-3 flex items-center justify-center md:justify-start gap-3">
-              <img
-                src={footerLogo}
-                alt="Logo"
-                className="max-w-[200px]"
-                style={{ filter: "invert(0)" }}
-              />
-             
+            <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-center mb-3 flex items-center justify-center gap-3">
+              <div className="dark:bg-white p-2">
+                <img
+                  src={footerLogo}
+                  alt="Logo"
+                  className="max-w-[200px]"
+                />
+              </div>
             </h1>
             {/* Descrição da empresa */}
-            <p className="text-center md:text-left">Conectando ideias, marcas e pessoas!</p>
+            <p className="text-center">Conectando ideias, marcas e pessoas!</p>
             <br />
             {/* Informações de contato */}
-            <div className="flex flex-col items-center md:items-start gap-3">
+            <div className="flex flex-col items-center gap-3">
               {/* Número de telefone */}
               <div className="flex items-center gap-3">
                 <FaMobileAlt />
@@ -91,30 +91,30 @@ const Footer = () => {
               {/* Links para redes sociais e WhatsApp */}
               <div className="flex items-center gap-3">
                 <a href="https://www.instagram.com/conexaokeventos/" target="_blank" rel="noopener noreferrer">
-                  <FaInstagram className="text-3xl hover:text-blue-500" />
+                  <FaInstagram className="text-3xl hover:text-cyan-500" />
                 </a>
                 <a href="https://www.facebook.com/Conexaokshows" target="_blank" rel="noopener noreferrer">
-                  <FaFacebook className="text-3xl hover:text-blue-500" />
+                  <FaFacebook className="text-3xl hover:text-cyan-500" />
                 </a>
                 <a href="https://www.linkedin.com/in/conexaok/" target="_blank" rel="noopener noreferrer">
-                  <FaLinkedin className="text-3xl hover:text-blue-500" />
+                  <FaLinkedin className="text-3xl hover:text-cyan-500" />
                 </a>
                 <a href="https://api.whatsapp.com/send?phone=558195042474" target="_blank" rel="noopener noreferrer">
-                  <FaWhatsapp className="text-3xl hover:text-blue-500" />
+                  <FaWhatsapp className="text-3xl hover:text-cyan-500" />
                 </a>
               </div>
             </div>
           </div>
           {/* Coluna 2: Opções de serviços */}
-          <div className="py-8 px-4 flex flex-col justify-center items-center md:items-start">
+          <div className="py-8 px-4 flex flex-col justify-center items-center">
             {/* Título */}
-            <h1 className="sm:text-xl text-xl font-bold text-center sm:text-right mb-3">
+            <h1 className="sm:text-xl text-xl font-bold text-center mb-3">
               Opções de Serviços
             </h1>
             {/* Lista de opções de serviços */}
-            <ul className="flex flex-col gap-3 items-center md:items-start">
+            <ul className="flex flex-col gap-3 items-center">
               {ServiceOptions.map((option, index) => (
-                <li key={index} className="text-gray-500 text-left">
+                <li key={index} className="text-gray-500 text-center">
                   <span>&#11162;</span>
                   <span>{option.title}</span>
                 </li>
@@ -122,17 +122,17 @@ const Footer = () => {
             </ul>
           </div>
           {/* Coluna 3: Links */}
-          <div className="py-8 px-4 flex flex-col justify-center items-center md:items-start">
+          <div className="py-8 px-4 flex flex-col justify-center items-center">
             {/* Título */}
-            <h1 className="sm:text-xl text-xl font-bold text-center sm:text-left mb-3">
+            <h1 className="sm:text-xl text-xl font-bold text-center mb-3">
               Links
             </h1>
             {/* Lista de links */}
-            <ul className="flex flex-col gap-3 items-center md:items-start">
+            <ul className="flex flex-col gap-3 items-center">
               {FooterLinks.map((link, index) => (
                 <li
                   key={index}
-                  className="cursor-pointer text-gray-500 text-left transition-colors duration-300 hover:text-green-700"
+                  className="cursor-pointer text-gray-500 text-center transition-colors duration-300 hover:text-cyan-500"
                   onClick={() => (window.location.href = link.link)}
                 >
                   <span>&#11162;</span>
@@ -152,4 +152,3 @@ const Footer = () => {
 };
 
 export default Footer;
- 
