@@ -16,6 +16,7 @@ import Brindes from "./components/Brindes/Brindes";
 import Stands from "./components/Stands/Stands";
 import Contato from "./components/Contato/Contato";
 import { Gallery } from "./components/Gallery/Gallery";
+import WhatsApp from "./components/WhatsApp/WhatsApp"; 
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
       <Testimonials/>
       <Clientes/>
       <Subscribe/>
+      <WhatsApp/>
       <Footer/>
       <Routes>
     
