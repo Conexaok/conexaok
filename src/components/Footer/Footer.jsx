@@ -56,7 +56,7 @@ const FooterLinks = [
 const Footer = () => {
   return (
     // Div com a cor de fundo cyan-200 no modo claro e preto no modo escuro
-    <div className="bg-cyan-200 dark:bg-black">
+    <div className="bg-sky-700 dark:bg-black">
       {/* Seção do rodapé */}
       <section className="container mx-auto text-black dark:text-white">
         {/* Grid com três colunas */}
@@ -91,16 +91,16 @@ const Footer = () => {
               {/* Links para redes sociais e WhatsApp */}
               <div className="flex items-center gap-3">
                 <a href="https://www.instagram.com/conexaokeventos/" target="_blank" rel="noopener noreferrer">
-                  <FaInstagram className="text-3xl hover:text-cyan-500" />
+                  <FaInstagram className="text-3xl hover:text-sky-500" />
                 </a>
                 <a href="https://www.facebook.com/Conexaokshows" target="_blank" rel="noopener noreferrer">
-                  <FaFacebook className="text-3xl hover:text-cyan-500" />
+                  <FaFacebook className="text-3xl hover:text-sky-500" />
                 </a>
                 <a href="https://www.linkedin.com/in/conexaok/" target="_blank" rel="noopener noreferrer">
-                  <FaLinkedin className="text-3xl hover:text-cyan-500" />
+                  <FaLinkedin className="text-3xl hover:text-sky-500" />
                 </a>
                 <a href="https://api.whatsapp.com/send?phone=558195042474" target="_blank" rel="noopener noreferrer">
-                  <FaWhatsapp className="text-3xl hover:text-cyan-500" />
+                  <FaWhatsapp className="text-3xl hover:text-sky-500" />
                 </a>
               </div>
             </div>
@@ -114,7 +114,7 @@ const Footer = () => {
             {/* Lista de opções de serviços */}
             <ul className="flex flex-col gap-3 items-center">
               {ServiceOptions.map((option, index) => (
-                <li key={index} className="text-gray-500 text-center">
+                <li key={index} className="text-gray-950 text-center dark:text-white">
                   <span>&#11162;</span>
                   <span>{option.title}</span>
                 </li>
@@ -132,7 +132,7 @@ const Footer = () => {
               {FooterLinks.map((link, index) => (
                 <li
                   key={index}
-                  className="cursor-pointer text-gray-500 text-center transition-colors duration-300 hover:text-cyan-500"
+                  className="cursor-pointer text-gray-950 text-center transition-colors duration-300 hover:text-sky-500 dark:text-white"
                   onClick={() => (window.location.href = link.link)}
                 >
                   <span>&#11162;</span>

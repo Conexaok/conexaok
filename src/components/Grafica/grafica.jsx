@@ -3,8 +3,9 @@ import Img1 from "../../assets/women/women.png";
 import Img2 from "../../assets/women/women2.jpg";
 import Img3 from "../../assets/women/women3.jpg";
 import Img4 from "../../assets/women/women4.jpg";
-import { FaStar } from "react-icons/fa6";
 import { Gallery } from "../Gallery/Gallery";
+
+
 
 // Dados dos produtos
 const GraficaData = [
@@ -132,7 +133,7 @@ const Grafica = () => {
                   <h3 className="font-semibold">{data.title}</h3>
                   {/* Botão para abrir a galeria */}
                   <button
-                    className="bg-primary hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
+                    className="bg-sky-700 hover:scale-105 duration-300 text-white py-2 px-8 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
                     onClick={() => handleItemClick(data.galleryType)}
                   >
                     Clique Aqui

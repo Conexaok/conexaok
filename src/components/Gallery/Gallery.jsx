@@ -7,7 +7,7 @@ export function Gallery({ images, onClose }) {
     <div className="relative grid gap-4">
       <button 
         onClick={onClose}
-        className="absolute top-4 right-4 bg-blue-500 text-white py-2 px-4 rounded-full"
+        className="absolute top-4 right-4 bg-sky-700 text-white py-2 px-4 rounded-full"
       >
         Fechar
       </button>

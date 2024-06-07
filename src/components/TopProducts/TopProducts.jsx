@@ -129,7 +129,7 @@ const TopProducts = () => {
   }
 
   return (
-    <div className="container flex flex-col items-center justify-center">
+    <div className="container flex flex-col items-center justify-center ">
       {/* Seção de cabeçalho */}
       <div className="text-center mb-24">
         <h1 data-aos="fade-up" className="text-3xl font-bold shadow-md">
@@ -137,13 +137,13 @@ const TopProducts = () => {
         </h1>
       </div>
       {/* Seção do corpo */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-20 md:gap-5 place-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-20 md:gap-8 place-items-center">
         {/* Mapeamento dos dados dos produtos */}
         {ProductsData.map((data) => (
           <div
             key={data.id}
             data-aos="zoom-in"
-            className="relative rounded-2xl bg-white dark:bg-gray-800 hover:bg-gradient-to-b from-primary to-secondary dark:hover:bg-primary hover:text-white shadow-xl duration-300 group max-w-[300px]"
+            className="relative rounded-2xl bg-white dark:bg-gray-950 hover:bg-sky-700 dark:text-white from-primary to-secondary dark:hover:bg-slate-800 hover:text-white shadow-xl duration-300 group max-w-[300px]"
             style={{ cursor: "pointer" }} // Adiciona estilo de cursor pointer
             onClick={() => handleItemClick(data.galleryType)} // Adiciona o evento de clique
           >
@@ -161,7 +161,7 @@ const TopProducts = () => {
               <p className="text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-2">
                 {data.description}
               </p>
-              <button className="bg-primary hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary">
+              <button className="bg-sky-700 hover:scale-105 duration-300 text-white py-2 px-8 rounded-full mt-4 group-hover:bg-white group-hover:text-primary">
                 Clique Aqui
               </button>
             </div>

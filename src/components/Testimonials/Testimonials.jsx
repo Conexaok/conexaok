@@ -87,10 +87,10 @@ const Testimonials = () => {
           <Slider {...settings}>
             {/* Mapeia os dados dos depoimentos e renderiza os cartões */}
             {TestimonialData.map((data) => (
-              <div className="my-6">
+              <div className="my-6 ">
                 <div
                   key={data.id}
-                  className="flex flex-col gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl dark:bg-gray-800 bg-primary/40 relative"
+                  className="flex flex-col gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl dark:bg-gray-950 bg-sky-700 relative"
                 >
                   <div className="mb-4">
                     {/* Renderiza a imagem do depoimento */}
@@ -105,7 +105,7 @@ const Testimonials = () => {
                       {/* Renderiza o texto do depoimento */}
                       <p className="text-xs text-gray-500">{data.text}</p>
                       {/* Renderiza o nome do autor do depoimento */}
-                      <h1 className="text-xl font-bold text-black/80 dark:text-light">
+                      <h1 className="text-xl font-bold text-gray-950 dark:text-white dark:text-light">
                         {data.name}
                       </h1>
                     </div>

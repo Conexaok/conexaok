@@ -33,6 +33,7 @@ const Hero = ({ handleOrderPopup }) => {
     arrows: true,
     infinite: true,
     speed: 1200,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 943000,
@@ -45,7 +46,7 @@ const Hero = ({ handleOrderPopup }) => {
   };
 
   return (
-    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gray-100 flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 ">
+    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-sky-700 flex justify-center items-center dark:bg-gray-950 dark:bg-sky-500dark:text-white duration-200 ">
       {/* Padrão de fundo */}
       <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
       {/* Seção do herói */}

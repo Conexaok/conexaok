@@ -111,7 +111,7 @@ const Navbar = ({ handleOrderPopup }) => {
             <li key={data.id}>
               <a
                 href={data.link}
-                className="inline-block px-4 hover:text-primary duration-200"
+                className="inline-block px-4 hover:text-sky-500 duration-200"
               >
                 {data.name}
               </a>

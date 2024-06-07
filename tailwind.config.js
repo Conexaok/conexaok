@@ -1,21 +1,27 @@
-/** @type {import('tailwindcss').Config} */
+/*@type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: "class",
+  darkMode: "class", 
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"],
+      },
       colors: {
-        primary: "#06b6d4",
-        secondary: "#06b6d4",
-        
-        
+        primary: "#0284c7",
+        secondary: "#0284c7",
+        dark: "#0284c7",
+        light: "#0369a1",
       },
       container: {
         center: true,
         padding: {
-          DEFAULT: "2rem",
-          sm: "5rem",
+          DEFAULT: "1rem",
+          sm: "3rem",
         },
+      },
+      animation: {
+        "spin-slow": "spin 40s linear infinite",
       },
     },
   },

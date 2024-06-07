@@ -107,7 +107,7 @@ const Brindes = () => {
                   <p className="text-sm text-gray-600">{data.color}</p>
                 </div>
                 <button
-                  className="mt-2 w-full bg-cyan-500 text-white py-2 px-4 rounded-full"
+                  className="mt-2 w-full bg-sky-700 text-white py-2 px-4 rounded-full"
                   onClick={(e) => {
                     e.stopPropagation();
                     handleEventClick(data.galleryImages);

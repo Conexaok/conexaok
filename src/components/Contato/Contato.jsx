@@ -52,7 +52,7 @@ const Contato = () => {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100"
               />
             </div>
             <div>
@@ -67,7 +67,7 @@ const Contato = () => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100"
               />
             </div>
             <div>
@@ -81,13 +81,13 @@ const Contato = () => {
                 required
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100"
               ></textarea>
             </div>
             <div>
               <button
                 type="submit"
-                className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-cyan-500 hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-green-200 focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-gray-900"
+                className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-sky-700 hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-green-200 focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-gray-900"
               >
                 Enviar
               </button>
