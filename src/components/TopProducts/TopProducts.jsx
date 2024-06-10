@@ -14,7 +14,7 @@ import fnt5 from "../../assets/shirt/furniture/5.jpg";
 import amb1 from "../../assets/shirt/assembly/6.jpg";
 import amb2 from "../../assets/shirt/assembly/2.jpg";
 import amb3 from "../../assets/shirt/assembly/3.jpg";
-import amb4 from "../../assets/shirt/assembly/4.jpg";
+import amb4 from "../../assets/shirt/assembly/j4.jpg";
 import amb5 from "../../assets/shirt/assembly/5.jpg";
 import oys1 from "../../assets/shirt/toys/1.webp"
 import oys2 from "../../assets/shirt/toys/2.webp"
