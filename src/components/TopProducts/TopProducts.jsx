@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-import Img1 from "../../assets/shirt/shirt.png"; // Importa a imagem 1
-import Img2 from "../../assets/shirt/shirt2.png"; // Importa a imagem 2
-import Img3 from "../../assets/shirt/shirt3.png"; // Importa a imagem 3
-import Img4 from "../../assets/shirt/shirt4.png"; // Importa a imagem 4
 import { useNavigate } from "react-router-dom";
 import { Gallery } from "../Gallery/Gallery";
 import glp1 from "../../assets/shirt/shed/1.jpg";
