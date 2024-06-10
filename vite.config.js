@@ -14,6 +14,5 @@ export default defineConfig({
       ]
     })
   ],
-  base: '/conexaok/', // Certifique-se de adicionar o base path aqui
-  assetsInclude: ['**/*.jpg', '**/*.jpeg', '**/*.JPG', '**/*.webp', '**/*.WEBP']
+  assetsInclude: ['**/*.jpg', '**/*.jpeg', '**/*.JPG','**/*.webp', '**/*.WEBP']
 });
