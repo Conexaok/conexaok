@@ -106,7 +106,7 @@ const Testimonials = () => {
           <Slider {...settings}>
             {TestimonialData.map((data) => (
               <div className="my-6" key={data.id}>
-                <div className="flex flex-col items-center gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl dark:bg-gray-800 bg-white relative transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                <div className="flex flex-col items-center gap-4 shadow-lg py-3 px-1 mx-1 rounded-xl dark:bg-gray-800 bg-white relative transition-all duration-300 transform hover:scale-105 hover:shadow-2xl h-full min-h-[400px] max-h-[400px]">
                   <div className="mb-4">
                     <img
                       src={data.img}

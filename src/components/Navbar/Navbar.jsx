@@ -6,7 +6,7 @@ import { Link } from "react-scroll";
 
 // Itens do menu principal
 const Menu = [
-  { id: 1, name: "Início", link: "Inicio" },
+  { id: 1, name: "Início", link: "/#" },
   { id: 2, name: "Sobre", link: "Sobre" },
   { id: 3, name: "Stands", link: "Stands" },
   { id: 4, name: "Brindes", link: "Brindes" },

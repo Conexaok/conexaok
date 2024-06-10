@@ -1,16 +1,10 @@
 import React, { useState } from "react";
-import Img1 from "../../assets/women/women.png";
-import Img2 from "../../assets/women/women2.jpg";
-import Img3 from "../../assets/women/women3.jpg";
-import Img4 from "../../assets/women/women4.jpg";
+import prt1 from "../../assets/shirt/print/1.jpg";
+import prt2 from "../../assets/shirt/print/2.png";
+import prt3 from "../../assets/shirt/print/3.png";
+import prt4 from "../../assets/shirt/print/4.jpg";
+import prt5 from "../../assets/shirt/print/5.png";
 import { Gallery } from "../Gallery/Gallery";
-import prt1 from "../../assets/shirt/print/1.jpg"
-import prt2 from "../../assets/shirt/print/2.png"
-import prt3 from "../../assets/shirt/print/3.png"
-import prt4 from "../../assets/shirt/print/4.jpg"
-import prt5 from "../../assets/shirt/print/5.png"
-
-
 
 // Dados dos produtos
 const GraficaData = [
@@ -103,27 +97,27 @@ const Grafica = () => {
         </div>
         {/* Seção do corpo */}
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 place-items-center gap-5">
             {/* Seção dos cards de produtos */}
             {GraficaData.map((data) => (
               <div
                 data-aos="fade-up" // Animação AOS
                 data-aos-delay={data.aosDelay} // Atraso para a animação AOS
                 key={data.id}
-                className="space-y-3"
+                className="space-y-3 w-full flex flex-col items-center"
               >
                 {/* Imagem do produto */}
                 <img
                   src={data.img}
                   alt=""
-                  className="h-[220px] w-[150px] object-cover rounded-md"
+                  className="h-[220px] w-full max-w-[150px] object-cover rounded-md"
                 />
-                <div>
+                <div className="text-center">
                   {/* Título do produto */}
                   <h3 className="font-semibold">{data.title}</h3>
                   {/* Botão para abrir a galeria */}
                   <button
-                    className="bg-sky-700 dark:bg-cyan-900 hover:scale-105 duration-300 text-white py-2 px-8 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
+                    className="bg-sky-700 dark:bg-cyan-900 hover:scale-105 duration-300 text-white py-2 px-8 rounded-full mt-4"
                     onClick={() => handleItemClick(data.galleryType)}
                   >
                     Clique Aqui
