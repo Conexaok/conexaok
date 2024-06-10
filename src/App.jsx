@@ -11,7 +11,7 @@ import Clientes from "./components/Clientes/Clientes";
 import Subscribe from "./components/Subscribe/Subscribe";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
-import Grafica from "./components/Grafica/Grafica";
+import Grafica from "./components/Grafica/grafica";
 import Brindes from "./components/Brindes/Brindes";
 import Stands from "./components/Stands/Stands";
 import Contato from "./components/Contato/Contato";
