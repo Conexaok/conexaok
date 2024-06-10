@@ -11,7 +11,7 @@ import BocarosaLogo from "../../assets/women/bocarosa.png";
 import HeinekenLogo from "../../assets/women/heineken.png";
 import BrisanetLogo from "../../assets/women/Brisanet.png";
 import CafecoracoesLogo from "../../assets/women/cafecoracoes.png";
-import CaixaLogo from "../../assets/women/Caixa.png";
+import CaixaLogo from "../../assets/women/caixa.png";
 import CapricheLogo from "../../assets/women/capriche.png";
 import CardealLogo from "../../assets/women/cardeal.png";
 import PatteoLogo from "../../assets/women/clientepatteo.png";
