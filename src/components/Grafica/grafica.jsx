@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-import Img1 from "../../assets/women/women.png";
-import Img2 from "../../assets/women/women2.jpg";
-import Img3 from "../../assets/women/women3.jpg";
-import Img4 from "../../assets/women/women4.jpg";
 import { Gallery } from "../Gallery/Gallery";
 import prt1 from "../../assets/shirt/print/1.jpg"
 import prt2 from "../../assets/shirt/print/2.png"
@@ -10,9 +6,6 @@ import prt3 from "../../assets/shirt/print/3.png"
 import prt4 from "../../assets/shirt/print/4.jpg"
 import prt5 from "../../assets/shirt/print/5.png"
 
-
-
-// Dados dos produtos
 const GraficaData = [
   {
     id: 1,
