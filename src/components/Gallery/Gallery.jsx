@@ -13,7 +13,7 @@ export function Gallery({ images, onClose }) {
       </button>
       <div>
         <img
-          className="h-auto w-full max-w-full rounded-lg object-cover object-center md:h-[480px]"
+          className="h-auto w-full max-w-full rounded-lg object-cover object-center md:h-[850px]"
           src={active}
           alt="Featured"
         />
@@ -24,7 +24,7 @@ export function Gallery({ images, onClose }) {
             <img
               onClick={() => setActive(imgelink)}
               src={imgelink}
-              className="h-20 max-w-full cursor-pointer rounded-lg object-cover object-center"
+              className="h-50 max-w-full cursor-pointer rounded-lg object-cover object-center"
               alt={`gallery-image-${index}`}
             />
           </div>

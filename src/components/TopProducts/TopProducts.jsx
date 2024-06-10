@@ -5,75 +5,94 @@ import Img3 from "../../assets/shirt/shirt3.png"; // Importa a imagem 3
 import Img4 from "../../assets/shirt/shirt4.png"; // Importa a imagem 4
 import { useNavigate } from "react-router-dom";
 import { Gallery } from "../Gallery/Gallery";
-
+import glp1 from "../../assets/shirt/shed/1.jpg";
+import glp2 from "../../assets/shirt/shed/2.jpg";
+import glp3 from "../../assets/shirt/shed/3.jpg";
+import glp4 from "../../assets/shirt/shed/4.jpg";
+import glp5 from "../../assets/shirt/shed/5.jpg";
+import fnt1 from "../../assets/shirt/furniture/1.jpg";
+import fnt2 from "../../assets/shirt/furniture/2.jpg";
+import fnt3 from "../../assets/shirt/furniture/3.jpg";
+import fnt4 from "../../assets/shirt/furniture/4.jpg";
+import fnt5 from "../../assets/shirt/furniture/5.jpg";
+import amb1 from "../../assets/shirt/assembly/1.jpg";
+import amb2 from "../../assets/shirt/assembly/2.jpg";
+import amb3 from "../../assets/shirt/assembly/3.jpg";
+import amb4 from "../../assets/shirt/assembly/4.jpg";
+import amb5 from "../../assets/shirt/assembly/5.jpg";
+import oys1 from "../../assets/shirt/toys/1.webp"
+import oys2 from "../../assets/shirt/toys/2.webp"
+import oys3 from "../../assets/shirt/toys/3.webp"
+import oys4 from "../../assets/shirt/toys/4.webp"
+import oys5 from "../../assets/shirt/toys/5.jpeg"
 // Dados das imagens para cada galeria
 const galleryData = {
   galpoes: [
     {
-      imgelink: "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      imgelink: glp1
     },
     {
-      imgelink: "https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      imgelink: glp2
     },
     {
-      imgelink: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
+      imgelink: glp3
     },
     {
-      imgelink: "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
+      imgelink: glp4
     },
     {
-      imgelink: "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
+      imgelink: glp5
     },
   ],
   stands: [
     {
-      imgelink: "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      imgelink: amb1
     },
     {
-      imgelink: "https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      imgelink: amb2
     },
     {
-      imgelink: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
+      imgelink: amb3
     },
     {
-      imgelink: "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
+      imgelink: amb4
     },
     {
-      imgelink: "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
+      imgelink: amb5
     },
   ],
   moveis: [
     {
-      imgelink: "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      imgelink: fnt1
     },
     {
-      imgelink: "https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      imgelink: fnt2
     },
     {
-      imgelink: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
+      imgelink: fnt3
     },
     {
-      imgelink: "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
+      imgelink: fnt4
     },
     {
-      imgelink: "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
+      imgelink: fnt5
     },
   ],
   eletronicos: [
     {
-      imgelink: "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      imgelink: oys1
     },
     {
-      imgelink: "https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      imgelink: oys2
     },
     {
-      imgelink: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
+      imgelink: oys3
     },
     {
-      imgelink: "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
+      imgelink: oys4
     },
     {
-      imgelink: "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
+      imgelink: oys5
     },
   ],
 };
@@ -82,28 +101,28 @@ const galleryData = {
 const ProductsData = [
   {
     id: 1,
-    img: Img1,
+    img: glp1,
     title: "Galpôes",
     description: "Locação de galpôes para eventos",
     galleryType: "galpoes",
   },
   {
     id: 2,
-    img: Img2,
+    img: amb5,
     title: "Montagens de Stands",
     description: "Montagem completa de stands",
     galleryType: "stands",
   },
   {
     id: 3,
-    img: Img3,
+    img: fnt5,
     title: "Móveis",
     description: "Locação de móveis diversos",
     galleryType: "moveis",
   },
   {
     id: 4,
-    img: Img4,
+    img: oys3,
     title: "Eletrônicos",
     description: "Locação de equipamentos eletrônicos",
     galleryType: "eletronicos",
@@ -149,7 +168,7 @@ const TopProducts = () => {
               <img
                 src={data.img}
                 alt=""
-                className="max-w-[140px] block mx-auto group-hover:scale-105 duration-300 drop-shadow-md"
+                className="max-w-[100px] block mx-auto group-hover:scale-105 duration-300 drop-shadow-md"
               />
             </div>
             <div className="p-4 text-center flex flex-col items-center justify-center h-full">

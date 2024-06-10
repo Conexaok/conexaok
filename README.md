@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 Ola!
-=======
 ## Hi there 👋
 
 <!--
@@ -17,4 +15,3 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
->>>>>>> 5e9801ec835a517f346ccd9b74c8b21e5064faae
