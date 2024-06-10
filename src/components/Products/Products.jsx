@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import img1 from "../../assets/evento/imagem01.jpg";
-import img2 from "../../assets/evento/imagem2.JPG";
-import img3 from "../../assets/evento/imagem3.JPG";
-import img4 from "../../assets/evento/imagem4.JPG";
-import img5 from "../../assets/evento/imagem5.JPG";
-import img6 from "../../assets/evento/imagem6.JPG";
+import img1 from "../../assets/evento/imagem1.jpg";
+import img2 from "../../assets/evento/imagem2.jpg";
+import img3 from "../../assets/evento/imagem3.jpg";
+import img4 from "../../assets/evento/imagem4.jpg";
+import img5 from "../../assets/evento/imagem5.jpg";
+import img6 from "../../assets/evento/imagem6.jpg";
 import img7 from "../../assets/evento/imagem7.jpg";
 import img8 from "../../assets/evento/imagem8.jpg";
 import img9 from "../../assets/evento/imagem9.jpg";

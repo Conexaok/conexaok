@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-import Img1 from "../../assets/shirt/shirt.png"; // Importa a imagem 1
-import Img2 from "../../assets/shirt/shirt2.png"; // Importa a imagem 2
-import Img3 from "../../assets/shirt/shirt3.png"; // Importa a imagem 3
-import Img4 from "../../assets/shirt/shirt4.png"; // Importa a imagem 4
 import { useNavigate } from "react-router-dom";
 import { Gallery } from "../Gallery/Gallery";
 import glp1 from "../../assets/shirt/shed/1.jpg";
@@ -15,10 +11,10 @@ import fnt2 from "../../assets/shirt/furniture/2.jpg";
 import fnt3 from "../../assets/shirt/furniture/3.jpg";
 import fnt4 from "../../assets/shirt/furniture/4.jpg";
 import fnt5 from "../../assets/shirt/furniture/5.jpg";
-import amb1 from "../../assets/shirt/assembly/1.jpg";
+import amb1 from "../../assets/shirt/assembly/6.jpg";
 import amb2 from "../../assets/shirt/assembly/2.jpg";
 import amb3 from "../../assets/shirt/assembly/3.jpg";
-import amb4 from "../../assets/shirt/assembly/4.jpg";
+import amb4 from "../../assets/shirt/assembly/j4.jpg";
 import amb5 from "../../assets/shirt/assembly/5.jpg";
 import oys1 from "../../assets/shirt/toys/1.webp"
 import oys2 from "../../assets/shirt/toys/2.webp"
