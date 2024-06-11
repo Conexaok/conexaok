@@ -6,7 +6,7 @@ const Contato = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [statusMessage, setStatusMessage] = useState(''); // Estado para a mensagem de status
+  const [statusMessage, setStatusMessage] = useState(''); 
 
   function sendEmail(e) {
     e.preventDefault();
@@ -23,11 +23,11 @@ const Contato = () => {
         setName('');
         setEmail('');
         setMessage('');
-        setStatusMessage('Mensagem enviada com sucesso!'); // Mensagem de sucesso
+        setStatusMessage('Mensagem enviada com sucesso!'); 
       })
       .catch((error) => {
         console.error("ERRO AO ENVIAR EMAIL: ", error);
-        setStatusMessage('Erro ao enviar mensagem. Tente novamente.'); // Mensagem de erro
+        setStatusMessage('Erro ao enviar mensagem. Tente novamente.'); 
       });
   }
 
