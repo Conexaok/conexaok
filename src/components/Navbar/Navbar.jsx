@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import Logo from "../../assets/website/logo.png";
 import { FaWhatsapp, FaBars, FaTimes, FaCaretDown, FaList } from "react-icons/fa";
 import DarkMode from "./DarkMode";
-import clsx from "clsx";
 
 const Navbar = ({ handleOrderPopup }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
 
   const openWhatsApp = () => {
     const phoneNumber = '558195042474';
@@ -87,6 +90,13 @@ const Navbar = ({ handleOrderPopup }) => {
                   ))}
                 </ul>
               )}
+            </div>
+
+            {/* Botão de menu móvel */}
+            <div className="sm:hidden">
+              <button onClick={toggleMobileMenu} className="text-xl">
+                {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+              </button>
             </div>
           </div>
         </div>

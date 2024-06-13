@@ -1,117 +1,141 @@
-import React from "react";
-import Img1 from "../../assets/shirt/shirt.png"; // Importa a imagem 1
-import Img2 from "../../assets/shirt/shirt2.png"; // Importa a imagem 2
-import Img3 from "../../assets/shirt/shirt3.png"; // Importa a imagem 3
-import Img4 from "../../assets/shirt/shirt4.png"; // Importa a imagem 4
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Gallery from "../Gallery/Gallery"; // Certifique-se de que o caminho está correto
+import glp1 from "../../assets/shirt/shed/1.jpg";
+import glp2 from "../../assets/shirt/shed/2.jpg";
+import glp3 from "../../assets/shirt/shed/3.jpg";
+import glp4 from "../../assets/shirt/shed/4.jpg";
+import glp5 from "../../assets/shirt/shed/5.jpg";
+import fnt1 from "../../assets/shirt/furniture/1.jpg";
+import fnt2 from "../../assets/shirt/furniture/2.jpg";
+import fnt3 from "../../assets/shirt/furniture/3.jpg";
+import fnt4 from "../../assets/shirt/furniture/4.jpg";
+import fnt5 from "../../assets/shirt/furniture/5.jpg";
+import amb1 from "../../assets/shirt/assembly/6.jpg";
+import amb2 from "../../assets/shirt/assembly/2.jpg";
+import amb3 from "../../assets/shirt/assembly/3.jpg";
+import amb4 from "../../assets/shirt/assembly/j4.jpg";
+import amb5 from "../../assets/shirt/assembly/5.jpg";
+import oys1 from "../../assets/shirt/toys/1.webp";
+import oys2 from "../../assets/shirt/toys/2.webp";
+import oys3 from "../../assets/shirt/toys/3.webp";
+import oys4 from "../../assets/shirt/toys/4.webp";
+import oys5 from "../../assets/shirt/toys/5.jpeg";
+
+// Dados das imagens para cada galeria
+const galleryData = {
+  galpoes: [
+    { imgelink: glp1 },
+    { imgelink: glp2 },
+    { imgelink: glp3 },
+    { imgelink: glp4 },
+    { imgelink: glp5 },
+  ],
+  stands: [
+    { imgelink: amb1 },
+    { imgelink: amb2 },
+    { imgelink: amb3 },
+    { imgelink: amb4 },
+    { imgelink: amb5 },
+  ],
+  moveis: [
+    { imgelink: fnt1 },
+    { imgelink: fnt2 },
+    { imgelink: fnt3 },
+    { imgelink: fnt4 },
+    { imgelink: fnt5 },
+  ],
+  eletronicos: [
+    { imgelink: oys1 },
+    { imgelink: oys2 },
+    { imgelink: oys3 },
+    { imgelink: oys4 },
+    { imgelink: oys5 },
+  ],
+};
 
 // Array de dados dos produtos
 const ProductsData = [
   {
     id: 1,
-    img: Img1,
+    img: glp1,
     title: "Galpôes",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Locação de galpôes para eventos",
+    galleryType: "galpoes",
   },
   {
     id: 2,
-    img: Img2,
+    img: amb5,
     title: "Montagens de Stands",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Montagem completa de stands",
+    galleryType: "stands",
   },
   {
     id: 3,
-    img: Img3,
-    title: "Movéis em Geral",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    img: fnt5,
+    title: "Móveis",
+    description: "Locação de móveis diversos",
+    galleryType: "moveis",
   },
   {
     id: 4,
-    img: Img4,
+    img: oys3,
     title: "Eletrônicos",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Locação de equipamentos eletrônicos",
+    galleryType: "eletronicos",
   },
 ];
 
 // Componente TopProducts
-const TopProducts = ({ galerry }) => {
+const TopProducts = () => {
+  const navigate = useNavigate();
+  const [showGallery, setShowGallery] = useState(false);
+  const [galleryImages, setGalleryImages] = useState([]);
+
+  const handleItemClick = (galleryType) => {
+    console.log("Gallery Type:", galleryType); // Adicione este log para verificar o tipo de galeria
+    console.log("Images for gallery:", galleryData[galleryType]); // Adicione este log para verificar as imagens
+    setGalleryImages(galleryData[galleryType]);
+    setShowGallery(true);
+  };
+
+  const closeGallery = () => {
+    setShowGallery(false);
+  };
+
+  if (showGallery) {
+    return <Gallery images={galleryImages} onClose={closeGallery} />;
+  }
+
   return (
-    <div className="container flex flex-col items-center justify-center pt-24"> {/* Adiciona padding-top para compensar a altura do navbar */}
-      {/* Seção de cabeçalho */}
+    <div id="TopProducts" className="container flex flex-col items-center justify-center">
       <div className="text-center mb-24">
-        <h1 className="text-3xl font-bold shadow-md">
+        <h1 data-aos="fade-up" className="text-3xl font-bold shadow-md">
           Locações de Móveis e Estruturas Para Eventos
         </h1>
       </div>
-      {/* Seção do corpo */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-20 md:gap-5 place-items-center">
-        {/* Mapeamento dos dados dos produtos */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 place-items-center">
         {ProductsData.map((data) => (
           <div
             key={data.id}
-            className="
-              relative
-              rounded-2xl
-              bg-white
-              dark:bg-gray-800
-              hover:bg-gradient-to-b
-              from-primary
-              to-secondary
-              dark:hover:bg-primary
-              hover:text-white
-              shadow-xl
-              duration-300
-              group
-              max-w-[300px]
-              space-y-3
-            "
+            data-aos="zoom-in"
+            className="relative flex flex-col items-center justify-center rounded-2xl bg-white dark:bg-gray-950 hover:bg-sky-700 dark:text-white from-primary to-secondary dark:hover:bg-cyan-900 hover:text-white shadow-xl duration-300 group w-full h-[250px] max-w-[300px]"
             style={{ cursor: "pointer" }}
-            onClick={() => galerry(data.id)}
+            onClick={() => handleItemClick(data.galleryType)}
           >
-            {/* Seção da imagem */}
-            <div className="h-[100px] relative">
+            <div className="h-[100px] relative flex items-center justify-center">
               <img
                 src={data.img}
                 alt={data.title}
-                className="
-                  max-w-[140px]
-                  block
-                  mx-auto
-                  absolute
-                  left-0
-                  right-0
-                  top-1/2
-                  transform
-                  -translate-y-1/2
-                  group-hover:scale-105
-                  duration-300
-                  drop-shadow-md
-                "
+                className="max-w-[100px] block mx-auto group-hover:scale-105 duration-300 drop-shadow-md"
               />
             </div>
-            {/* Seção de detalhes */}
-            <div className="p-4 text-center">
+            <div className="p-4 text-center flex flex-col items-center justify-center h-full">
               <h1 className="text-xl font-bold">{data.title}</h1>
               <p className="text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-2">
                 {data.description}
               </p>
-              <button
-                className="
-                  bg-primary
-                  hover:scale-105
-                  duration-300
-                  text-white
-                  py-1
-                  px-4
-                  rounded-full
-                  mt-4
-                  group-hover:bg-white
-                  group-hover:text-primary
-                "
-              >
+              <button className="bg-sky-700 dark:bg-cyan-900 hover:scale-105 duration-300 text-white py-2 px-8 rounded-full mt-4 group-hover:bg-white group-hover:text-primary">
                 Clique Aqui
               </button>
             </div>
