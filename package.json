@@ -12,6 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@material-tailwind/react": "^3.0.0-beta.7",
     "aos": "^2.3.4",

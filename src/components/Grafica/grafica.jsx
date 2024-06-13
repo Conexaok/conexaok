@@ -20,7 +20,7 @@ const GraficaData = [
   {
     id: 2,
     img: prt2,
-    title: "Foldes, Flyers, Folhetos",
+    title: "Backdrop",
     galleryType: "grafica2",
   },
   {
@@ -32,7 +32,7 @@ const GraficaData = [
   {
     id: 4,
     img: prt4,
-    title: "Backdrop",
+    title: "Foldes, Flyers, Adesivos",
     galleryType: "grafica4",
   },
   {

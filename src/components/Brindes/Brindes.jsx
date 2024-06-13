@@ -3,6 +3,7 @@ import Img1 from "../../assets/women/necessaire.png";
 import Img2 from "../../assets/women/squeeze.png";
 import Img3 from "../../assets/women/cheveiro.jpg";
 import Img4 from "../../assets/women/entrega.jpg";
+import Img5 from "../../assets/women/bolsa.png";
 import { GalleryBrinds } from "./GalleryBrinds";
 
 
@@ -15,7 +16,8 @@ const BrindesData = [
       { imgelink: Img1 },
       { imgelink: Img2 },
       { imgelink: Img3 },
-      { imgelink: Img4 }
+      { imgelink: Img4 },
+      { imgelink: Img5 }
     ],
   },
   {
@@ -23,10 +25,11 @@ const BrindesData = [
     img: Img2,
     title: "Squeeze",
     galleryImages: [
-      { imgelink: Img1 },
       { imgelink: Img2 },
+      { imgelink: Img1 },
       { imgelink: Img3 },
-      { imgelink: Img4 }
+      { imgelink: Img4 },
+      { imgelink: Img5 }
     ],
   },
   {
@@ -34,10 +37,11 @@ const BrindesData = [
     img: Img3,
     title: "Chaveiro",
     galleryImages: [
-      { imgelink: Img1 },
-      { imgelink: Img2 },
       { imgelink: Img3 },
-      { imgelink: Img4 }
+      { imgelink: Img2 },
+      { imgelink: Img1 },
+      { imgelink: Img4 },
+      { imgelink: Img5 }
     ],
   },
   {
@@ -45,21 +49,23 @@ const BrindesData = [
     img: Img4,
     title: "Entrega Rápida",
     galleryImages: [
-      { imgelink: Img1 },
+      { imgelink: Img4 },
       { imgelink: Img2 },
       { imgelink: Img3 },
-      { imgelink: Img4 }
+      { imgelink: Img1 },
+      { imgelink: Img5 }
     ],
   },
   {
     id: 5,
-    img: Img2,
-    title: "Brindes",
+    img: Img5,
+    title: "Bolsa",
     galleryImages: [
-      { imgelink: Img1 },
+      { imgelink: Img5 },
       { imgelink: Img2 },
       { imgelink: Img3 },
-      { imgelink: Img4 }
+      { imgelink: Img4 },
+      { imgelink: Img1 }
     ],
   },
 ];
