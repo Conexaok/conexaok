@@ -133,7 +133,7 @@ const Stands = () => {
         {/* Seção de cabeçalho */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
           <h1 data-aos="fade-up" className="text-3xl font-bold mb-6 text-center shadow-md">
-            Stands
+            Estruturas
           </h1>
         </div>
         {/* Seção do corpo */}

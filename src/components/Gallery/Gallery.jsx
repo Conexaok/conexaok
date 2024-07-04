@@ -11,9 +11,9 @@ const Gallery = ({ images, onClose }) => {
       >
         Fechar
       </button>
-      <div>
+      <div className="flex justify-center">
         <img
-          className="h-auto w-full max-w-full rounded-lg object-cover object-center md:h-[600px]"
+          className="h-auto w-1/2 max-w-full rounded-lg object-cover object-center"
           src={active}
           alt="Featured"
         />

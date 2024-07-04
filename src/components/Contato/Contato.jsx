@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import img from "../../assets/website/contato.jpg";
 import emailjs from '@emailjs/browser';
 
 const Contato = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [statusMessage, setStatusMessage] = useState(''); 
+  const [statusMessage, setStatusMessage] = useState('');
 
   function sendEmail(e) {
     e.preventDefault();
@@ -23,85 +22,81 @@ const Contato = () => {
         setName('');
         setEmail('');
         setMessage('');
-        setStatusMessage('Mensagem enviada com sucesso!'); 
+        setStatusMessage('Mensagem enviada com sucesso!');
       })
       .catch((error) => {
         console.error("ERRO AO ENVIAR EMAIL: ", error);
-        setStatusMessage('Erro ao enviar mensagem. Tente novamente.'); 
+        setStatusMessage('Erro ao enviar mensagem. Tente novamente.');
       });
   }
 
   return (
-    <div className="container mx-auto">
-      <h2 className="text-3xl font-bold mb-6 text-center shadow">Entre em Contato</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="max-w-md md:max-w-lg shadow-md rounded-md overflow-hidden">
-          <img src={img} alt="Contato" className="w-full h-auto" />
+    <section className="text-gray-400 bg-gray-900 body-font relative">
+      <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+        <div className="lg:w-2/3 md:w-1/2 w-full h-96 md:h-auto bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 relative">
+          <iframe
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            title="map"
+            marginHeight="0"
+            marginWidth="0"
+            scrolling="no"
+            src="https://www.google.com/maps?q=Rua%20Arthur%20Heleno%20de%20Souza%2C%20111%2C%20Conex%C3%A3o%20K&hl=pt-BR&z=18&output=embed"
+            style={{ position: 'absolute', top: 0, left: 0 }}
+          ></iframe>
         </div>
-        <div className="max-w-md md:max-w-lg shadow-md rounded-md overflow-hidden p-6">
-          <form className="space-y-4" onSubmit={sendEmail}>
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-500">
-                Seu Nome
-              </label>
+        <div className="lg:w-1/3 md:w-1/2 w-full bg-gray-900 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+          <h2 className="text-white text-lg mb-1 font-medium title-font">Contato</h2>
+          <p className="leading-relaxed mb-5">Fale um pouco sobre o que você quer realizar, entre em contato conosco!</p>
+          <form className="relative mb-4" onSubmit={sendEmail}>
+            <div className="relative mb-4">
+              <label htmlFor="name" className="leading-7 text-sm text-gray-400">Nome</label>
               <input
                 type="text"
-                name="name"
                 id="name"
-                autoComplete="name"
-                required
+                name="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100"
+                className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-500">
-                Seu Email
-              </label>
+            <div className="relative mb-4">
+              <label htmlFor="email" className="leading-7 text-sm text-gray-400">Email</label>
               <input
                 type="email"
-                name="email"
                 id="email"
-                autoComplete="email"
-                required
+                name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100"
+                className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-500">
-                Mensagem
-              </label>
+            <div className="relative mb-4">
+              <label htmlFor="message" className="leading-7 text-sm text-gray-400">Mensagem</label>
               <textarea
                 id="message"
                 name="message"
-                rows="4"
-                required
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100"
+                className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duração-200 ease-in-out"
               ></textarea>
             </div>
-            <div>
-              <button
-                type="submit"
-                className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-cyan-900 hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-green-200 focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-gray-900"
-              >
-                Enviar
-              </button>
-            </div>
+            <button
+              type="submit"
+              className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            >
+              Enviar
+            </button>
           </form>
           {statusMessage && (
-            <div className={`mt-4 text-center ${statusMessage.includes('sucesso') ? 'text-cyan-800' : 'text-rose-950'}`}>
+            <p className={`text-xs mt-3 ${statusMessage.includes('sucesso') ? 'text-cyan-800' : 'text-rose-950'}`}>
               {statusMessage}
-            </div>
+            </p>
           )}
         </div>
       </div>
-      <div className="w-full border-t-2 border-gray-300/50 my-6"></div>
-    </div>
+    </section>
   );
 };
 

@@ -19,7 +19,7 @@ import amb5 from "../../assets/shirt/assembly/5.jpg";
 import oys1 from "../../assets/shirt/toys/1.webp";
 import oys2 from "../../assets/shirt/toys/2.webp";
 import oys3 from "../../assets/shirt/toys/3.webp";
-import oys4 from "../../assets/shirt/toys/4.webp";
+import oys4 from "../../assets/shirt/toys/4.jpeg";
 import oys5 from "../../assets/shirt/toys/5.jpeg";
 
 // Dados das imagens para cada galeria

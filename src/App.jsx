@@ -35,6 +35,7 @@ function App() {
         <Testimonials/>
         <Clientes/>
         <Subscribe/>
+
         <Navbar/>
         <WhatsApp/>
         <Footer/>

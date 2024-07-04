@@ -41,7 +41,7 @@ const MapPage = () => {
   }
 
   return (
-    <MapContainer center={center} zoom={18} scrollWheelZoom={true} style={{ height: '50vh', width: '100%', borderRadius: '1%'}}>
+    <MapContainer center={center} zoom={18} scrollWheelZoom={true} style={{ height: '100%', width: '100%', borderRadius: '1%' }}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

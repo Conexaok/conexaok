@@ -1,5 +1,4 @@
 import React from "react";
-import MapPage from "../MapPage/MapPage";
 import {
   FaWhatsapp,
   FaFacebook,
@@ -7,6 +6,7 @@ import {
   FaLinkedin,
   FaMobileAlt,
   FaMapMarkerAlt,
+  FaEnvelope,
 } from "react-icons/fa";
 import footerLogo from "../../assets/website/logo.png";
 
@@ -81,7 +81,12 @@ const Footer = () => {
               {/* Número de telefone */}
               <div className="flex items-center gap-3">
                 <FaMobileAlt />
-                <p>+55 81 9.9504-2474</p>
+                <p>81 9.9504-2474 / </p>
+              </div>
+              {/* Email */}
+              <div className="flex items-center gap-3">
+                <FaEnvelope />
+                <p>atendimento@conexaokf.com.br</p>
               </div>
               {/* Endereço */}
               <div className="flex items-center gap-3">
