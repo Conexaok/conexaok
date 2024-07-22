@@ -8,7 +8,7 @@ import prt5 from "../../assets/shirt/print/5.png";
 
 // Dados das imagens para cada galeria
 const galleryData = {
-  grafica1: [{ imgelink: prt1 }],
+  grafica1: [{ imgelink: prt1, description: "Descrição da imagem 1" }],
   grafica2: [{ imgelink: prt2 }],
   grafica3: [{ imgelink: prt3 }],
   grafica4: [{ imgelink: prt4 }],
@@ -16,41 +16,41 @@ const galleryData = {
 };
 
 // Array de dados dos produtos
-const GraficaData = [
+const GraficaOffsetData = [
   {
     id: 1,
     img: prt1,
-    title: "Comunicação Visual",
+    title: "GraficaOffset 01",
     galleryType: "grafica1",
   },
   {
     id: 2,
     img: prt2,
-    title: "Backdrop",
+    title: "GraficaOffset 02",
     galleryType: "grafica2",
   },
   {
     id: 3,
     img: prt3,
-    title: "Adesivo Perfurado",
+    title: "GraficaOffset 03",
     galleryType: "grafica3",
   },
   {
     id: 4,
     img: prt4,
-    title: "Foldes, Flyers, Adesivos",
+    title: "GraficaOffset 04",
     galleryType: "grafica4",
   },
   {
     id: 5,
     img: prt5,
-    title: "Balcão Personalizado",
+    title: "GraficaOffset 05",
     galleryType: "grafica5",
   },
 ];
 
 // Componente Grafica
-const Grafica = () => {
+const GraficaOffset = () => {
   const [showGallery, setShowGallery] = useState(false);
   const [galleryImages, setGalleryImages] = useState([]);
 
@@ -68,19 +68,19 @@ const Grafica = () => {
   }
 
   return (
-    <div id="Grafica" className="mt-14 mb-12">
+    <div id="GraficaOffset" className="mt-14 mb-12">
       <div className="container">
         {/* Seção de cabeçalho */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
           <h1 data-aos="fade-up" className="text-3xl font-bold shadow-md">
-            Gráfica
+          GraficaOffset
           </h1>
         </div>
         {/* Seção do corpo */}
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 place-items-center gap-5">
             {/* Seção dos cards de produtos */}
-            {GraficaData.map((data) => (
+            {GraficaOffsetData.map((data) => (
               <div
                 data-aos="fade-up" // Animação AOS
                 data-aos-delay={data.aosDelay} // Atraso para a animação AOS
@@ -111,4 +111,4 @@ const Grafica = () => {
   );
 };
 
-export default Grafica;
+export default GraficaOffset;

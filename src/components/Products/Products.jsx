@@ -39,7 +39,7 @@ const ProductsData = [
       { imgelink: img2 },
       { imgelink: img3 },
       { imgelink: img4 },
-      { imgelink: img5 }
+      { imgelink: img5 },
     ],
   },
   {
@@ -53,7 +53,7 @@ const ProductsData = [
       { imgelink: img7 },
       { imgelink: img8 },
       { imgelink: img9 },
-      { imgelink: img10 }
+      { imgelink: img10 },
     ],
   },
   {
@@ -67,7 +67,7 @@ const ProductsData = [
       { imgelink: img12 },
       { imgelink: img13 },
       { imgelink: img14 },
-      { imgelink: img15 }
+      { imgelink: img15 },
     ],
   },
   {
@@ -81,7 +81,7 @@ const ProductsData = [
       { imgelink: img17 },
       { imgelink: img18 },
       { imgelink: img19 },
-      { imgelink: img20 }
+      { imgelink: img20 },
     ],
   },
   {
@@ -95,7 +95,7 @@ const ProductsData = [
       { imgelink: img22 },
       { imgelink: img23 },
       { imgelink: img24 },
-      { imgelink: img25 }
+      { imgelink: img25 },
     ],
   },
 ];
@@ -108,6 +108,12 @@ const Products = () => {
     setGalleryImages(galleryImages);
     setShowGallery(true);
   };
+
+  if (showGallery) {
+    return (
+      <GalleryProducts images={galleryImages} onClose={() => setShowGallery(false)} />
+    );
+  }
 
   return (
     <div id="Eventos" className="mt-14 mb-12">
@@ -127,38 +133,29 @@ const Products = () => {
                 key={data.id}
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}
-                className="space-y-3 cursor-pointer"
-                
+                className="relative flex flex-col items-center justify-center rounded-2xl bg-white dark:bg-gray-950 hover:bg-sky-700 dark:text-white from-primary to-secondary dark:hover:bg-cyan-900 hover:text-white shadow-xl duration-300 group w-full h-[250px] max-w-[300px]"
+                style={{ cursor: "pointer" }}
+                onClick={() => handleEventClick(data.galleryImages)}
               >
-                {/* Imagem do produto */}
-                <img
-                  src={data.img}
-                  alt={data.title}
-                  className="h-[220px] w-[150px] object-cover "
-                />
-                <div>
-                  {/* Título do produto */}
-                  <h3 className="font-semibold">{data.title}</h3>
-                  {/* Cor do produto */}
-                  <p className="text-sm text-gray-600">{data.color}</p>
+                <div className="h-[100px] relative flex items-center justify-center">
+                  <img
+                    src={data.img}
+                    alt={data.title}
+                    className="max-w-[100px] block mx-auto group-hover:scale-105 duration-300 drop-shadow-md"
+                  />
                 </div>
-                <button
-                  className="bg-sky-700 dark:bg-cyan-900 hover:scale-105 duration-300 text-white py-2 px-8 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleEventClick(data.galleryImages);
-                  }}
-                >
-                  Clique aqui
-                </button>
+                <div className="p-4 text-center flex flex-col items-center justify-center h-full">
+                  <h1 className="text-xl font-bold">{data.title}</h1>
+                  <p className="text-sm text-gray-600">{data.color}</p>
+                  <button className="bg-sky-700 dark:bg-cyan-900 hover:scale-105 duration-300 text-white py-2 px-8 rounded-full mt-4 group-hover:bg-white group-hover:text-primary">
+                    Clique aqui
+                  </button>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </div>
-      {showGallery && (
-        <GalleryProducts images={galleryImages} onClose={() => setShowGallery(false)} />
-      )}
     </div>
   );
 };

@@ -70,11 +70,10 @@ const Navbar = ({ handleOrderPopup }) => {
     { id: 2, name: "Sobre", link: "/#Sobre" },
     { id: 4, name: "Brindes", link: "/#Brindes" },
     { id: 5, name: "Uniformes", link: "/#" },
-    //Locações
     { id: 6, name: "Gráfica-OffSet", link: "/#Grafica" },
     { id: 7, name: "Comunicação Visual", link: "/#" },
-    { id: 7, name: "eventos realizados", link: "/#" },
-    { id: 7, name: "como chegar", link: "/#" },
+    { id: 8, name: "Eventos Realizados", link: "/#" },
+    { id: 9, name: "Como Chegar", link: "/#" },
   ];
 
   const DropdownLinks = [
@@ -120,7 +119,7 @@ const Navbar = ({ handleOrderPopup }) => {
             <div className="flex flex-col md:flex-row md:items-center">
               {Menu.map((item) => (
                 <React.Fragment key={item.id}>
-                  <a href={item.link} className='relative mx-6 text-center text-gray-800 dark:text-white hover:text-blue-500 py-2 font-sans text-sm font-medium uppercase group'>
+                  <a href={item.link} className='relative mx-2 text-center text-gray-800 dark:text-white hover:text-blue-500 py-2 font-sans text-sm font-medium uppercase'>
                     {item.name}
                     <span className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
                   </a>

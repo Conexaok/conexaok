@@ -5,7 +5,6 @@ import Hero from "./components/Hero/Hero";
 import Products from "./components/Products/Products";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import TopProducts from "./components/TopProducts/TopProducts";
 import Clientes from "./components/Clientes/Clientes";
 import Subscribe from "./components/Subscribe/Subscribe";
 import Testimonials from "./components/Testimonials/Testimonials";
@@ -16,6 +15,10 @@ import Stands from "./components/Stands/Stands";
 import Contato from "./components/Contato/Contato";
 import GalleryProducts from "./components/Products/GalleryProducts"; // Certifique-se de que este caminho está correto
 import WhatsApp from "./components/WhatsApp/WhatsApp"; 
+import Galpoes from "./components/Galpoes/Galpoes";
+import Uniformes from "./components/Uniformes/Uniformes";
+import GraficaOffset from "./components/GraficaOffset/GraficaOffset";
+import ComunicacaoVisual from "./components/ComunicacaoVisual/ComunicacaoVisual";
 
 
 
@@ -27,9 +30,12 @@ function App() {
       <Router>
         <Hero/>
         <Products/>
-        <TopProducts/>
+        <Galpoes/>
         <Grafica/>
         <Brindes/>
+        <Uniformes/>
+        <GraficaOffset/>
+        <ComunicacaoVisual/>
         <Stands/>
         <Contato/>
         <Testimonials/>
@@ -41,13 +47,16 @@ function App() {
         <Footer/>
         <Routes>
           <Route path="/products" element={<Products />} />
-          <Route path="/top-products" element={<TopProducts />} />
+          <Route path="/Galpoes" element={<Galpoes />} />
           <Route path="/clientes" element={<Clientes />} />
           <Route path="/subscribe" element={<Subscribe />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/footer" element={<Footer />} />
           <Route path="/grafica" element={<Grafica />} />
           <Route path="/brindes" element={<Brindes />} />
+          <Route path="/uniformes" element={<Uniformes />} />
+          <Route path="/GraficaOffset" element={<GraficaOffset />} />
+          <Route path="/ComunicacaoVisual" element={<ComunicacaoVisual />} />
           <Route path="/stands" element={<Stands />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/gallery-products" element={<GalleryProducts />} />

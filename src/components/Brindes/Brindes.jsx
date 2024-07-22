@@ -1,23 +1,23 @@
 import React, { useState } from "react";
-import Img1 from "../../assets/women/necessaire.png";
+import Img1 from "../../assets/women/necessaire.jpeg";
 import Img2 from "../../assets/women/squeeze.png";
 import Img3 from "../../assets/women/cheveiro.jpg";
 import Img4 from "../../assets/women/entrega.jpg";
 import Img5 from "../../assets/women/bolsa.png";
 import { GalleryBrinds } from "./GalleryBrinds";
 
-
+// Array de dados dos produtos
 const BrindesData = [
   {
     id: 1,
     img: Img1,
     title: "Necessaire",
     galleryImages: [
-      { imgelink: Img1 },
-      { imgelink: Img2 },
-      { imgelink: Img3 },
-      { imgelink: Img4 },
-      { imgelink: Img5 }
+      { imgelink: Img1, caption: "Descrição" },
+      { imgelink: Img2, caption: "Descrição" },
+      { imgelink: Img3, caption: "Descrição" },
+      { imgelink: Img4, caption: "Descrição" },
+      { imgelink: Img5, caption: "Descrição" }
     ],
   },
   {
@@ -25,11 +25,11 @@ const BrindesData = [
     img: Img2,
     title: "Squeeze",
     galleryImages: [
-      { imgelink: Img2 },
-      { imgelink: Img1 },
-      { imgelink: Img3 },
-      { imgelink: Img4 },
-      { imgelink: Img5 }
+      { imgelink: Img2, caption: "Descrição" },
+      { imgelink: Img1, caption: "Descrição" },
+      { imgelink: Img3, caption: "Descrição" },
+      { imgelink: Img4, caption: "Descrição" },
+      { imgelink: Img5, caption: "Descrição" }
     ],
   },
   {
@@ -37,11 +37,11 @@ const BrindesData = [
     img: Img3,
     title: "Chaveiro",
     galleryImages: [
-      { imgelink: Img3 },
-      { imgelink: Img2 },
-      { imgelink: Img1 },
-      { imgelink: Img4 },
-      { imgelink: Img5 }
+      { imgelink: Img3, caption: "Descrição" },
+      { imgelink: Img2, caption: "Descrição" },
+      { imgelink: Img1, caption: "Descrição" },
+      { imgelink: Img4, caption: "Descrição" },
+      { imgelink: Img5, caption: "Descrição" }
     ],
   },
   {
@@ -49,11 +49,11 @@ const BrindesData = [
     img: Img4,
     title: "Entrega Rápida",
     galleryImages: [
-      { imgelink: Img4 },
-      { imgelink: Img2 },
-      { imgelink: Img3 },
-      { imgelink: Img1 },
-      { imgelink: Img5 }
+      { imgelink: Img4, caption: "Descrição" },
+      { imgelink: Img2, caption: "Descrição" },
+      { imgelink: Img3, caption: "Descrição" },
+      { imgelink: Img1, caption: "Descrição" },
+      { imgelink: Img5, caption: "Descrição" }
     ],
   },
   {
@@ -61,15 +61,16 @@ const BrindesData = [
     img: Img5,
     title: "Bolsa",
     galleryImages: [
-      { imgelink: Img5 },
-      { imgelink: Img2 },
-      { imgelink: Img3 },
-      { imgelink: Img4 },
-      { imgelink: Img1 }
+      { imgelink: Img5, caption: "Descrição" },
+      { imgelink: Img2, caption: "Descrição" },
+      { imgelink: Img3, caption: "Descrição" },
+      { imgelink: Img4, caption: "Descrição" },
+      { imgelink: Img1, caption: "Descrição" }
     ],
   },
 ];
 
+// Componente Brindes
 const Brindes = () => {
   const [showGallery, setShowGallery] = useState(false);
   const [galleryImages, setGalleryImages] = useState([]);
@@ -78,6 +79,14 @@ const Brindes = () => {
     setGalleryImages(galleryImages);
     setShowGallery(true);
   };
+
+  const closeGallery = () => {
+    setShowGallery(false);
+  };
+
+  if (showGallery) {
+    return <GalleryBrinds images={galleryImages} onClose={closeGallery} />;
+  }
 
   return (
     <div id="Brindes" className="mt-14 mb-12">
@@ -97,37 +106,30 @@ const Brindes = () => {
                 data-aos="fade-up" // Animação AOS
                 data-aos-delay={data.aosDelay} // Atraso para a animação AOS
                 key={data.id}
-                className="space-y-3 cursor-pointer"
+                className="relative flex flex-col items-center justify-center rounded-2xl bg-white dark:bg-gray-950 hover:bg-sky-700 dark:text-white from-primary to-secondary dark:hover:bg-cyan-900 hover:text-white shadow-xl duration-300 group w-full h-[250px] max-w-[300px]"
+                style={{ cursor: "pointer" }}
                 onClick={() => handleEventClick(data.galleryImages)}
               >
-                {/* Imagem do produto */}
-                <img
-                  src={data.img}
-                  alt=""
-                  className="h-[220px] w-[150px] object-cover rounded-md"
-                />
-                <div>
-                  {/* Título do produto */}
-                  <h3 className="font-semibold">{data.title}</h3>
-                  {/* Cor do produto */}
-                  <p className="text-sm text-gray-600">{data.color}</p>
+                <div className="h-[100px] relative flex items-center justify-center">
+                  <img
+                    src={data.img}
+                    alt={data.title}
+                    className="max-w-[100px] block mx-auto group-hover:scale-105 duration-300 drop-shadow-md"
+                  />
                 </div>
-                <button
-                  className="bg-sky-700 dark:bg-cyan-900 hover:scale-105 duration-300 text-white py-2 px-8 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleEventClick(data.galleryImages);
-                  }}
-                >
-                  Clique aqui
-                </button>
+                <div className="p-4 text-center flex flex-col items-center justify-center h-full">
+                  <h1 className="text-xl font-bold">{data.title}</h1>
+                  <button className="bg-sky-700 dark:bg-cyan-900 hover:scale-105 duration-300 text-white py-2 px-8 rounded-full mt-4 group-hover:bg-white group-hover:text-primary">
+                    Clique aqui
+                  </button>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </div>
       {showGallery && (
-        <GalleryBrinds images={galleryImages} onClose={() => setShowGallery(false)} />
+        <GalleryBrinds images={galleryImages} onClose={closeGallery} />
       )}
     </div>
   );

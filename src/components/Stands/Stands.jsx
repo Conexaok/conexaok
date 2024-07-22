@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import Gallery from "../Gallery/Gallery";
 import imb1 from "../../assets/shirt/stands/1.jpg";
 import imb2 from "../../assets/shirt/stands/2.jpg";
@@ -145,30 +144,22 @@ const Stands = () => {
                 data-aos="fade-up" // Animação AOS
                 data-aos-delay={data.aosDelay} // Atraso para a animação AOS
                 key={data.id}
-                className="space-y-3 w-full flex flex-col items-center"
+                className="relative flex flex-col items-center justify-center rounded-2xl bg-white dark:bg-gray-950 hover:bg-sky-700 dark:text-white from-primary to-secondary dark:hover:bg-cyan-900 hover:text-white shadow-xl duration-300 group w-full h-[250px] max-w-[300px]"
+                style={{ cursor: "pointer" }}
+                onClick={() => handleItemClick(data.galleryType)}
               >
-                {/* Imagem do produto */}
-                <img
-                  src={data.img}
-                  alt=""
-                  className="h-[220px] w-full max-w-[150px] object-cover rounded-md"
-                />
-                <div className="text-center">
-                  {/* Título do produto */}
-                  <h3 className="font-semibold">{data.title}</h3>
-                  {/* Cor do produto */}
+                <div className="h-[100px] relative flex items-center justify-center">
+                  <img
+                    src={data.img}
+                    alt={data.title}
+                    className="max-w-[100px] block mx-auto group-hover:scale-105 duration-300 drop-shadow-md"
+                  />
+                </div>
+                <div className="p-4 text-center flex flex-col items-center justify-center h-full">
+                  <h1 className="text-xl font-bold">{data.title}</h1>
                   <p className="text-sm text-gray-600">{data.color}</p>
-                  {/* Rating do produto */}
-                  <div className="flex items-center gap-1 justify-center">
-                   
-                    <span>{data.rating}</span>
-                  </div>
-                  {/* Botão para abrir a galeria */}
-                  <button
-                    className="bg-sky-700 dark:bg-cyan-900 hover:scale-105 duration-300 text-white py-2 px-8 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
-                    onClick={() => handleItemClick(data.galleryType)}
-                  >
-                    Clique Aqui
+                  <button className="bg-sky-700 dark:bg-cyan-900 hover:scale-105 duration-300 text-white py-2 px-8 rounded-full mt-4 group-hover:bg-white group-hover:text-primary">
+                    Clique aqui
                   </button>
                 </div>
               </div>

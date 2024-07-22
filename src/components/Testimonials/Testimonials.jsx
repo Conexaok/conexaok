@@ -1,32 +1,5 @@
 import React from "react";
-import Slider from "react-slick";
-import trf1 from "../../assets/about/1.jpeg";
-import trf2 from "../../assets/about/2.jpeg";
-import trf3 from "../../assets/about/3.jpeg";
 
-const TestimonialData = [
-  {
-    id: 1,
-    name: "Karlus Demetrius",
-    title: "Sócio",
-    text: "A Conexão K não apenas transformou nossa visão em realidade; eles a catapultaram para o futuro. Com uma fusão única de criatividade e compromisso, cada detalhe foi meticulosamente trabalhado, não apenas para atender, mas para superar nossas expectativas. Aqui, a inovação não é apenas uma palavra - é o tecido do nosso sucesso.",
-    img: trf1,
-  },
-  {
-    id: 2,
-    name: "Ana Paula",
-    title: "Sócia",
-    text: "Parceira inigualável, a Conexão K não apenas nos proporcionou uma experiência incrível, mas também nos impulsionou rumo ao sucesso. Sua abordagem profissional e apaixonada vai além do esperado, entregando resultados que transcendem a excepcionalidade. Aqui, cada projeto é uma jornada de excelência e inovação, moldada pela determinação de criar um impacto duradouro.",
-    img: trf2,
-  },
-  {
-    id: 3,
-    name: "Cristina Severina",
-    title: "Atendimento",
-    text: "A sinergia da equipe da Conexão K é um verdadeiro catalisador para o sucesso. Com uma mentalidade inovadora e uma dedicação incomparável, eles não apenas compreendem as necessidades do cliente, mas as antecipam, transformando cada evento em uma experiência memorável. Aqui, a excelência é a norma e a criatividade é o combustível que alimenta nossa jornada em direção ao extraordinário.",
-    img: trf3,
-  },
-];
 
 const Testimonials = () => {
   var settings = {
@@ -100,40 +73,6 @@ const Testimonials = () => {
             <br /><br />
             Essa missão, visão e valores refletem o compromisso da Agência Conexão K com a excelência, a inovação e a integridade em tudo o que fazemos, enquanto mantemos um foco contínuo na satisfação de nossos clientes e no impacto positivo que criamos em nossa comunidade.
           </h2>
-        </div>
-
-        <div data-aos="zoom-in">
-          <Slider {...settings}>
-            {TestimonialData.map((data) => (
-              <div className="my-6" key={data.id}>
-                <div className="flex flex-col items-center gap-4 shadow-lg py-3 px-1 mx-1 rounded-xl dark:bg-gray-800 bg-white relative transition-all duration-300 transform hover:scale-105 hover:shadow-2xl h-full min-h-[400px] max-h-[400px]">
-                  <div className="mb-4">
-                    <img
-                      src={data.img}
-                      alt={data.name}
-                      className="rounded-full w-24 h-24 object-cover"
-                    />
-                  </div>
-                  <div className="flex flex-col items-center gap-2">
-                    <div className="space-y-3 text-center">
-                      <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
-                        {data.text}
-                      </p>
-                      <h1 className="text-xl font-semibold text-gray-900 dark:text-white">
-                        {data.name}
-                      </h1>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">
-                        {data.title}
-                      </p>
-                    </div>
-                  </div>
-                  <p className="text-black/20 text-9xl font-serif absolute top-0 right-0 transform translate-x-2 -translate-y-1">
-                    ,,
-                  </p>
-                </div>
-              </div>
-            ))}
-          </Slider>
         </div>
       </div>
     </div>

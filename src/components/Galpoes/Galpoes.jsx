@@ -16,41 +16,41 @@ const galleryData = {
 };
 
 // Array de dados dos produtos
-const GraficaData = [
+const GalpoesData = [
   {
     id: 1,
     img: prt1,
-    title: "Comunicação Visual",
+    title: "Galpão 01",
     galleryType: "grafica1",
   },
   {
     id: 2,
     img: prt2,
-    title: "Backdrop",
+    title: "Galpão 02",
     galleryType: "grafica2",
   },
   {
     id: 3,
     img: prt3,
-    title: "Adesivo Perfurado",
+    title: "Galpão 03",
     galleryType: "grafica3",
   },
   {
     id: 4,
     img: prt4,
-    title: "Foldes, Flyers, Adesivos",
+    title: "Galpão 04",
     galleryType: "grafica4",
   },
   {
     id: 5,
     img: prt5,
-    title: "Balcão Personalizado",
+    title: "Galpão 05",
     galleryType: "grafica5",
   },
 ];
 
 // Componente Grafica
-const Grafica = () => {
+const Galpoes = () => {
   const [showGallery, setShowGallery] = useState(false);
   const [galleryImages, setGalleryImages] = useState([]);
 
@@ -68,19 +68,19 @@ const Grafica = () => {
   }
 
   return (
-    <div id="Grafica" className="mt-14 mb-12">
+    <div id="Galpao" className="mt-14 mb-12">
       <div className="container">
         {/* Seção de cabeçalho */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
           <h1 data-aos="fade-up" className="text-3xl font-bold shadow-md">
-            Gráfica
+            Galpao
           </h1>
         </div>
         {/* Seção do corpo */}
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 place-items-center gap-5">
             {/* Seção dos cards de produtos */}
-            {GraficaData.map((data) => (
+            {GalpoesData.map((data) => (
               <div
                 data-aos="fade-up" // Animação AOS
                 data-aos-delay={data.aosDelay} // Atraso para a animação AOS
@@ -111,4 +111,4 @@ const Grafica = () => {
   );
 };
 
-export default Grafica;
+export default Galpoes;
