@@ -12,20 +12,6 @@ const TestimonialData = [
     text: "A Conexão K não apenas transformou nossa visão em realidade; eles a catapultaram para o futuro. Com uma fusão única de criatividade e compromisso, cada detalhe foi meticulosamente trabalhado, não apenas para atender, mas para superar nossas expectativas. Aqui, a inovação não é apenas uma palavra - é o tecido do nosso sucesso.",
     img: trf1,
   },
-  {
-    id: 2,
-    name: "Ana Paula",
-    title: "Sócia",
-    text: "Parceira inigualável, a Conexão K não apenas nos proporcionou uma experiência incrível, mas também nos impulsionou rumo ao sucesso. Sua abordagem profissional e apaixonada vai além do esperado, entregando resultados que transcendem a excepcionalidade. Aqui, cada projeto é uma jornada de excelência e inovação, moldada pela determinação de criar um impacto duradouro.",
-    img: trf2,
-  },
-  {
-    id: 3,
-    name: "Cristina Severina",
-    title: "Atendimento",
-    text: "A sinergia da equipe da Conexão K é um verdadeiro catalisador para o sucesso. Com uma mentalidade inovadora e uma dedicação incomparável, eles não apenas compreendem as necessidades do cliente, mas as antecipam, transformando cada evento em uma experiência memorável. Aqui, a excelência é a norma e a criatividade é o combustível que alimenta nossa jornada em direção ao extraordinário.",
-    img: trf3,
-  },
 ];
 
 const Testimonials = () => {
@@ -79,26 +65,20 @@ const Testimonials = () => {
         <div className="mb-10 px-4">
           <h2 className="text-xl md:text-2xl font-medium text-center text-gray-800 dark:text-gray-200 leading-relaxed space-y-4">
             <span className="block font-bold">Missão:</span> 
-            Conectar ideias, marcas e pessoas de maneira inovadora e memorável, criando experiências que inspiram e transformam.
+            Conectar marcas e ideias através de soluções completas e personalizadas, com criatividade e excelência em cada detalhe.
             <br /><br />
             <span className="block font-bold">Visão:</span> 
-            Ser a agência líder em eventos e marketing, reconhecida por nossa criatividade, qualidade excepcional e compromisso inabalável com a satisfação de nossos clientes.
+            Ser uma empresa referência, reconhecida pelo profissionalismo, inovação e amplo portfólio, que conecta soluções para impulsionar o sucesso dos nossos clientes.
             <br /><br />
-            <span className="block font-bold mt-2">Valores / Criatividade:</span> Buscamos constantemente soluções inovadoras e inspiradoras para atender às necessidades de nossos clientes e surpreender o público.
+            <span className="block font-bold">Excelência:</span> Promovemos a mais alta qualidade em tudo que fazemos e ofertamos.
             <br /><br />
-            <span className="block font-bold">Excelência:</span> Comprometemo-nos com padrões de qualidade excepcionais em todos os aspectos do nosso trabalho, desde o planejamento até a execução.
+            <span className="block font-bold">Criatividade:</span> Sempre buscamos inovação e ousadia, através da pesquisa constante de novas ideias e soluções.
             <br /><br />
-            <span className="block font-bold">Integridade:</span> Agimos com honestidade, ética e transparência em todos os relacionamentos e transações, construindo confiança duradoura.
+            <span className="block font-bold">Compromisso:</span> Somos dedicados aos nossos clientes e parceiros.
             <br /><br />
-            <span className="block font-bold">Trabalho em Equipe:</span> Acreditamos que a colaboração é essencial para o sucesso e valorizamos a diversidade de talentos e perspectivas em nossa equipe.
+            <span className="block font-bold">Sustentabilidade:</span> Somos comprometidos em oferecer soluções que ofereçam o mínimo impacto ambiental possível.
             <br /><br />
-            <span className="block font-bold">Compromisso com o Cliente:</span> Colocamos os interesses e as necessidades de nossos clientes em primeiro lugar, sempre nos esforçando para superar suas expectativas.
-            <br /><br />
-            <span className="block font-bold">Responsabilidade Social e Ambiental:</span> Assumimos a responsabilidade de sermos cidadãos corporativos conscientes, contribuindo para o bem-estar da comunidade e minimizando nosso impacto no meio ambiente.
-            <br /><br />
-            <span className="block font-bold">Aprendizado Contínuo:</span> Buscamos constantemente novos conhecimentos e aprendizado, adaptando-nos às mudanças no mercado e mantendo-nos atualizados com as tendências mais recentes.
-            <br /><br />
-            Essa missão, visão e valores refletem o compromisso da Agência Conexão K com a excelência, a inovação e a integridade em tudo o que fazemos, enquanto mantemos um foco contínuo na satisfação de nossos clientes e no impacto positivo que criamos em nossa comunidade.
+            <span className="block font-bold">Conexão:</span> Acreditamos na força da conexão entre marcas, pessoas e soluções.
           </h2>
         </div>
 
