@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaArrowRight, FaPrint } from "react-icons/fa"; // Ícones
+import { FaArrowRight, FaTshirt } from "react-icons/fa"; // Ícones
 import Gallery from "../Gallery/Gallery"; // Certifique-se de que o caminho está correto
 import prt1 from "../../assets/shirt/print/1.jpg";
 import prt2 from "../../assets/shirt/print/2.png";
@@ -17,46 +17,46 @@ const galleryData = {
 };
 
 // Array de dados dos produtos
-const GraficaData = [
+const UniformesData = [
   {
     id: 1,
     img: prt1,
-    title: "Comunicação Visual",
+    title: "Uniformes 01",
     galleryType: "grafica1",
     aosDelay: "0", // Atraso para a animação AOS
   },
   {
     id: 2,
     img: prt2,
-    title: "Backdrop",
+    title: "Uniformes 02",
     galleryType: "grafica2",
     aosDelay: "200", // Atraso para a animação AOS
   },
   {
     id: 3,
     img: prt3,
-    title: "Adesivo Perfurado",
+    title: "Uniformes 03",
     galleryType: "grafica3",
     aosDelay: "400", // Atraso para a animação AOS
   },
   {
     id: 4,
     img: prt4,
-    title: "Foldes, Flyers, Adesivos",
+    title: "Uniformes 04",
     galleryType: "grafica4",
     aosDelay: "600", // Atraso para a animação AOS
   },
   {
     id: 5,
     img: prt5,
-    title: "Balcão Personalizado",
+    title: "Uniformes 05",
     galleryType: "grafica5",
     aosDelay: "800", // Atraso para a animação AOS
   },
 ];
 
-// Componente Grafica
-const Grafica = () => {
+// Componente Uniformes
+const Uniformes = () => {
   const [showGallery, setShowGallery] = useState(false);
   const [galleryImages, setGalleryImages] = useState([]);
 
@@ -74,19 +74,19 @@ const Grafica = () => {
   }
 
   return (
-    <div id="GraficaDigital" className="mt-14 mb-12 px-4">
+    <div id="Uniformes" className="mt-14 mb-12 px-4">
       <div className="container mx-auto p-8 rounded-lg shadow-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
         {/* Seção de cabeçalho */}
         <div className="text-center mb-10 max-w-[600px] mx-auto p-4 rounded-lg shadow-sm bg-gray-100 dark:bg-gray-700">
           <h1 data-aos="fade-up" className="text-3xl font-extrabold tracking-wide text-gray-800 dark:text-gray-200 drop-shadow-lg flex items-center justify-center">
-            <FaPrint className="mr-2 text-blue-600 dark:text-blue-400" /> Gráfica
+            <FaTshirt className="mr-2 text-blue-600 dark:text-blue-400" /> Uniformes
           </h1>
         </div>
         {/* Seção do corpo */}
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
             {/* Seção dos cards de produtos */}
-            {GraficaData.map((data) => (
+            {UniformesData.map((data) => (
               <div
                 key={data.id}
                 data-aos="fade-up"
@@ -119,4 +119,4 @@ const Grafica = () => {
   );
 };
 
-export default Grafica;
+export default Uniformes;

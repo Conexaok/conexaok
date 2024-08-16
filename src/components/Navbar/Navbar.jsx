@@ -19,12 +19,22 @@ const TopBar = ({ isVisible }) => {
   };
 
   return (
-    <div className={`bg-blue-900 p-2 flex justify-center items-center text-xs text-white transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'} fixed top-0 left-0 w-full z-40`}>
+    <div className={`bg-blue-900 p-2 flex justify-center items-center text-xs text-white transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'} fixed top-0 left-0 w-full z-40 hidden md:flex`}>
       <div className="w-full md:w-auto overflow-hidden">
         <Slider {...settings}>
-          <div className="text-center font-bold">CONECTANDO IDÉIAS MARCAS E PESSOAS. </div>
-          <div className="text-center font-bold">(81) 9.9504-2474</div>
-          <div className="text-center font-bold">atendimento@conexaokf.com.br</div>
+          <div className="text-center font-bold">CONECTANDO IDÉIAS, MARCAS E PESSOAS.</div>
+          <div className="text-center font-bold">
+            Entre em contato conosco pelo número{' '}
+            <a href="tel:+5581995042474" className="underline">
+              (81) 9.9504-2474
+            </a>. Estamos prontos para atender você!
+          </div>
+          <div className="text-center font-bold">
+            Para realizar seu orçamento ou tirar dúvidas sobre o que você deseja realizar, entre em contato pelo email{' '}
+            <a href="mailto:atendimento@conexaokf.com.br" className="underline">
+              atendimento@conexaokf.com.br
+            </a>. Estamos à disposição para ajudar!
+          </div>
         </Slider>
       </div>
     </div>
@@ -33,7 +43,7 @@ const TopBar = ({ isVisible }) => {
 
 const Navbar = ({ handleOrderPopup }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [topBarVisible, setTopBarVisible] = useState(true);
 
@@ -76,7 +86,11 @@ const Navbar = ({ handleOrderPopup }) => {
         { id: 4, name: "Galpões", link: "#Galpoes" },
       ]
     },
-    { id: 7, name: "Gráfica-OffSet", link: "#Grafica" },
+    { id: 7, name: "Gráfica", dropdown: true, links: [
+      { id: 1, name: "Gráfica-OffSet", link: "#GraficaOffset" },
+      { id: 2, name: "Gráfica Digital", link: "#GraficaDigital" },
+    ]
+    },
     { id: 8, name: "Comunicação Visual", link: "#Comunicacao" },
     { id: 9, name: "Eventos Realizados", link: "#Eventos" },
     { id: 10, name: "Contato", link: "#Contato" },
@@ -138,13 +152,13 @@ const Navbar = ({ handleOrderPopup }) => {
                   {item.dropdown ? (
                     <div
                       className="group relative cursor-pointer py-2 md:py-1 ml-3"
-                      onMouseEnter={() => setDropdownOpen(true)}
-                      onMouseLeave={() => setDropdownOpen(false)}
+                      onMouseEnter={() => setDropdownOpen(item.id)}
+                      onMouseLeave={() => setDropdownOpen(null)}
                     >
                       <a href="#" className="flex items-center gap-2 font-sans text-sm font-medium uppercase">
-                        {item.name} <FaCaretDown className={`transition ${dropdownOpen ? 'rotate-180' : 'rotate-0'}`} />
+                        {item.name} <FaCaretDown className={`transition ${dropdownOpen === item.id ? 'rotate-180' : 'rotate-0'}`} />
                       </a>
-                      {dropdownOpen && (
+                      {dropdownOpen === item.id && (
                         <ul className="md:absolute z-[9999] bg-white dark:bg-gray-800 p-2 text-black dark:text-white shadow-md rounded-md md:top-full md:left-0">
                           {item.links.map((link) => (
                             <li key={link.id} className="flex items-center">

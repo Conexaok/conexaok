@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { FaArrowRight, FaCubes } from "react-icons/fa"; // Ícones
 import Gallery from "../Gallery/Gallery";
 import imb1 from "../../assets/shirt/stands/1.jpg";
 import imb2 from "../../assets/shirt/stands/2.jpg";
@@ -56,7 +56,7 @@ const StandsData = [
   {
     id: 4,
     img: bil1,
-    title: "Bienal internacional do Livro",
+    title: "Bienal Internacional do Livro",
     color: "Yellow",
     aosDelay: "600", // Atraso para a animação AOS
     galleryType: "stands4",
@@ -128,47 +128,41 @@ const Stands = () => {
   }
 
   return (
-    <div id="Stands" className="mt-14 mb-12">
-      <div className="container mx-auto">
+    <div id="Stands" className="mt-14 mb-12 px-4">
+      <div className="container mx-auto p-8 rounded-lg shadow-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
         {/* Seção de cabeçalho */}
-        <div className="text-center mb-10 max-w-[600px] mx-auto">
-          <h1 data-aos="fade-up" className="text-3xl font-bold mb-6 text-center shadow-md">
-            Estruturas
+        <div className="text-center mb-10 max-w-[600px] mx-auto p-4 rounded-lg shadow-sm bg-gray-100 dark:bg-gray-700">
+          <h1 data-aos="fade-up" className="text-3xl font-extrabold tracking-wide text-gray-800 dark:text-gray-200 drop-shadow-lg flex items-center justify-center">
+            <FaCubes className="mr-2 text-blue-600 dark:text-blue-400" /> Estruturas
           </h1>
         </div>
         {/* Seção do corpo */}
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 place-items-center gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
             {/* Seção dos cards de produtos */}
             {StandsData.map((data) => (
               <div
-                data-aos="fade-up" // Animação AOS
-                data-aos-delay={data.aosDelay} // Atraso para a animação AOS
                 key={data.id}
-                className="space-y-3 w-full flex flex-col items-center"
+                data-aos="fade-up"
+                data-aos-delay={data.aosDelay}
+                className="relative flex flex-col items-center justify-center rounded-lg bg-white dark:bg-gray-900 hover:bg-blue-100 dark:hover:bg-blue-800 shadow-md transition-transform duration-300 transform hover:scale-105"
+                style={{ cursor: "pointer" }}
+                onClick={() => handleItemClick(data.galleryType)}
               >
-                {/* Imagem do produto */}
-                <img
-                  src={data.img}
-                  alt=""
-                  className="h-[220px] w-full max-w-[150px] object-cover rounded-md"
-                />
-                <div className="text-center">
-                  {/* Título do produto */}
-                  <h3 className="font-semibold">{data.title}</h3>
-                  {/* Cor do produto */}
-                  <p className="text-sm text-gray-600">{data.color}</p>
-                  {/* Rating do produto */}
-                  <div className="flex items-center gap-1 justify-center">
-                   
-                    <span>{data.rating}</span>
-                  </div>
-                  {/* Botão para abrir a galeria */}
-                  <button
-                    className="bg-sky-700 dark:bg-cyan-900 hover:scale-105 duration-300 text-white py-2 px-8 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
-                    onClick={() => handleItemClick(data.galleryType)}
-                  >
-                    Clique Aqui
+                <div className="h-[120px] relative flex items-center justify-center">
+                  <img
+                    src={data.img}
+                    alt={data.title}
+                    className="max-w-[120px] block mx-auto transition-transform duration-300 transform group-hover:scale-110"
+                  />
+                </div>
+                <div className="p-4 text-center flex flex-col items-center justify-center h-full">
+                  <h1 className="text-lg font-bold text-gray-800 dark:text-gray-200">
+                    {data.title}
+                  </h1>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{data.color}</p>
+                  <button className="flex items-center bg-blue-600 hover:bg-blue-700 text-white py-2 px-8 rounded-full mt-4 transition-colors duration-300">
+                    Clique aqui <FaArrowRight className="ml-2 transition-transform duration-300 transform group-hover:translate-x-1" />
                   </button>
                 </div>
               </div>

@@ -1,3 +1,4 @@
+import React from "react";
 import AsanetLogo from "../../assets/women/asanet.png";
 import AssaiLogo from "../../assets/women/assai.png";
 import AmbevLogo from "../../assets/women/ambev.png";
@@ -53,32 +54,32 @@ const Clientes = ({ isDarkMode }) => {
   };
 
   return (
-    <div className="min-h-[550px] flex justify-center items-center py-12 sm:py-0">
-      <div className="container">
-        <div className="grid grid-cols-1 gap-6 items-center text-center ">
-          {/* Título */}
-          <h1 className={"text-3xl font-bold shadow-md"}>
+    <div id="Clientes" className="py-14 mb-12 px-4 bg-gray-100 dark:bg-gray-900">
+      <div className="container mx-auto p-8 rounded-lg shadow-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
+        {/* Título */}
+        <div className="text-center mb-10 max-w-[600px] mx-auto p-4 rounded-lg shadow-sm  dark:bg-gray-700">
+          <h1 data-aos="fade-up" className="text-3xl font-extrabold tracking-wide text-gray-900  mb-6">
             Clientes
           </h1>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 justify-items-center">
-            {/* Renderizando os logotipos das empresas */}
-            {[
-              AsanetLogo, AssaiLogo, AmbevLogo, AccorLogo, BradescoLogo, AguardanteLogo, AjinomotoLogo, PituLogo, BrfLogo, BocarosaLogo,
-              HeinekenLogo, BrisanetLogo, CafecoracoesLogo, CaixaLogo, CapricheLogo, CardealLogo, PatteoLogo, CocacolaLogo, DelineLogo,
-              GilletteLogo, HapvidaLogo, HyperaLogo, ImperioLogo, IndaiaLogo, KraftLogo, MaggiLogo, MasterboiLogo, MastercardLogo, 
-              MdiasLogo, MixmateusLogo, NissinLogo, OboticarioLogo, PagbetLogo, PernodRicardLogo, RedbullLogo, SaltonLogo, SaobrazLogo,
-              SearaLogo, SococoLogo, TimLogo, TintasfrevoLogo, TurquesaLogo
-            ].map((logo, index) => (
-              <img
-                key={index}
-                src={logo}
-                alt={`Logo ${index}`}
-                className="h-24 w-24 object-contain cursor-pointer transition-transform duration-300 ease-in-out transform hover:translate-y-1 hover:shadow-lg"
-                onMouseOver={handleLogoHover}
-                onMouseLeave={handleLogoLeave}
-              />
-            ))}
-          </div>
+        </div>
+        {/* Logos dos clientes */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 justify-items-center">
+          {[
+            AsanetLogo, AssaiLogo, AmbevLogo, AccorLogo, BradescoLogo, AguardanteLogo, AjinomotoLogo, PituLogo, BrfLogo, BocarosaLogo,
+            HeinekenLogo, BrisanetLogo, CafecoracoesLogo, CaixaLogo, CapricheLogo, CardealLogo, PatteoLogo, CocacolaLogo, DelineLogo,
+            GilletteLogo, HapvidaLogo, HyperaLogo, ImperioLogo, IndaiaLogo, KraftLogo, MaggiLogo, MasterboiLogo, MastercardLogo, 
+            MdiasLogo, MixmateusLogo, NissinLogo, OboticarioLogo, PagbetLogo, PernodRicardLogo, RedbullLogo, SaltonLogo, SaobrazLogo,
+            SearaLogo, SococoLogo, TimLogo, TintasfrevoLogo, TurquesaLogo
+          ].map((logo, index) => (
+            <img
+              key={index}
+              src={logo}
+              alt={`Logo ${index}`}
+              className="h-24 w-24 object-contain cursor-pointer transition-transform duration-300 ease-in-out transform hover:translate-y-1 hover:shadow-lg"
+              onMouseOver={handleLogoHover}
+              onMouseLeave={handleLogoLeave}
+            />
+          ))}
         </div>
       </div>
     </div>

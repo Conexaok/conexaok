@@ -1,8 +1,5 @@
 import React from "react";
-import Slider from "react-slick";
 import trf1 from "../../assets/about/1.jpeg";
-import trf2 from "../../assets/about/2.jpeg";
-import trf3 from "../../assets/about/3.jpeg";
 
 const TestimonialData = [
   {
@@ -15,7 +12,7 @@ const TestimonialData = [
 ];
 
 const Testimonials = () => {
-  var settings = {
+  const settings = {
     dots: true,
     arrows: false,
     infinite: true,
@@ -54,14 +51,15 @@ const Testimonials = () => {
   };
 
   return (
-    <div id="Sobre" className="py-10 mb-10 bg-gray-100 dark:bg-gray-900">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-10 max-w-[600px] mx-auto">
-          <h1 data-aos="fade-up" className="text-4xl font-extrabold text-gray-900 dark:text-white mb-6">
+    <div id="Sobre" className="py-14 px-4 bg-gray-100 dark:bg-gray-900">
+      <div className="container mx-auto p-8 rounded-lg shadow-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
+        {/* Seção de cabeçalho */}
+        <div className="text-center mb-10 max-w-[600px] mx-auto p-4 rounded-lg shadow-sm dark:bg-gray-700">
+          <h1 data-aos="fade-up" className="text-4xl font-extrabold tracking-wide text-gray-900 dark:text-white mb-6">
             Sobre
           </h1>
         </div>
-
+        {/* Seção de conteúdo */}
         <div className="mb-10 px-4">
           <h2 className="text-xl md:text-2xl font-medium text-center text-gray-800 dark:text-gray-200 leading-relaxed space-y-4">
             <span className="block font-bold">Missão:</span> 
@@ -81,39 +79,29 @@ const Testimonials = () => {
             <span className="block font-bold">Conexão:</span> Acreditamos na força da conexão entre marcas, pessoas e soluções.
           </h2>
         </div>
-
-        <div data-aos="zoom-in">
-          <Slider {...settings}>
-            {TestimonialData.map((data) => (
-              <div className="my-6" key={data.id}>
-                <div className="flex flex-col items-center gap-4 shadow-lg py-3 px-1 mx-1 rounded-xl dark:bg-gray-800 bg-white relative transition-all duration-300 transform hover:scale-105 hover:shadow-2xl h-full min-h-[400px] max-h-[400px]">
-                  <div className="mb-4">
-                    <img
-                      src={data.img}
-                      alt={data.name}
-                      className="rounded-full w-24 h-24 object-cover"
-                    />
-                  </div>
-                  <div className="flex flex-col items-center gap-2">
-                    <div className="space-y-3 text-center">
-                      <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
-                        {data.text}
-                      </p>
-                      <h1 className="text-xl font-semibold text-gray-900 dark:text-white">
-                        {data.name}
-                      </h1>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">
-                        {data.title}
-                      </p>
-                    </div>
-                  </div>
-                  <p className="text-black/20 text-9xl font-serif absolute top-0 right-0 transform translate-x-2 -translate-y-1">
-                    ,,
-                  </p>
-                </div>
+        {/* Seção de depoimentos */}
+        <div className="mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {TestimonialData.map((testimonial) => (
+              <div
+                key={testimonial.id}
+                data-aos="fade-up"
+                className="relative flex flex-col items-center justify-center rounded-lg bg-white dark:bg-gray-900 hover:bg-blue-100 dark:hover:bg-blue-800 shadow-md transition-transform duration-300 transform hover:scale-105 p-6"
+              >
+                <img
+                  src={testimonial.img}
+                  alt={testimonial.name}
+                  className="w-24 h-24 rounded-full mb-4"
+                />
+                <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">
+                  {testimonial.name}
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300 text-center">
+                  {testimonial.text}
+                </p>
               </div>
             ))}
-          </Slider>
+          </div>
         </div>
       </div>
     </div>
