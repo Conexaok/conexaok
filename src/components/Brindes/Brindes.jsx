@@ -15,11 +15,11 @@ const BrindesData = [
     title: "Necessaire",
     aosDelay: "0", // Atraso para a animação AOS
     galleryImages: [
-      { imgelink: "https://i.im.ge/2024/08/16/fIjsFX.CONEX.png", caption: "Descrição" },
-      { imgelink: "https://i.im.ge/2024/08/15/fIUAnp.CONEX-1.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/15/fIUbFm.CONEX-2.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/15/fIU3kf.CONEX-4.png", caption: "Descrição" },
       { imgelink: "https://i.im.ge/2024/08/15/fIUEqP.CONEX-5.png", caption: "Descrição" },
       { imgelink: "https://i.im.ge/2024/08/15/fIUxt1.CONEX-3.png", caption: "Descrição" },
-      { imgelink: Img5, caption: "Descrição" }
+      { imgelink: "https://i.im.ge/2024/08/15/fIUAnp.CONEX-1.png", caption: "Descrição" }
     ],
   },
   {
@@ -28,11 +28,11 @@ const BrindesData = [
     title: "Squeeze",
     aosDelay: "200", // Atraso para a animação AOS
     galleryImages: [
-      { imgelink: Img2, caption: "Descrição" },
-      { imgelink: Img1, caption: "Descrição" },
-      { imgelink: Img3, caption: "Descrição" },
-      { imgelink: Img4, caption: "Descrição" },
-      { imgelink: Img5, caption: "Descrição" }
+      { imgelink: "https://i.im.ge/2024/08/15/fIUcjr.CONEX-6.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/15/fIUgRW.CONEX-7.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/15/fIUZ3c.CONEX-8.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/15/fIUK4L.CONEX-9.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/15/fIUfqG.CONEX-12.png", caption: "Descrição" }
     ],
   },
   {
@@ -41,8 +41,8 @@ const BrindesData = [
     title: "Chaveiro",
     aosDelay: "400", // Atraso para a animação AOS
     galleryImages: [
-      { imgelink: Img3, caption: "Descrição" },
-      { imgelink: Img2, caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/15/fIU4Tz.CONEX-15.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/15/fIUJWS.CONEX-14.png", caption: "Descrição" },
       { imgelink: Img1, caption: "Descrição" },
       { imgelink: Img4, caption: "Descrição" },
       { imgelink: Img5, caption: "Descrição" }

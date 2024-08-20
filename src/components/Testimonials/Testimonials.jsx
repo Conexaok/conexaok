@@ -54,18 +54,19 @@ const Testimonials = () => {
     <div id="Sobre" className="py-14 px-4 bg-gray-100 dark:bg-gray-900">
       <div className="container mx-auto p-8 rounded-lg shadow-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
         {/* Seção de cabeçalho */}
-        <div className="text-center mb-10 max-w-[600px] mx-auto p-4 rounded-lg shadow-sm dark:bg-gray-700">
-          <h1 data-aos="fade-up" className="text-4xl font-extrabold tracking-wide text-gray-900 dark:text-white mb-6">
+        <div className="text-center mb-10 max-w-[600px] mx-auto p-4 rounded-lg shadow-sm bg-gray-100 dark:bg-gray-700">
+          <h1 data-aos="fade-up" className="text-4xl font-extrabold tracking-wide text-gray-900 dark:text-white drop-shadow-lg flex items-center justify-center">
             Sobre
           </h1>
         </div>
+
         {/* Seção de conteúdo */}
         <div className="mb-10 px-4">
           <h2 className="text-xl md:text-2xl font-medium text-center text-gray-800 dark:text-gray-200 leading-relaxed space-y-4">
-            <span className="block font-bold">Missão:</span> 
+            <span className="block font-bold">Missão:</span>
             Conectar marcas e ideias através de soluções completas e personalizadas, com criatividade e excelência em cada detalhe.
             <br /><br />
-            <span className="block font-bold">Visão:</span> 
+            <span className="block font-bold">Visão:</span>
             Ser uma empresa referência, reconhecida pelo profissionalismo, inovação e amplo portfólio, que conecta soluções para impulsionar o sucesso dos nossos clientes.
             <br /><br />
             <span className="block font-bold">Excelência:</span> Promovemos a mais alta qualidade em tudo que fazemos e ofertamos.

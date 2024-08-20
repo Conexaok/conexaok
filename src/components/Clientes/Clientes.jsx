@@ -57,17 +57,18 @@ const Clientes = ({ isDarkMode }) => {
     <div id="Clientes" className="py-14 mb-12 px-4 bg-gray-100 dark:bg-gray-900">
       <div className="container mx-auto p-8 rounded-lg shadow-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
         {/* Título */}
-        <div className="text-center mb-10 max-w-[600px] mx-auto p-4 rounded-lg shadow-sm  dark:bg-gray-700">
-          <h1 data-aos="fade-up" className="text-3xl font-extrabold tracking-wide text-gray-900  mb-6">
+        <div className="text-center mb-10 max-w-[600px] mx-auto p-4 rounded-lg shadow-sm bg-gray-100 dark:bg-gray-700">
+          <h1 data-aos="fade-up" className="text-3xl font-extrabold tracking-wide text-gray-900 dark:text-white drop-shadow-lg flex items-center justify-center">
             Clientes
           </h1>
         </div>
+
         {/* Logos dos clientes */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 justify-items-center">
           {[
             AsanetLogo, AssaiLogo, AmbevLogo, AccorLogo, BradescoLogo, AguardanteLogo, AjinomotoLogo, PituLogo, BrfLogo, BocarosaLogo,
             HeinekenLogo, BrisanetLogo, CafecoracoesLogo, CaixaLogo, CapricheLogo, CardealLogo, PatteoLogo, CocacolaLogo, DelineLogo,
-            GilletteLogo, HapvidaLogo, HyperaLogo, ImperioLogo, IndaiaLogo, KraftLogo, MaggiLogo, MasterboiLogo, MastercardLogo, 
+            GilletteLogo, HapvidaLogo, HyperaLogo, ImperioLogo, IndaiaLogo, KraftLogo, MaggiLogo, MasterboiLogo, MastercardLogo,
             MdiasLogo, MixmateusLogo, NissinLogo, OboticarioLogo, PagbetLogo, PernodRicardLogo, RedbullLogo, SaltonLogo, SaobrazLogo,
             SearaLogo, SococoLogo, TimLogo, TintasfrevoLogo, TurquesaLogo
           ].map((logo, index) => (
