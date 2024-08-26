@@ -1,57 +1,79 @@
 import React, { useState } from "react";
 import { FaArrowRight, FaTshirt } from "react-icons/fa"; // Ícones
-import Gallery from "../Gallery/Gallery"; // Certifique-se de que o caminho está correto
+import { GalleryUniformes } from "./GalleryUniformes";
 import prt1 from "../../assets/shirt/print/1.jpg";
 import prt2 from "../../assets/shirt/print/2.png";
 import prt3 from "../../assets/shirt/print/3.png";
 import prt4 from "../../assets/shirt/print/4.jpg";
 import prt5 from "../../assets/shirt/print/5.png";
 
-// Dados das imagens para cada galeria
-const galleryData = {
-  grafica1: [{ imgelink: prt1 }],
-  grafica2: [{ imgelink: prt2 }],
-  grafica3: [{ imgelink: prt3 }],
-  grafica4: [{ imgelink: prt4 }],
-  grafica5: [{ imgelink: prt5 }],
-};
 
 // Array de dados dos produtos
 const UniformesData = [
   {
     id: 1,
     img: prt1,
-    title: "Uniformes 01",
-    galleryType: "grafica1",
+    title: "Uniformes",
     aosDelay: "0", // Atraso para a animação AOS
+    galleryImages: [
+      { imgelink: "https://i.im.ge/2024/08/26/fPgvDF.15.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/26/fPgYeT.7.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/26/fPgAKm.3.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/26/fPgk0S.12.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/26/fPgZ6a.9.png", caption: "Descrição" }
+    ],
   },
   {
     id: 2,
     img: prt2,
     title: "Uniformes 02",
-    galleryType: "grafica2",
     aosDelay: "200", // Atraso para a animação AOS
+    galleryImages: [
+      { imgelink: "https://i.im.ge/2024/08/26/fPgt21.1.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/26/fPgywf.2.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/26/fPgW2x.8.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/26/fPgKKJ.10.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/26/fPgHe6.14.png", caption: "Descrição" }
+    ],
   },
   {
     id: 3,
     img: prt3,
     title: "Uniformes 03",
-    galleryType: "grafica3",
     aosDelay: "400", // Atraso para a animação AOS
+    galleryImages: [
+      { imgelink: "https://i.im.ge/2024/08/26/fPgzcz.13.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/26/fPgfly.11.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/26/fPg6Ap.5.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/26/fPgxiW.6.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/15/fIUAnp.CONEX-1.png", caption: "Descrição" }
+    ],
   },
   {
     id: 4,
     img: prt4,
     title: "Uniformes 04",
-    galleryType: "grafica4",
     aosDelay: "600", // Atraso para a animação AOS
+    galleryImages: [
+      { imgelink: "https://i.im.ge/2024/08/26/fPgvDF.15.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/15/fIU3kf.CONEX-4.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/15/fIUEqP.CONEX-5.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/15/fIUxt1.CONEX-3.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/15/fIUAnp.CONEX-1.png", caption: "Descrição" }
+    ],
   },
   {
     id: 5,
     img: prt5,
     title: "Uniformes 05",
-    galleryType: "grafica5",
     aosDelay: "800", // Atraso para a animação AOS
+    galleryImages: [
+      { imgelink: "https://i.im.ge/2024/08/26/fPgvDF.15.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/15/fIU3kf.CONEX-4.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/15/fIUEqP.CONEX-5.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/15/fIUxt1.CONEX-3.png", caption: "Descrição" },
+      { imgelink: "https://i.im.ge/2024/08/15/fIUAnp.CONEX-1.png", caption: "Descrição" }
+    ],
   },
 ];
 
@@ -60,8 +82,8 @@ const Uniformes = () => {
   const [showGallery, setShowGallery] = useState(false);
   const [galleryImages, setGalleryImages] = useState([]);
 
-  const handleItemClick = (galleryType) => {
-    setGalleryImages(galleryData[galleryType]);
+  const handleItemClick = (galleryImages) => {
+    setGalleryImages(galleryImages);
     setShowGallery(true);
   };
 
@@ -70,8 +92,8 @@ const Uniformes = () => {
   };
 
   if (showGallery) {
-    return <Gallery images={galleryImages} onClose={closeGallery} />;
-  }
+    return <GalleryUniformes images={galleryImages} onClose={closeGallery} />;
+  }  
 
   return (
     <div id="Uniformes" className="mt-14 mb-12 px-4">
@@ -93,7 +115,7 @@ const Uniformes = () => {
                 data-aos-delay={data.aosDelay}
                 className="relative flex flex-col items-center justify-center rounded-lg bg-white dark:bg-gray-900 hover:bg-blue-100 dark:hover:bg-blue-800 shadow-md transition-transform duration-300 transform hover:scale-105"
                 style={{ cursor: "pointer" }}
-                onClick={() => handleItemClick(data.galleryType)}
+                onClick={() => handleItemClick(data.galleryImages)}
               >
                 <div className="h-[120px] relative flex items-center justify-center">
                   <img

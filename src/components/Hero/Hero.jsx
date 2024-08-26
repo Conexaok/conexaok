@@ -46,7 +46,7 @@ const Hero = ({ handleOrderPopup }) => {
   };
 
   return (
-    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-sky-700 flex justify-center items-center dark:bg-gray-950 dark:bg-sky-500dark:text-white duration-200 ">
+    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-sky-700 flex justify-center items-center dark:bg-gray-950 dark:bg-sky-500 dark:text-white duration-200 mt-8">
       {/* Padrão de fundo */}
       <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
       {/* Seção do herói */}
@@ -71,13 +71,6 @@ const Hero = ({ handleOrderPopup }) => {
                       alt=""
                       className="w-[300%] h-[300%] sm:h-[450%] sm:w-[1150%] sm:scale-auto lg:scale-auto  rounded"
                     />
-                  {data.id === 3 && (
-                    <button
-                      onClick={openWhatsApp}
-                      className="absolute bottom-10 w-60 right-80 m-12 p-12 rounded-md text-black text-center font-bold shadow-lg border-2 border-white bg-transparent"
-                    >
-                    </button>
-                  )}
                   </div>
                 </div>
               </div>
