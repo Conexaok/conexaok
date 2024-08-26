@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaArrowRight, FaPrint } from "react-icons/fa"; // Ícones
 import Gallery from "../Gallery/Gallery"; // Certifique-se de que o caminho está correto
-import prt1 from "../../assets/shirt/print/1.jpg";
+import prt1 from "../../assets/shirt/print/one.png";
 import prt2 from "../../assets/shirt/print/2.png";
 import prt3 from "../../assets/shirt/print/3.png";
 import prt4 from "../../assets/shirt/print/4.jpg";

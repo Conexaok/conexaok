@@ -33,7 +33,6 @@ const StandsData = [
     id: 1,
     img: imb1,
     title: "Salão Imobiliário de Pernambuco",
-    color: "white",
     aosDelay: "0", // Atraso para a animação AOS
     galleryType: "stands1",
   },
@@ -41,7 +40,6 @@ const StandsData = [
     id: 2,
     img: fln2,
     title: "Feira Limpa Nome",
-    color: "Red",
     aosDelay: "200", // Atraso para a animação AOS
     galleryType: "stands2",
   },
@@ -49,7 +47,6 @@ const StandsData = [
     id: 3,
     img: fcs1,
     title: "Ficons",
-    color: "brown",
     aosDelay: "400", // Atraso para a animação AOS
     galleryType: "stands3",
   },
@@ -57,7 +54,6 @@ const StandsData = [
     id: 4,
     img: bil1,
     title: "Bienal Internacional do Livro",
-    color: "Yellow",
     aosDelay: "600", // Atraso para a animação AOS
     galleryType: "stands4",
   },
@@ -65,7 +61,6 @@ const StandsData = [
     id: 5,
     img: efn3,
     title: "Expo Fest Noivas",
-    color: "Pink",
     aosDelay: "800", // Atraso para a animação AOS
     galleryType: "stands5",
   },

@@ -33,7 +33,6 @@ const ProductsData = [
     id: 1,
     img: img1,
     title: "Heineken",
-    color: "esperando por Dani.",
     aosDelay: "0", // Atraso para a animação AOS
     galleryImages: [
       { imgelink: img1 },
@@ -47,7 +46,6 @@ const ProductsData = [
     id: 2,
     img: img6,
     title: "Unilever",
-    color: "esperando por Dani",
     aosDelay: "200", // Atraso para a animação AOS
     galleryImages: [
       { imgelink: img6 },
@@ -61,7 +59,6 @@ const ProductsData = [
     id: 3,
     img: img11,
     title: "Carnaval",
-    color: "esperando por Dani",
     aosDelay: "400", // Atraso para a animação AOS
     galleryImages: [
       { imgelink: img11 },
@@ -75,7 +72,6 @@ const ProductsData = [
     id: 4,
     img: img16,
     title: "FENAFE",
-    color: "FENAFE por Dani",
     aosDelay: "600", // Atraso para a animação AOS
     galleryImages: [
       { imgelink: img16 },
@@ -89,7 +85,6 @@ const ProductsData = [
     id: 5,
     img: img21,
     title: "CoofBrack",
-    color: "Descrição do Evento 5",
     aosDelay: "800", // Atraso para a animação AOS
     galleryImages: [
       { imgelink: img21 },
