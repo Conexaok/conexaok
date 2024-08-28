@@ -38,7 +38,7 @@
                 {/* Número de telefone */}
                 <div className="flex items-center gap-3">
                   <FaMobileAlt />
-                  <p>81 9.9504-2474 </p>
+                  <p>81 9.9504-2474 / 81 9.9431-8149</p>
                 </div>
                 {/* Email */}
                 <div className="flex items-center gap-3">

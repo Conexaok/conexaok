@@ -2,18 +2,20 @@ import React, { useState } from "react";
 import { FaArrowRight, FaPrint } from "react-icons/fa"; // Ícones
 import Gallery from "../Gallery/Gallery"; // Certifique-se de que o caminho está correto
 import prt1 from "../../assets/shirt/print/one.png";
-import prt2 from "../../assets/shirt/print/2.png";
-import prt3 from "../../assets/shirt/print/3.png";
-import prt4 from "../../assets/shirt/print/4.jpg";
-import prt5 from "../../assets/shirt/print/5.png";
+
+// URLs das novas imagens
+const newImage1 = "https://i.im.ge/2024/08/29/fANJkW.Ima.jpeg";
+const newImage2 = "https://i.im.ge/2024/08/29/fAN4F0.Cartao.jpeg";
+const newImage3 = "https://i.im.ge/2024/08/29/fANBjT.banners.jpeg";
+const newImage4 = "https://i.im.ge/2024/08/29/fANGRc.cracha.png";
 
 // Dados das imagens para cada galeria
 const galleryData = {
   grafica1: [{ imgelink: prt1, description: "Descrição da imagem 1" }],
-  grafica2: [{ imgelink: prt2 }],
-  grafica3: [{ imgelink: prt3 }],
-  grafica4: [{ imgelink: prt4 }],
-  grafica5: [{ imgelink: prt5 }],
+  grafica2: [{ imgelink: newImage1 }],
+  grafica3: [{ imgelink: newImage2 }],
+  grafica4: [{ imgelink: newImage3 }],
+  grafica5: [{ imgelink: newImage4 }],
 };
 
 // Array de dados dos produtos
@@ -27,29 +29,29 @@ const GraficaOffsetData = [
   },
   {
     id: 2,
-    img: prt2,
-    title: "GraficaOffset 02",
+    img: newImage1,
+    title: "Ima Geladeira",
     galleryType: "grafica2",
     aosDelay: "200", // Atraso para a animação AOS
   },
   {
     id: 3,
-    img: prt3,
-    title: "GraficaOffset 03",
+    img: newImage2,
+    title: "Cartão",
     galleryType: "grafica3",
     aosDelay: "400", // Atraso para a animação AOS
   },
   {
     id: 4,
-    img: prt4,
-    title: "GraficaOffset 04",
+    img: newImage3,
+    title: "Banner",
     galleryType: "grafica4",
     aosDelay: "600", // Atraso para a animação AOS
   },
   {
     id: 5,
-    img: prt5,
-    title: "GraficaOffset 05",
+    img: newImage4,
+    title: "Crachá",
     galleryType: "grafica5",
     aosDelay: "800", // Atraso para a animação AOS
   },
@@ -79,7 +81,7 @@ const GraficaOffset = () => {
         {/* Seção de cabeçalho */}
         <div className="text-center mb-10 max-w-[600px] mx-auto p-4 rounded-lg shadow-sm bg-gray-100 dark:bg-gray-700">
           <h1 data-aos="fade-up" className="text-3xl font-extrabold tracking-wide text-gray-800 dark:text-gray-200 drop-shadow-lg flex items-center justify-center">
-          <FaPrint className="mr-2 text-blue-600 dark:text-blue-400" /> GraficaOffset
+            <FaPrint className="mr-2 text-blue-600 dark:text-blue-400" /> GraficaOffset
           </h1>
         </div>
         {/* Seção do corpo */}

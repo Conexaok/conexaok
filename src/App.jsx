@@ -7,7 +7,6 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import Clientes from "./components/Clientes/Clientes";
 import Subscribe from "./components/Subscribe/Subscribe";
-import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
 import Grafica from "./components/Grafica/grafica";
 import Brindes from "./components/Brindes/Brindes";
@@ -38,7 +37,6 @@ function App() {
         <Stands/>
         <Galpoes/>
         <Contato/>
-        <Testimonials/>
         <Clientes/>
         <Subscribe/>
 
@@ -50,7 +48,6 @@ function App() {
           <Route path="/Galpoes" element={<Galpoes />} />
           <Route path="/clientes" element={<Clientes />} />
           <Route path="/subscribe" element={<Subscribe />} />
-          <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/footer" element={<Footer />} />
           <Route path="/grafica" element={<Grafica />} />
           <Route path="/brindes" element={<Brindes />} />

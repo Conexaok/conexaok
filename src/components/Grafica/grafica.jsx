@@ -5,7 +5,9 @@ import prt1 from "../../assets/shirt/print/1.jpg";
 import prt2 from "../../assets/shirt/print/2.png";
 import prt3 from "../../assets/shirt/print/3.png";
 import prt4 from "../../assets/shirt/print/4.jpg";
-import prt5 from "../../assets/shirt/print/5.png";
+
+// Nova imagem
+const newImage1 = "https://i.im.ge/2024/08/29/fAPhOD.Balcao.png";
 
 // Dados das imagens para cada galeria
 const galleryData = {
@@ -13,7 +15,7 @@ const galleryData = {
   grafica2: [{ imgelink: prt2 }],
   grafica3: [{ imgelink: prt3 }],
   grafica4: [{ imgelink: prt4 }],
-  grafica5: [{ imgelink: prt5 }],
+  grafica5: [{ imgelink: newImage1 }],
 };
 
 // Array de dados dos produtos
@@ -48,7 +50,7 @@ const GraficaData = [
   },
   {
     id: 5,
-    img: prt5,
+    img: newImage1, // Substituição pela nova imagem
     title: "Balcão Personalizado",
     galleryType: "grafica5",
     aosDelay: "800", // Atraso para a animação AOS
