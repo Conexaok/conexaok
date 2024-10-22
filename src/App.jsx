@@ -1,65 +1,80 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import Products from "./components/Products/Products";
-import "aos/dist/aos.css";
-import AOS from "aos";
-import Clientes from "./components/Clientes/Clientes";
-import Subscribe from "./components/Subscribe/Subscribe";
-import Footer from "./components/Footer/Footer";
-import Grafica from "./components/Grafica/grafica";
-import Brindes from "./components/Brindes/Brindes";
-import Stands from "./components/Stands/Stands";
-import Contato from "./components/Contato/Contato";
-import GalleryProducts from "./components/Products/GalleryProducts"; // Certifique-se de que este caminho está correto
-import WhatsApp from "./components/WhatsApp/WhatsApp"; 
-import Galpoes from "./components/Galpoes/Galpoes";
-import Uniformes from "./components/Uniformes/Uniformes";
-import GraficaOffset from "./components/GraficaOffset/GraficaOffset";
-import ComunicacaoVisual from "./components/ComunicacaoVisual/ComunicacaoVisual";
-
-
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import WhatsApp from './components/WhatsApp/WhatsApp';
+import Hero from './components/Hero/Hero';
+import Brindes from './components/Brindes/Brindes';
+import Uniformes from './components/Uniformes/Uniformes';
+import Galpoes from './components/Galpoes/Galpoes';
+import Clientes from './components/Clientes/Clientes';
+import Subscribe from './components/Subscribe/Subscribe';
+import Grafica from './components/Grafica/grafica';
+import GraficaOffset from './components/GraficaOffset/GraficaOffset';
+import ComunicacaoVisual from './components/ComunicacaoVisual/ComunicacaoVisual';
+import Moveis from './components/Moveis/Moveis';
+import Stands from './components/Stands/Stands';
+import Equipamentos from './components/Equipamentos/Equipamentos';
+import Testimonials from './components/Testimonials/Testimonials';
+import Gallery from './components/Gallery/Gallery'; // Importe o componente da galeria
 
 function App() {
-  AOS.init();
-
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
       <Router>
-        <Hero/>
-        <Products/>
-        <Grafica/>
-        <GraficaOffset/>
-        <Brindes/>
-        <Uniformes/>
-        <ComunicacaoVisual/>
-        <Stands/>
-        <Galpoes/>
-        <Contato/>
-        <Clientes/>
-        <Subscribe/>
-
-        <Navbar/>
-        <WhatsApp/>
-        <Footer/>
-        <Routes>
-          <Route path="/products" element={<Products />} />
-          <Route path="/Galpoes" element={<Galpoes />} />
-          <Route path="/clientes" element={<Clientes />} />
-          <Route path="/subscribe" element={<Subscribe />} />
-          <Route path="/footer" element={<Footer />} />
-          <Route path="/grafica" element={<Grafica />} />
-          <Route path="/brindes" element={<Brindes />} />
-          <Route path="/uniformes" element={<Uniformes />} />
-          <Route path="/GraficaOffset" element={<GraficaOffset />} />
-          <Route path="/ComunicacaoVisual" element={<ComunicacaoVisual />} />
-          <Route path="/stands" element={<Stands />} />
-          <Route path="/contato" element={<Contato />} />
-          <Route path="/gallery-products" element={<GalleryProducts />} />
-        </Routes>
+        <AppContent />
       </Router>
     </div>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();
+  const [showNavbar, setShowNavbar] = useState(true); // Estado para controlar a visibilidade do Navbar
+
+  useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 800,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
+
+  // Controle explícito da visibilidade do Navbar com base na rota atual
+  useEffect(() => {
+    if (location.pathname === '/gallery') {
+      setShowNavbar(false); // Oculta o Navbar quando estiver na rota da galeria
+    } else {
+      setShowNavbar(true); // Mostra o Navbar nas outras rotas
+    }
+  }, [location.pathname]); // Atualiza o estado sempre que a rota muda
+
+  return (
+    <>
+      {/* Renderiza o Navbar baseado no estado */}
+      {showNavbar && <Navbar />}
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <WhatsApp />
+              <Hero />
+              <Clientes />
+              <Footer />
+            </>
+          }
+        />
+        <Route path="/testimonials" element={<Testimonials />} />
+        {/* Adiciona a rota para a galeria */}
+        <Route path="/gallery" element={<Gallery />} />
+      </Routes>
+    </>
   );
 }
 

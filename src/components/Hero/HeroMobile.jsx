@@ -1,18 +1,16 @@
 import React from "react";
 import Slider from "react-slick";
-import Image1 from "../../assets/hero/conexaok3.png";
-import Image2 from "../../assets/hero/conexaok1.png";
-import Image3 from "../../assets/hero/conexaok2.png";
-import Image4 from "../../assets/hero/conexaok4.jpg";
-import Image5 from "../../assets/hero/conexao.jpg";
+import Image1 from "../../assets/hero/conexaok1.png";
+import Image2 from "../../assets/hero/conexaok2.png";
+import Image3 from "../../assets/hero/conexaok3.png";
+import Image4 from "../../assets/hero/conexaok4.png";
 
 // Lista de imagens e informações para exibição no slider
 const ImageList = [
   { id: 1, img: Image1 },
-  { id: 3, img: Image2 },
-  { id: 5, img: Image5 },
-  { id: 4, img: Image3 },
   { id: 2, img: Image4 },
+  { id: 3, img: Image2 },
+  { id: 4, img: Image3 },
 ];
 
 const HeroMobile = () => {

@@ -8,13 +8,14 @@ import prt4 from "../../assets/shirt/print/4.jpg";
 
 // Nova imagem
 const newImage1 = "https://i.im.ge/2024/08/29/fAPhOD.Balcao.png";
+const newImage2 = "https://i.im.ge/2024/09/02/fYBkbh.D-NQ-NP-953357-MLB45768504579-042021-O.webp";
 
 // Dados das imagens para cada galeria
 const galleryData = {
   grafica1: [{ imgelink: prt1 }],
   grafica2: [{ imgelink: prt2 }],
   grafica3: [{ imgelink: prt3 }],
-  grafica4: [{ imgelink: prt4 }],
+  grafica4: [{ imgelink: newImage2 }],
   grafica5: [{ imgelink: newImage1 }],
 };
 
@@ -43,7 +44,7 @@ const GraficaData = [
   },
   {
     id: 4,
-    img: prt4,
+    img: newImage2,
     title: "Foldes, Flyers, Adesivos",
     galleryType: "grafica4",
     aosDelay: "600", // Atraso para a animação AOS
@@ -81,8 +82,9 @@ const Grafica = () => {
         {/* Seção de cabeçalho */}
         <div className="text-center mb-10 max-w-[600px] mx-auto p-4 rounded-lg shadow-sm bg-gray-100 dark:bg-gray-700">
           <h1 data-aos="fade-up" className="text-3xl font-extrabold tracking-wide text-gray-800 dark:text-gray-200 drop-shadow-lg flex items-center justify-center">
-            <FaPrint className="mr-2 text-blue-600 dark:text-blue-400" /> Gráfica
+            <FaPrint className="mr-2 text-blue-600 dark:text-blue-400" /> Gráfica Digital
           </h1>
+
         </div>
         {/* Seção do corpo */}
         <div>

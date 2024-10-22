@@ -1,157 +1,174 @@
 import React, { useState } from "react";
-import { FaArrowRight, FaCalendarAlt } from "react-icons/fa"; // Ícone de seta e ícone de calendário
-import img1 from "../../assets/evento/imagem1.JPG";
-import img2 from "../../assets/evento/imagem2.JPG";
-import img3 from "../../assets/evento/imagem3.JPG";
-import img4 from "../../assets/evento/imagem4.JPG";
-import img5 from "../../assets/evento/imagem5.JPG";
-import img6 from "../../assets/evento/imagem6.jpg";
-import img7 from "../../assets/evento/imagem7.jpg";
-import img8 from "../../assets/evento/imagem8.jpg";
-import img9 from "../../assets/evento/imagem9.jpg";
-import img10 from "../../assets/evento/imagem10.jpg";
-import img11 from "../../assets/evento/imagem11.jpg";
-import img12 from "../../assets/evento/imagem12.jpeg";
-import img13 from "../../assets/evento/imagem13.jpg";
-import img14 from "../../assets/evento/imagem14.jpeg";
-import img15 from "../../assets/evento/imagem15.jpeg";
-import img16 from "../../assets/evento/imagem16.jpeg";
-import img17 from "../../assets/evento/imagem17.jpeg";
-import img18 from "../../assets/evento/imagem18.jpeg";
-import img19 from "../../assets/evento/imagem19.jpeg";
-import img20 from "../../assets/evento/imagem20.jpeg";
-import img21 from "../../assets/evento/imagem21.jpeg";
-import img22 from "../../assets/evento/imagem22.jpeg";
-import img23 from "../../assets/evento/imagem23.jpeg";
-import img24 from "../../assets/evento/imagem24.jpeg";
-import img25 from "../../assets/evento/imagem25.jpeg";
-import { GalleryProducts } from "./GalleryProducts";
-
-// Dados dos produtos
-const ProductsData = [
-  {
-    id: 1,
-    img: img1,
-    title: "Heineken",
-    aosDelay: "0", // Atraso para a animação AOS
-    galleryImages: [
-      { imgelink: img1 },
-      { imgelink: img2 },
-      { imgelink: img3 },
-      { imgelink: img4 },
-      { imgelink: img5 },
-    ],
-  },
-  {
-    id: 2,
-    img: img6,
-    title: "Unilever",
-    aosDelay: "200", // Atraso para a animação AOS
-    galleryImages: [
-      { imgelink: img6 },
-      { imgelink: img7 },
-      { imgelink: img8 },
-      { imgelink: img9 },
-      { imgelink: img10 },
-    ],
-  },
-  {
-    id: 3,
-    img: img11,
-    title: "Carnaval",
-    aosDelay: "400", // Atraso para a animação AOS
-    galleryImages: [
-      { imgelink: img11 },
-      { imgelink: img12 },
-      { imgelink: img13 },
-      { imgelink: img14 },
-      { imgelink: img15 },
-    ],
-  },
-  {
-    id: 4,
-    img: img16,
-    title: "FENAFE",
-    aosDelay: "600", // Atraso para a animação AOS
-    galleryImages: [
-      { imgelink: img16 },
-      { imgelink: img17 },
-      { imgelink: img18 },
-      { imgelink: img19 },
-      { imgelink: img20 },
-    ],
-  },
-  {
-    id: 5,
-    img: img21,
-    title: "CoofBrack",
-    aosDelay: "800", // Atraso para a animação AOS
-    galleryImages: [
-      { imgelink: img21 },
-      { imgelink: img22 },
-      { imgelink: img23 },
-      { imgelink: img24 },
-      { imgelink: img25 },
-    ],
-  },
-];
+import Gallery from "../Gallery/Gallery"; // Sobe um nível e entra na pasta Gallery
 
 const Products = () => {
   const [showGallery, setShowGallery] = useState(false);
-  const [galleryImages, setGalleryImages] = useState([]);
+  const [selectedImages, setSelectedImages] = useState([]); // Estado para as imagens selecionadas
+  const [visibleCards, setVisibleCards] = useState(6); // Inicialmente exibe 6 cards
 
-  const handleEventClick = (galleryImages) => {
-    setGalleryImages(galleryImages);
+  // Dados dos cards com suas respectivas imagens
+  const cards = [
+    {
+      id: 1,
+      title: "Don't Overlook A Category Page: Why Category Description is a Game-Changer",
+      description: "3 min read | Published on Oct. 1, 2024 | By Peter Skouhus",
+      imageUrl: "https://via.placeholder.com/300x200/007bff/ffffff?text=Image+1",
+      images: [
+        "https://via.placeholder.com/800x600/007bff/ffffff?text=Imagem+1",
+        "https://via.placeholder.com/800x600/007bff/ffffff?text=Imagem+2",
+        "https://via.placeholder.com/800x600/007bff/ffffff?text=Imagem+3"
+      ]
+    },
+    {
+      id: 2,
+      title: "Humanizing AI content: How to make AI-generated text feel more authentic + Prompt examples",
+      description: "5 min read | Published on Sep. 27, 2024 | By Peter Skouhus",
+      imageUrl: "https://via.placeholder.com/300x200/ff4444/ffffff?text=Image+2",
+      images: [
+        "https://via.placeholder.com/800x600/ff4444/ffffff?text=Imagem+1",
+        "https://via.placeholder.com/800x600/ff4444/ffffff?text=Imagem+2",
+        "https://via.placeholder.com/800x600/ff4444/ffffff?text=Imagem+3"
+      ]
+    },
+    {
+      id: 3,
+      title: "Why is keyword analysis important in ecommerce?",
+      description: "3 min read | Published on Aug. 6, 2024 | By Peter Skouhus",
+      imageUrl: "https://via.placeholder.com/300x200/28a745/ffffff?text=Image+3",
+      images: [
+        "https://via.placeholder.com/800x600/28a745/ffffff?text=Imagem+1",
+        "https://via.placeholder.com/800x600/28a745/ffffff?text=Imagem+2",
+        "https://via.placeholder.com/800x600/28a745/ffffff?text=Imagem+3"
+      ]
+    },
+    {
+      id: 4,
+      title: "The Importance of Mobile Optimization for E-commerce",
+      description: "4 min read | Published on Jul. 12, 2024 | By Jane Doe",
+      imageUrl: "https://via.placeholder.com/300x200/00aaff/ffffff?text=Image+4",
+      images: [
+        "https://via.placeholder.com/800x600/00aaff/ffffff?text=Imagem+1",
+        "https://via.placeholder.com/800x600/00aaff/ffffff?text=Imagem+2",
+        "https://via.placeholder.com/800x600/00aaff/ffffff?text=Imagem+3"
+      ]
+    },
+    {
+      id: 5,
+      title: "Understanding Customer Behavior in Online Stores",
+      description: "6 min read | Published on Jun. 5, 2024 | By John Smith",
+      imageUrl: "https://via.placeholder.com/300x200/ffaa00/ffffff?text=Image+5",
+      images: [
+        "https://via.placeholder.com/800x600/ffaa00/ffffff?text=Imagem+1",
+        "https://via.placeholder.com/800x600/ffaa00/ffffff?text=Imagem+2",
+        "https://via.placeholder.com/800x600/ffaa00/ffffff?text=Imagem+3"
+      ]
+    },
+    {
+      id: 6,
+      title: "Boosting Conversion Rates with Better UX",
+      description: "5 min read | Published on May. 20, 2024 | By Alex Johnson",
+      imageUrl: "https://via.placeholder.com/300x200/aa00ff/ffffff?text=Image+6",
+      images: [
+        "https://via.placeholder.com/800x600/aa00ff/ffffff?text=Imagem+1",
+        "https://via.placeholder.com/800x600/aa00ff/ffffff?text=Imagem+2",
+        "https://via.placeholder.com/800x600/aa00ff/ffffff?text=Imagem+3"
+      ]
+    },
+    {
+      id: 7,
+      title: "Product Title 7",
+      description: "Description for Product 7",
+      imageUrl: "https://via.placeholder.com/300x200/007bff/ffffff?text=Image+7",
+      images: [
+        "https://via.placeholder.com/800x600/007bff/ffffff?text=Imagem+7",
+        "https://via.placeholder.com/800x600/007bff/ffffff?text=Imagem+8",
+        "https://via.placeholder.com/800x600/007bff/ffffff?text=Imagem+9"
+      ]
+    },
+    {
+      id: 8,
+      title: "Product Title 8",
+      description: "Description for Product 8",
+      imageUrl: "https://via.placeholder.com/300x200/ffaa00/ffffff?text=Image+8",
+      images: [
+        "https://via.placeholder.com/800x600/ffaa00/ffffff?text=Imagem+10",
+        "https://via.placeholder.com/800x600/ffaa00/ffffff?text=Imagem+11",
+        "https://via.placeholder.com/800x600/ffaa00/ffffff?text=Imagem+12"
+      ]
+    },
+    {
+      id: 9,
+      title: "Product Title 9",
+      description: "Description for Product 9",
+      imageUrl: "https://via.placeholder.com/300x200/00aaff/ffffff?text=Image+9",
+      images: [
+        "https://via.placeholder.com/800x600/00aaff/ffffff?text=Imagem+13",
+        "https://via.placeholder.com/800x600/00aaff/ffffff?text=Imagem+14",
+        "https://via.placeholder.com/800x600/00aaff/ffffff?text=Imagem+15"
+      ]
+    }
+  ];
+
+  // Função para abrir a galeria com as imagens selecionadas
+  const openGallery = (images) => {
+    setSelectedImages(images);
     setShowGallery(true);
   };
 
-  if (showGallery) {
-    return <GalleryProducts images={galleryImages} onClose={() => setShowGallery(false)} />;
-  }
+  // Função para fechar a galeria
+  const closeGallery = () => {
+    setShowGallery(false);
+  };
+
+  // Função para mostrar mais 3 cards
+  const loadMoreCards = () => {
+    setVisibleCards((prevCount) => prevCount + 3);
+  };
 
   return (
-    <div id="Eventos" className="mt-14 mb-12 px-4">
-      <div className="container mx-auto p-8 rounded-lg shadow-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
-        {/* Seção de cabeçalho */}
-        <div className="text-center mb-10 max-w-[600px] mx-auto p-4 rounded-lg shadow-sm bg-gray-100 dark:bg-gray-700">
-          <h1 data-aos="fade-up" className="text-3xl font-extrabold tracking-wide text-gray-800 dark:text-gray-200 drop-shadow-lg flex items-center justify-center">
-            <FaCalendarAlt className="mr-2 text-blue-600 dark:text-blue-400" /> Eventos Realizados
-          </h1>
-        </div>
-        {/* Seção do corpo */}
-        <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
-            {/* Seção dos cards de produtos */}
-            {ProductsData.map((data) => (
-              <div
-                key={data.id}
-                data-aos="fade-up"
-                data-aos-delay={data.aosDelay}
-                className="relative flex flex-col items-center justify-center rounded-lg bg-white dark:bg-gray-900 hover:bg-blue-100 dark:hover:bg-blue-800 shadow-md transition-transform duration-300 transform hover:scale-105"
-                style={{ cursor: "pointer" }}
-                onClick={() => handleEventClick(data.galleryImages)}
-              >
-                <div className="h-[120px] relative flex items-center justify-center">
-                  <img
-                    src={data.img}
-                    alt={data.title}
-                    className="max-w-[120px] block mx-auto transition-transform duration-300 transform group-hover:scale-110"
-                  />
-                </div>
-                <div className="p-4 text-center flex flex-col items-center justify-center h-full">
-                  <h1 className="text-xl font-bold text-gray-800 dark:text-gray-200">
-                    {data.title}
-                  </h1>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">{data.color}</p>
-                  <button className="flex items-center bg-blue-600 hover:bg-blue-700 text-white py-2 px-8 rounded-full mt-4 transition-colors duration-300">
-                    Clique aqui <FaArrowRight className="ml-2 transition-transform duration-300 transform group-hover:translate-x-1" />
-                  </button>
-                </div>
-              </div>
-            ))}
+    <div className="container mx-auto py-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {cards.slice(0, visibleCards).map((card) => (
+          <div
+            key={card.id}
+            className="overflow-hidden group cursor-pointer"
+            onClick={() => openGallery(card.images)} // Ao clicar, abre a galeria com as imagens do card
+          >
+            {/* Image Section */}
+            <div className="h-44 flex items-center justify-center overflow-hidden">
+              <img
+                src={card.imageUrl}
+                alt={card.title}
+                className="object-cover h-full w-full transition-transform duration-700 ease-in-out transform group-hover:scale-105"
+              />
+            </div>
+            {/* Content Section */}
+            <div className="mt-4">
+              <h3 className="text-3xl font-bold mb-2 transition-colors duration-700 ease-in-out group-hover:underline group-hover:text-black">
+                {card.title}
+              </h3>
+              <p className="text-gray-600 text-sm">{card.description}</p>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
+
+      {/* Renderize o botão "Ver mais" apenas se houver mais cards para mostrar */}
+      {visibleCards < cards.length && (
+        <div className="text-center mt-8">
+          <button
+            onClick={loadMoreCards}
+            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+          >
+            Ver mais
+          </button>
+        </div>
+      )}
+
+      {/* Renderize a galeria apenas se showGallery for true */}
+      {showGallery && (
+        <Gallery images={selectedImages} onClose={closeGallery} />
+      )}
     </div>
   );
 };

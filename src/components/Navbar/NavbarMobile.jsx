@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaList, FaTimes, FaCaretDown } from "react-icons/fa";
 import Logo from "../../assets/website/logo.png";
 
+// Certifique-se de que `showMobileMenu` é removido, caso não seja necessário neste componente
 const NavbarMobile = ({ Menu, mobileMenuOpen, setMobileMenuOpen, dropdownOpen, setDropdownOpen, drawerOpen, setDrawerOpen }) => {
+
+  // Se `showMobileMenu` é necessário, defina aqui ou receba como prop
+  // const [showMobileMenu, setShowMobileMenu] = useState(false);
+
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
   const DrawerMenu = () => (

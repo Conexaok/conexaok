@@ -1,66 +1,59 @@
 import React from "react";
-import Slider from "react-slick";
-import Image1 from "../../assets/hero/conexaok3.png";
-import Image2 from "../../assets/hero/conexaok1.png";
-import Image3 from "../../assets/hero/conexaok2.png";
-import Image4 from "../../assets/hero/conexaok4.jpg";
-import Image5 from "../../assets/hero/conexao.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import Image1 from "../../assets/hero/conexaok1.png";
+import Image2 from "../../assets/hero/conexaok2.png";
+import Image3 from "../../assets/hero/conexaok3.png";
+import Image4 from "../../assets/hero/conexaok4.png";
 
-// Lista de imagens e informações para exibição no slider
+// Lista de imagens
 const ImageList = [
   { id: 1, img: Image1 },
-  { id: 3, img: Image2 },
-  { id: 5, img: Image5 },
-  { id: 4, img: Image3 },
   { id: 2, img: Image4 },
+  { id: 3, img: Image2 },
+  { id: 4, img: Image3 },
 ];
 
 const Hero = () => {
-  // Configurações do slider
-  const settings = {
-    dots: true,
-    arrows: true,
-    infinite: true,
-    speed: 1200,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 8300,
-    cssEase: "ease-in-out",
-    pauseOnHover: false,
-    pauseOnFocus: true,
-    appendDots: dots => (
-      <ul className="m-0 p-0"> {dots} </ul>
-    ),
-  };
-
   return (
-    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-sky-700 flex justify-center items-center dark:bg-gray-950 dark:bg-sky-500 dark:text-white duration-200 mt-8">
+    <div className="relative overflow-hidden h-screen w-screen bg-sky-700 dark:bg-gray-950 dark:bg-sky-500 dark:text-white transition duration-200">
       {/* Padrão de fundo */}
-      <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z-8"></div>
-      {/* Seção do herói */}
-      <div className="container pb-8 sm:pb-0">
-        {/* Slider */}
-        <Slider {...settings}>
-          {ImageList.map((data) => (
-            <div key={data.id}>
-              <div className="flex justify-center items-center">
-                {/* Seção de imagem */}
-                <div
-                  data-aos="zoom-in"
-                  data-aos-once="true"
-                  className="relative z-1 w-full h-full"
-                >
-                  <img
-                    src={data.img}
-                    alt=""
-                    className="w-full h-full max-h-[550px] sm:max-h-[650px] object-cover rounded"
-                  />
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
+      <div className="absolute inset-0 flex justify-center items-center">
+        <div className="h-full w-full">
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            pagination={{
+              clickable: true,
+              el: '.swiper-pagination', // Definir um seletor personalizado para a paginação
+            }}
+            autoplay={{ delay: 5000 }}
+            loop={true}
+            speed={1200}
+            className="h-full w-full"
+          >
+            {/* Mapeamento das imagens no Swiper */}
+            {ImageList.map((data) => (
+              <SwiperSlide key={data.id} className="flex justify-center items-center h-full w-full">
+                <img
+                  src={data.img}
+                  alt={`Image ${data.id}`}
+                  className="w-full h-full object-contain"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          {/* Paginação personalizada */}
+          <div className="swiper-pagination flex justify-center mt-4 space-x-2">
+            {ImageList.map((_, index) => (
+              <div
+                key={index}
+                className="w-5 h-5 bg-white rounded-none border-2 border-green-500 active:bg-green-500"
+              ></div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
