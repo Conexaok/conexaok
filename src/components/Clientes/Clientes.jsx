@@ -43,12 +43,10 @@ import TintasfrevoLogo from "../../assets/women/tintasFrevo.png";
 import TurquesaLogo from "../../assets/women/turquesa.png";
 
 const Clientes = ({ isDarkMode }) => {
-  // Função para lidar com o hover do logo
   const handleLogoHover = (event) => {
     event.target.style.transform = "translateY(-5px)";
   };
 
-  // Função para lidar com a saída do hover do logo
   const handleLogoLeave = (event) => {
     event.target.style.transform = "translateY(0)";
   };
@@ -56,14 +54,12 @@ const Clientes = ({ isDarkMode }) => {
   return (
     <div id="Clientes" className="py-14 mb-12 px-4 bg-gray-100 dark:bg-gray-900">
       <div className="container mx-auto p-8 rounded-lg shadow-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
-        {/* Título */}
         <div className="text-center mb-10 max-w-[600px] mx-auto p-4 rounded-lg shadow-sm bg-gray-100 dark:bg-gray-700">
           <h1 data-aos="fade-up" className="text-3xl font-extrabold tracking-wide text-gray-900 dark:text-white drop-shadow-lg flex items-center justify-center">
             Clientes
           </h1>
         </div>
 
-        {/* Logos dos clientes */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 justify-items-center">
           {[
             AsanetLogo, AssaiLogo, AmbevLogo, AccorLogo, BradescoLogo, AguardanteLogo, AjinomotoLogo, PituLogo, BrfLogo, BocarosaLogo,

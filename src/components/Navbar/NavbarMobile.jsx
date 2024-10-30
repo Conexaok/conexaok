@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FaList, FaTimes, FaCaretDown } from "react-icons/fa";
-import Logo from "../../assets/website/logo.png";
+import LogoBranca from "../../assets/website/LogoBranca.png";  // Importação correta da logo branca
 
-// Certifique-se de que `showMobileMenu` é removido, caso não seja necessário neste componente
 const NavbarMobile = ({ Menu, mobileMenuOpen, setMobileMenuOpen, dropdownOpen, setDropdownOpen, drawerOpen, setDrawerOpen }) => {
-
-  // Se `showMobileMenu` é necessário, defina aqui ou receba como prop
-  // const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
@@ -54,7 +50,8 @@ const NavbarMobile = ({ Menu, mobileMenuOpen, setMobileMenuOpen, dropdownOpen, s
             <FaList className="text-lg" />
           </button>
           <a href="#" className="text-2xl font-bold md:text-3xl mx-auto">
-            <img src={Logo} alt="Logo" className="w-32 h-auto object-contain" />
+            {/* Substituir `Logo` por `LogoBranca` */}
+            <img src={LogoBranca} alt="Logo" className="w-32 h-auto object-contain" />
           </a>
           {/* Espaço reservado para centralizar a logo */}
           <div className="p-1.5 invisible md:hidden">

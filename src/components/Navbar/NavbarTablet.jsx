@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaList, FaTimes, FaCaretDown } from "react-icons/fa";
-import Logo from "../../assets/website/logo.png";
+import LogoBranca from "../../assets/website/LogoBranca.png"; // Importando LogoBranca
 
 const NavbarTablet = ({ Menu }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -61,7 +61,7 @@ const NavbarTablet = ({ Menu }) => {
           {/* Logo Centralizada */}
           <div className="flex-grow text-center">
             <a href="#" className="inline-block text-2xl font-bold md:text-3xl">
-              <img src={Logo} alt="Logo" className="w-32 h-auto object-contain" />
+              <img src={LogoBranca} alt="Logo" className="w-32 h-auto object-contain" /> {/* Usando LogoBranca */}
             </a>
           </div>
 

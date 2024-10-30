@@ -5,30 +5,20 @@ import 'aos/dist/aos.css';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import WhatsApp from './components/WhatsApp/WhatsApp';
-import Hero from './components/Hero/Hero';
-import Brindes from './components/Brindes/Brindes';
-import Uniformes from './components/Uniformes/Uniformes';
-import Galpoes from './components/Galpoes/Galpoes';
 import Clientes from './components/Clientes/Clientes';
-import Subscribe from './components/Subscribe/Subscribe';
-import Grafica from './components/Grafica/grafica';
-import GraficaOffset from './components/GraficaOffset/GraficaOffset';
-import ComunicacaoVisual from './components/ComunicacaoVisual/ComunicacaoVisual';
-import Moveis from './components/Moveis/Moveis';
-import Stands from './components/Stands/Stands';
-import Equipamentos from './components/Equipamentos/Equipamentos';
 import Testimonials from './components/Testimonials/Testimonials';
 import Gallery from './components/Gallery/Gallery'; // Importe o componente da galeria
 
 function App() {
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
+    <div className="bg-site-background bg-cover bg-center min-h-screen flex flex-col">
       <Router>
         <AppContent />
       </Router>
     </div>
   );
 }
+
 
 function AppContent() {
   const location = useLocation();
@@ -57,23 +47,25 @@ function AppContent() {
     <>
       {/* Renderiza o Navbar baseado no estado */}
       {showNavbar && <Navbar />}
-
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <WhatsApp />
-              <Hero />
-              <Clientes />
-              <Footer />
-            </>
-          }
-        />
-        <Route path="/testimonials" element={<Testimonials />} />
-        {/* Adiciona a rota para a galeria */}
-        <Route path="/gallery" element={<Gallery />} />
-      </Routes>
+      
+      <div className="flex-grow"> {/* Este div permite que o conteúdo cresça */}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <WhatsApp />
+                <Clientes />
+              </>
+            }
+          />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/gallery" element={<Gallery />} />
+        </Routes>
+      </div>
+      
+      {/* Footer será renderizado aqui */}
+      <Footer />
     </>
   );
 }

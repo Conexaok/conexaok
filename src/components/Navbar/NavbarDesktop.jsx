@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaWhatsapp, FaCaretDown } from "react-icons/fa";
-import DarkMode from "./DarkMode";
-import Logo from "../../assets/website/logo.png";
+import LogoBranca from "../../assets/website/LogoBranca.png";  // Certifique-se de que esta importação está correta
 import { useMediaQuery } from 'react-responsive';
 import { useLocation } from 'react-router-dom'; // Importa o hook useLocation para verificar a rota
 
@@ -53,7 +52,8 @@ const NavbarDesktop = ({ Menu = [], dropdownOpen, setDropdownOpen, openWhatsApp,
         <div className={`flex justify-between items-center py-5 px-3 md:px-6 ${isVerySmallScreen ? 'flex-wrap' : ''}`}>
           <div className="flex items-center gap-2">
             <a href="#" className="text-2xl font-bold md:text-3xl">
-              <img src={Logo} alt="Logo" className={`w-${isVerySmallScreen ? '24' : '32'} h-auto object-contain`} />
+              {/* Usar a LogoBranca aqui */}
+              <img src={LogoBranca} alt="Logo" className={`w-${isVerySmallScreen ? '24' : '32'} h-auto object-contain`} />
             </a>
           </div>
           <div className="flex-1 flex items-center justify-center">
