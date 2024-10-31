@@ -12,9 +12,10 @@ import iconCel from "../../assets/website/icoCel.png";
 import iconEmail from "../../assets/website/iconEmail.png";
 import iconLoc from "../../assets/website/iconLoc.png";
 
+// Componente Footer
 const Footer = () => {
   return (
-    <div
+    <footer
       className="relative bg-sky-700 dark:bg-black py-12 w-full"
       style={{
         backgroundImage: `url(${FundoFooter1}), url(${FundoFooter2})`,
@@ -23,111 +24,83 @@ const Footer = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <section className="container mx-auto text-black dark:text-white">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <section className="container mx-auto px-4 text-black dark:text-white">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
           {/* Coluna 1: Logo e texto */}
-          <div className="flex flex-col items-start">
-            <h1 className="text-3xl font-bold flex items-center gap-3 mb-3">
+          <div className="flex flex-col items-center md:items-start">
+            <a href="/" target="_blank" rel="noopener noreferrer">
               <img
                 src={LogoBranca}
                 alt="Logo Conexx"
-                className="max-w-[200px] dark:bg-white p-2"
+                className="max-w-[200px] dark:bg-white p-2 mb-3"
               />
-            </h1>
-            <p className="text-left text-[#00FF66] font-medium">
+            </a>
+
+            <p className="text-[#00FF66] font-medium">
               Conectando ideias, marcas e pessoas!
             </p>
           </div>
 
           {/* Coluna 2: Informações de contato */}
-          <div className="flex flex-col items-start gap-6">
-            <div className="flex items-center gap-3">
-              <img
-                src={iconCel}
-                alt="Ícone Celular"
-                className="w-5 h-5"
-                style={{
-                  filter:
-                    'brightness(0) saturate(100%) invert(82%) sepia(94%) saturate(625%) hue-rotate(70deg) brightness(96%) contrast(93%)',
-                }}
-              />
-              <p className="text-[#27ea67] font-medium">
-                81 9.9504-2474 / 81 9.9431-8149
-              </p>
-            </div>
-            <div className="flex items-center gap-3">
-              <img
-                src={iconEmail}
-                alt="Ícone Email"
-                className="w-5 h-5"
-                style={{
-                  filter:
-                    'brightness(0) saturate(100%) invert(82%) sepia(94%) saturate(625%) hue-rotate(70deg) brightness(96%) contrast(93%)',
-                }}
-              />
-              <p className="text-[#27ea67] font-medium">
-                atendimento@conexaokf.com.br
-              </p>
-            </div>
-            <div className="flex items-center gap-3">
-              <img
-                src={iconLoc}
-                alt="Ícone Localização"
-                className="w-5 h-5"
-                style={{
-                  filter:
-                    'brightness(0) saturate(100%) invert(82%) sepia(94%) saturate(625%) hue-rotate(70deg) brightness(96%) contrast(93%)',
-                }}
-              />
-              <p className="text-[#27ea67] font-medium">
-                Rua Arthur Heleno de Souza, 111
-              </p>
-            </div>
+          <div className="flex flex-col items-center md:items-start gap-4 md:ml-8">
+            <ContactInfo icon={iconCel} text="81 9.9504-2474 / 81 9.9431-8149" />
+            <ContactInfo icon={iconEmail} text="atendimento@conexaokf.com.br" />
+            <ContactInfo icon={iconLoc} text="Rua Arthur Heleno de Souza, 111" />
           </div>
 
-          {/* Coluna 3: Redes sociais */}
-          <div className="flex justify-center gap-4">
-            <a
+
+          {/* Coluna 3: Redes sociais, centralizada */}
+          <div className="flex justify-center items-center gap-4">
+            <SocialIcon
               href="https://www.instagram.com/conexaokeventos/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-sky-500"
-            >
-              <FaInstagram className="text-3xl text-[#00FF66]" />
-            </a>
-            <a
+              label="Instagram"
+              Icon={FaInstagram}
+            />
+            <SocialIcon
               href="https://www.facebook.com/Conexaokshows"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-sky-500"
-            >
-              <FaFacebook className="text-3xl text-[#00FF66]" />
-            </a>
-            <a
+              label="Facebook"
+              Icon={FaFacebook}
+            />
+            <SocialIcon
               href="https://www.linkedin.com/in/conexaok/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-sky-500"
-            >
-              <FaLinkedin className="text-3xl text-[#00FF66]" />
-            </a>
-            <a
+              label="LinkedIn"
+              Icon={FaLinkedin}
+            />
+            <SocialIcon
               href="https://api.whatsapp.com/send?phone=558195042474"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-sky-500"
-            >
-              <FaWhatsapp className="text-3xl text-[#00FF66]" />
-            </a>
+              label="WhatsApp"
+              Icon={FaWhatsapp}
+            />
           </div>
         </div>
       </section>
-
-      <div className="text-center py-6 bg-[#00FF66] font-sans font-medium">
-        © 2024 Conexão K. Todos os direitos reservados.
-      </div>
-    </div>
+    </footer>
   );
 };
+
+// Componente para renderizar cada ícone de contato
+const ContactInfo = ({ icon, text }) => (
+  <div className="flex items-center gap-3">
+    <img
+      src={icon}
+      alt=""
+      className="w-5 h-5 filter-green"
+    />
+    <p className="text-[#27ea67] font-medium">{text}</p>
+  </div>
+);
+
+// Componente para renderizar ícones de redes sociais com aria-label
+const SocialIcon = ({ href, label, Icon }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={label}
+    className="hover:text-sky-500"
+  >
+    <Icon className="text-3xl text-[#00FF66]" />
+  </a>
+);
 
 export default Footer;

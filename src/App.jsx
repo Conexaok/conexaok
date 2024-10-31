@@ -8,10 +8,19 @@ import WhatsApp from './components/WhatsApp/WhatsApp';
 import Clientes from './components/Clientes/Clientes';
 import Testimonials from './components/Testimonials/Testimonials';
 import Gallery from './components/Gallery/Gallery'; // Importe o componente da galeria
+import FooterWp from './components/Footer/FooterWp';
 
 function App() {
+  useEffect(() => {
+    // Define o fundo do body para cobrir toda a área do site
+    document.body.classList.add('bg-site-background', 'bg-cover', 'bg-center', 'min-h-screen');
+    return () => {
+      document.body.classList.remove('bg-site-background', 'bg-cover', 'bg-center', 'min-h-screen');
+    };
+  }, []);
+
   return (
-    <div className="bg-site-background bg-cover bg-center min-h-screen flex flex-col">
+    <div className="flex flex-col min-h-screen">
       <Router>
         <AppContent />
       </Router>
@@ -19,10 +28,9 @@ function App() {
   );
 }
 
-
 function AppContent() {
   const location = useLocation();
-  const [showNavbar, setShowNavbar] = useState(true); // Estado para controlar a visibilidade do Navbar
+  const [showNavbar, setShowNavbar] = useState(true);
 
   useEffect(() => {
     AOS.init({
@@ -36,37 +44,29 @@ function AppContent() {
 
   // Controle explícito da visibilidade do Navbar com base na rota atual
   useEffect(() => {
-    if (location.pathname === '/gallery') {
-      setShowNavbar(false); // Oculta o Navbar quando estiver na rota da galeria
-    } else {
-      setShowNavbar(true); // Mostra o Navbar nas outras rotas
-    }
-  }, [location.pathname]); // Atualiza o estado sempre que a rota muda
+    setShowNavbar(location.pathname !== '/gallery');
+  }, [location.pathname]);
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       {/* Renderiza o Navbar baseado no estado */}
       {showNavbar && <Navbar />}
-      
-      <div className="flex-grow"> {/* Este div permite que o conteúdo cresça */}
+
+      <main className="flex-grow"> {/* Área principal */}
         <Routes>
           <Route
             path="/"
-            element={
-              <>
-                <WhatsApp />
-                <Clientes />
-              </>
-            }
+            element={<></>}
           />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/gallery" element={<Gallery />} />
         </Routes>
-      </div>
+      </main>
       
       {/* Footer será renderizado aqui */}
       <Footer />
-    </>
+      <FooterWp/>
+    </div>
   );
 }
 
